@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learningsystem.dao.ReleaseapplicationcaseMapper">
+  <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Releaseapplicationcase">
+    <id column="RAC_ID" jdbcType="INTEGER" property="racId" />
+    <result column="RAC_CLASS" jdbcType="VARCHAR" property="racClass" />
+    <result column="RAC_CASEDESCRIPTION" jdbcType="VARCHAR" property="racCasedescription" />
+    <result column="RAC_CASEIMG" jdbcType="VARCHAR" property="racCaseimg" />
+    <result column="RAC_UPLOADACCESSORY" jdbcType="VARCHAR" property="racUploadaccessory" />
+    <result column="RAC_CONDITION" jdbcType="INTEGER" property="racCondition" />
+    <result column="RAC_TIME" jdbcType="TIME" property="racTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    RAC_ID, RAC_CLASS, RAC_CASEDESCRIPTION, RAC_CASEIMG, RAC_UPLOADACCESSORY, RAC_CONDITION, 
+    RAC_TIME
+  </sql>
+  <select id="selectByExample" parameterType="com.learningsystem.pojo.ReleaseapplicationcaseExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from releaseapplicationcase
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from releaseapplicationcase
+    where RAC_ID = #{racId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from releaseapplicationcase
+    where RAC_ID = #{racId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.learningsystem.pojo.ReleaseapplicationcaseExample">
+    delete from releaseapplicationcase
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.learningsystem.pojo.Releaseapplicationcase">
+    insert into releaseapplicationcase (RAC_ID, RAC_CLASS, RAC_CASEDESCRIPTION, 
+      RAC_CASEIMG, RAC_UPLOADACCESSORY, RAC_CONDITION, 
+      RAC_TIME)
+    values (#{racId,jdbcType=INTEGER}, #{racClass,jdbcType=VARCHAR}, #{racCasedescription,jdbcType=VARCHAR}, 
+      #{racCaseimg,jdbcType=VARCHAR}, #{racUploadaccessory,jdbcType=VARCHAR}, #{racCondition,jdbcType=INTEGER}, 
+      #{racTime,jdbcType=TIME})
+  </insert>
+  <insert id="insertSelective" parameterType="com.learningsystem.pojo.Releaseapplicationcase">
+    insert into releaseapplicationcase
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="racId != null">
+        RAC_ID,
+      </if>
+      <if test="racClass != null">
+        RAC_CLASS,
+      </if>
+      <if test="racCasedescription != null">
+        RAC_CASEDESCRIPTION,
+      </if>
+      <if test="racCaseimg != null">
+        RAC_CASEIMG,
+      </if>
+      <if test="racUploadaccessory != null">
+        RAC_UPLOADACCESSORY,
+      </if>
+      <if test="racCondition != null">
+        RAC_CONDITION,
+      </if>
+      <if test="racTime != null">
+        RAC_TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="racId != null">
+        #{racId,jdbcType=INTEGER},
+      </if>
+      <if test="racClass != null">
+        #{racClass,jdbcType=VARCHAR},
+      </if>
+      <if test="racCasedescription != null">
+        #{racCasedescription,jdbcType=VARCHAR},
+      </if>
+      <if test="racCaseimg != null">
+        #{racCaseimg,jdbcType=VARCHAR},
+      </if>
+      <if test="racUploadaccessory != null">
+        #{racUploadaccessory,jdbcType=VARCHAR},
+      </if>
+      <if test="racCondition != null">
+        #{racCondition,jdbcType=INTEGER},
+      </if>
+      <if test="racTime != null">
+        #{racTime,jdbcType=TIME},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.learningsystem.pojo.ReleaseapplicationcaseExample" resultType="java.lang.Long">
+    select count(*) from releaseapplicationcase
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update releaseapplicationcase
+    <set>
+      <if test="record.racId != null">
+        RAC_ID = #{record.racId,jdbcType=INTEGER},
+      </if>
+      <if test="record.racClass != null">
+        RAC_CLASS = #{record.racClass,jdbcType=VARCHAR},
+      </if>
+      <if test="record.racCasedescription != null">
+        RAC_CASEDESCRIPTION = #{record.racCasedescription,jdbcType=VARCHAR},
+      </if>
+      <if test="record.racCaseimg != null">
+        RAC_CASEIMG = #{record.racCaseimg,jdbcType=VARCHAR},
+      </if>
+      <if test="record.racUploadaccessory != null">
+        RAC_UPLOADACCESSORY = #{record.racUploadaccessory,jdbcType=VARCHAR},
+      </if>
+      <if test="record.racCondition != null">
+        RAC_CONDITION = #{record.racCondition,jdbcType=INTEGER},
+      </if>
+      <if test="record.racTime != null">
+        RAC_TIME = #{record.racTime,jdbcType=TIME},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update releaseapplicationcase
+    set RAC_ID = #{record.racId,jdbcType=INTEGER},
+      RAC_CLASS = #{record.racClass,jdbcType=VARCHAR},
+      RAC_CASEDESCRIPTION = #{record.racCasedescription,jdbcType=VARCHAR},
+      RAC_CASEIMG = #{record.racCaseimg,jdbcType=VARCHAR},
+      RAC_UPLOADACCESSORY = #{record.racUploadaccessory,jdbcType=VARCHAR},
+      RAC_CONDITION = #{record.racCondition,jdbcType=INTEGER},
+      RAC_TIME = #{record.racTime,jdbcType=TIME}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Releaseapplicationcase">
+    update releaseapplicationcase
+    <set>
+      <if test="racClass != null">
+        RAC_CLASS = #{racClass,jdbcType=VARCHAR},
+      </if>
+      <if test="racCasedescription != null">
+        RAC_CASEDESCRIPTION = #{racCasedescription,jdbcType=VARCHAR},
+      </if>
+      <if test="racCaseimg != null">
+        RAC_CASEIMG = #{racCaseimg,jdbcType=VARCHAR},
+      </if>
+      <if test="racUploadaccessory != null">
+        RAC_UPLOADACCESSORY = #{racUploadaccessory,jdbcType=VARCHAR},
+      </if>
+      <if test="racCondition != null">
+        RAC_CONDITION = #{racCondition,jdbcType=INTEGER},
+      </if>
+      <if test="racTime != null">
+        RAC_TIME = #{racTime,jdbcType=TIME},
+      </if>
+    </set>
+    where RAC_ID = #{racId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Releaseapplicationcase">
+    update releaseapplicationcase
+    set RAC_CLASS = #{racClass,jdbcType=VARCHAR},
+      RAC_CASEDESCRIPTION = #{racCasedescription,jdbcType=VARCHAR},
+      RAC_CASEIMG = #{racCaseimg,jdbcType=VARCHAR},
+      RAC_UPLOADACCESSORY = #{racUploadaccessory,jdbcType=VARCHAR},
+      RAC_CONDITION = #{racCondition,jdbcType=INTEGER},
+      RAC_TIME = #{racTime,jdbcType=TIME}
+    where RAC_ID = #{racId,jdbcType=INTEGER}
+  </update>
+</mapper>

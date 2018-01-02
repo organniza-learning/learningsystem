@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learningsystem.dao.ReleaseexerciseMapper">
+  <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Releaseexercise">
+    <id column="RE_ID" jdbcType="INTEGER" property="reId" />
+    <result column="RE_TITLE" jdbcType="VARCHAR" property="reTitle" />
+    <result column="RE_CLASS" jdbcType="VARCHAR" property="reClass" />
+    <result column="RE_TEXT" jdbcType="VARCHAR" property="reText" />
+    <result column="RE_FILE" jdbcType="VARCHAR" property="reFile" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    RE_ID, RE_TITLE, RE_CLASS, RE_TEXT, RE_FILE
+  </sql>
+  <select id="selectByExample" parameterType="com.learningsystem.pojo.ReleaseexerciseExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from releaseexercise
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from releaseexercise
+    where RE_ID = #{reId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from releaseexercise
+    where RE_ID = #{reId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.learningsystem.pojo.ReleaseexerciseExample">
+    delete from releaseexercise
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.learningsystem.pojo.Releaseexercise">
+    insert into releaseexercise (RE_ID, RE_TITLE, RE_CLASS, 
+      RE_TEXT, RE_FILE)
+    values (#{reId,jdbcType=INTEGER}, #{reTitle,jdbcType=VARCHAR}, #{reClass,jdbcType=VARCHAR}, 
+      #{reText,jdbcType=VARCHAR}, #{reFile,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.learningsystem.pojo.Releaseexercise">
+    insert into releaseexercise
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="reId != null">
+        RE_ID,
+      </if>
+      <if test="reTitle != null">
+        RE_TITLE,
+      </if>
+      <if test="reClass != null">
+        RE_CLASS,
+      </if>
+      <if test="reText != null">
+        RE_TEXT,
+      </if>
+      <if test="reFile != null">
+        RE_FILE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="reId != null">
+        #{reId,jdbcType=INTEGER},
+      </if>
+      <if test="reTitle != null">
+        #{reTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="reClass != null">
+        #{reClass,jdbcType=VARCHAR},
+      </if>
+      <if test="reText != null">
+        #{reText,jdbcType=VARCHAR},
+      </if>
+      <if test="reFile != null">
+        #{reFile,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.learningsystem.pojo.ReleaseexerciseExample" resultType="java.lang.Long">
+    select count(*) from releaseexercise
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update releaseexercise
+    <set>
+      <if test="record.reId != null">
+        RE_ID = #{record.reId,jdbcType=INTEGER},
+      </if>
+      <if test="record.reTitle != null">
+        RE_TITLE = #{record.reTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reClass != null">
+        RE_CLASS = #{record.reClass,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reText != null">
+        RE_TEXT = #{record.reText,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reFile != null">
+        RE_FILE = #{record.reFile,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update releaseexercise
+    set RE_ID = #{record.reId,jdbcType=INTEGER},
+      RE_TITLE = #{record.reTitle,jdbcType=VARCHAR},
+      RE_CLASS = #{record.reClass,jdbcType=VARCHAR},
+      RE_TEXT = #{record.reText,jdbcType=VARCHAR},
+      RE_FILE = #{record.reFile,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Releaseexercise">
+    update releaseexercise
+    <set>
+      <if test="reTitle != null">
+        RE_TITLE = #{reTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="reClass != null">
+        RE_CLASS = #{reClass,jdbcType=VARCHAR},
+      </if>
+      <if test="reText != null">
+        RE_TEXT = #{reText,jdbcType=VARCHAR},
+      </if>
+      <if test="reFile != null">
+        RE_FILE = #{reFile,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where RE_ID = #{reId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Releaseexercise">
+    update releaseexercise
+    set RE_TITLE = #{reTitle,jdbcType=VARCHAR},
+      RE_CLASS = #{reClass,jdbcType=VARCHAR},
+      RE_TEXT = #{reText,jdbcType=VARCHAR},
+      RE_FILE = #{reFile,jdbcType=VARCHAR}
+    where RE_ID = #{reId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learningsystem.dao.GroupingMapper">
+  <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Grouping">
+    <id column="G_ID" jdbcType="INTEGER" property="gId" />
+    <result column="G_IDENTIFYING" jdbcType="INTEGER" property="gIdentifying" />
+    <result column="G_NAME" jdbcType="VARCHAR" property="gName" />
+    <result column="G_STUDENTID" jdbcType="VARCHAR" property="gStudentid" />
+    <result column="G_SPEAKNUM" jdbcType="INTEGER" property="gSpeaknum" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    G_ID, G_IDENTIFYING, G_NAME, G_STUDENTID, G_SPEAKNUM
+  </sql>
+  <select id="selectByExample" parameterType="com.learningsystem.pojo.GroupingExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from grouping
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from grouping
+    where G_ID = #{gId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from grouping
+    where G_ID = #{gId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.learningsystem.pojo.GroupingExample">
+    delete from grouping
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.learningsystem.pojo.Grouping">
+    insert into grouping (G_ID, G_IDENTIFYING, G_NAME, 
+      G_STUDENTID, G_SPEAKNUM)
+    values (#{gId,jdbcType=INTEGER}, #{gIdentifying,jdbcType=INTEGER}, #{gName,jdbcType=VARCHAR}, 
+      #{gStudentid,jdbcType=VARCHAR}, #{gSpeaknum,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.learningsystem.pojo.Grouping">
+    insert into grouping
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="gId != null">
+        G_ID,
+      </if>
+      <if test="gIdentifying != null">
+        G_IDENTIFYING,
+      </if>
+      <if test="gName != null">
+        G_NAME,
+      </if>
+      <if test="gStudentid != null">
+        G_STUDENTID,
+      </if>
+      <if test="gSpeaknum != null">
+        G_SPEAKNUM,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="gId != null">
+        #{gId,jdbcType=INTEGER},
+      </if>
+      <if test="gIdentifying != null">
+        #{gIdentifying,jdbcType=INTEGER},
+      </if>
+      <if test="gName != null">
+        #{gName,jdbcType=VARCHAR},
+      </if>
+      <if test="gStudentid != null">
+        #{gStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="gSpeaknum != null">
+        #{gSpeaknum,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.learningsystem.pojo.GroupingExample" resultType="java.lang.Long">
+    select count(*) from grouping
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update grouping
+    <set>
+      <if test="record.gId != null">
+        G_ID = #{record.gId,jdbcType=INTEGER},
+      </if>
+      <if test="record.gIdentifying != null">
+        G_IDENTIFYING = #{record.gIdentifying,jdbcType=INTEGER},
+      </if>
+      <if test="record.gName != null">
+        G_NAME = #{record.gName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gStudentid != null">
+        G_STUDENTID = #{record.gStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gSpeaknum != null">
+        G_SPEAKNUM = #{record.gSpeaknum,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update grouping
+    set G_ID = #{record.gId,jdbcType=INTEGER},
+      G_IDENTIFYING = #{record.gIdentifying,jdbcType=INTEGER},
+      G_NAME = #{record.gName,jdbcType=VARCHAR},
+      G_STUDENTID = #{record.gStudentid,jdbcType=VARCHAR},
+      G_SPEAKNUM = #{record.gSpeaknum,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Grouping">
+    update grouping
+    <set>
+      <if test="gIdentifying != null">
+        G_IDENTIFYING = #{gIdentifying,jdbcType=INTEGER},
+      </if>
+      <if test="gName != null">
+        G_NAME = #{gName,jdbcType=VARCHAR},
+      </if>
+      <if test="gStudentid != null">
+        G_STUDENTID = #{gStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="gSpeaknum != null">
+        G_SPEAKNUM = #{gSpeaknum,jdbcType=INTEGER},
+      </if>
+    </set>
+    where G_ID = #{gId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Grouping">
+    update grouping
+    set G_IDENTIFYING = #{gIdentifying,jdbcType=INTEGER},
+      G_NAME = #{gName,jdbcType=VARCHAR},
+      G_STUDENTID = #{gStudentid,jdbcType=VARCHAR},
+      G_SPEAKNUM = #{gSpeaknum,jdbcType=INTEGER}
+    where G_ID = #{gId,jdbcType=INTEGER}
+  </update>
+</mapper>

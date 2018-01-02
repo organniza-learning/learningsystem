@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learningsystem.dao.RleaseonlinetestingMapper">
+  <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Rleaseonlinetesting">
+    <id column="ROT_ID" jdbcType="INTEGER" property="rotId" />
+    <result column="ROT_IDENTIFYING" jdbcType="INTEGER" property="rotIdentifying" />
+    <result column="ROT_CLASS" jdbcType="VARCHAR" property="rotClass" />
+    <result column="ROT_CHOICEQUESTION" jdbcType="VARCHAR" property="rotChoicequestion" />
+    <result column="CHOICEQUESTION_RESULT" jdbcType="VARCHAR" property="choicequestionResult" />
+    <result column="ROT_COMPLETION" jdbcType="VARCHAR" property="rotCompletion" />
+    <result column="COMPLETION_RESULT" jdbcType="VARCHAR" property="completionResult" />
+    <result column="ROT_TEXTTOPIC" jdbcType="VARCHAR" property="rotTexttopic" />
+    <result column="TEXTTOPIC_RESULT" jdbcType="VARCHAR" property="texttopicResult" />
+    <result column="ROT_TRUEORFALSE" jdbcType="VARCHAR" property="rotTrueorfalse" />
+    <result column="TRUEORFALSE_RESULT" jdbcType="INTEGER" property="trueorfalseResult" />
+    <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ROT_ID, ROT_IDENTIFYING, ROT_CLASS, ROT_CHOICEQUESTION, CHOICEQUESTION_RESULT, ROT_COMPLETION, 
+    COMPLETION_RESULT, ROT_TEXTTOPIC, TEXTTOPIC_RESULT, ROT_TRUEORFALSE, TRUEORFALSE_RESULT, 
+    STU_STUDENTID
+  </sql>
+  <select id="selectByExample" parameterType="com.learningsystem.pojo.RleaseonlinetestingExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from rleaseonlinetesting
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from rleaseonlinetesting
+    where ROT_ID = #{rotId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from rleaseonlinetesting
+    where ROT_ID = #{rotId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.learningsystem.pojo.RleaseonlinetestingExample">
+    delete from rleaseonlinetesting
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.learningsystem.pojo.Rleaseonlinetesting">
+    insert into rleaseonlinetesting (ROT_ID, ROT_IDENTIFYING, ROT_CLASS, 
+      ROT_CHOICEQUESTION, CHOICEQUESTION_RESULT, 
+      ROT_COMPLETION, COMPLETION_RESULT, ROT_TEXTTOPIC, 
+      TEXTTOPIC_RESULT, ROT_TRUEORFALSE, TRUEORFALSE_RESULT, 
+      STU_STUDENTID)
+    values (#{rotId,jdbcType=INTEGER}, #{rotIdentifying,jdbcType=INTEGER}, #{rotClass,jdbcType=VARCHAR}, 
+      #{rotChoicequestion,jdbcType=VARCHAR}, #{choicequestionResult,jdbcType=VARCHAR}, 
+      #{rotCompletion,jdbcType=VARCHAR}, #{completionResult,jdbcType=VARCHAR}, #{rotTexttopic,jdbcType=VARCHAR}, 
+      #{texttopicResult,jdbcType=VARCHAR}, #{rotTrueorfalse,jdbcType=VARCHAR}, #{trueorfalseResult,jdbcType=INTEGER}, 
+      #{stuStudentid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.learningsystem.pojo.Rleaseonlinetesting">
+    insert into rleaseonlinetesting
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="rotId != null">
+        ROT_ID,
+      </if>
+      <if test="rotIdentifying != null">
+        ROT_IDENTIFYING,
+      </if>
+      <if test="rotClass != null">
+        ROT_CLASS,
+      </if>
+      <if test="rotChoicequestion != null">
+        ROT_CHOICEQUESTION,
+      </if>
+      <if test="choicequestionResult != null">
+        CHOICEQUESTION_RESULT,
+      </if>
+      <if test="rotCompletion != null">
+        ROT_COMPLETION,
+      </if>
+      <if test="completionResult != null">
+        COMPLETION_RESULT,
+      </if>
+      <if test="rotTexttopic != null">
+        ROT_TEXTTOPIC,
+      </if>
+      <if test="texttopicResult != null">
+        TEXTTOPIC_RESULT,
+      </if>
+      <if test="rotTrueorfalse != null">
+        ROT_TRUEORFALSE,
+      </if>
+      <if test="trueorfalseResult != null">
+        TRUEORFALSE_RESULT,
+      </if>
+      <if test="stuStudentid != null">
+        STU_STUDENTID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="rotId != null">
+        #{rotId,jdbcType=INTEGER},
+      </if>
+      <if test="rotIdentifying != null">
+        #{rotIdentifying,jdbcType=INTEGER},
+      </if>
+      <if test="rotClass != null">
+        #{rotClass,jdbcType=VARCHAR},
+      </if>
+      <if test="rotChoicequestion != null">
+        #{rotChoicequestion,jdbcType=VARCHAR},
+      </if>
+      <if test="choicequestionResult != null">
+        #{choicequestionResult,jdbcType=VARCHAR},
+      </if>
+      <if test="rotCompletion != null">
+        #{rotCompletion,jdbcType=VARCHAR},
+      </if>
+      <if test="completionResult != null">
+        #{completionResult,jdbcType=VARCHAR},
+      </if>
+      <if test="rotTexttopic != null">
+        #{rotTexttopic,jdbcType=VARCHAR},
+      </if>
+      <if test="texttopicResult != null">
+        #{texttopicResult,jdbcType=VARCHAR},
+      </if>
+      <if test="rotTrueorfalse != null">
+        #{rotTrueorfalse,jdbcType=VARCHAR},
+      </if>
+      <if test="trueorfalseResult != null">
+        #{trueorfalseResult,jdbcType=INTEGER},
+      </if>
+      <if test="stuStudentid != null">
+        #{stuStudentid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.learningsystem.pojo.RleaseonlinetestingExample" resultType="java.lang.Long">
+    select count(*) from rleaseonlinetesting
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update rleaseonlinetesting
+    <set>
+      <if test="record.rotId != null">
+        ROT_ID = #{record.rotId,jdbcType=INTEGER},
+      </if>
+      <if test="record.rotIdentifying != null">
+        ROT_IDENTIFYING = #{record.rotIdentifying,jdbcType=INTEGER},
+      </if>
+      <if test="record.rotClass != null">
+        ROT_CLASS = #{record.rotClass,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rotChoicequestion != null">
+        ROT_CHOICEQUESTION = #{record.rotChoicequestion,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choicequestionResult != null">
+        CHOICEQUESTION_RESULT = #{record.choicequestionResult,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rotCompletion != null">
+        ROT_COMPLETION = #{record.rotCompletion,jdbcType=VARCHAR},
+      </if>
+      <if test="record.completionResult != null">
+        COMPLETION_RESULT = #{record.completionResult,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rotTexttopic != null">
+        ROT_TEXTTOPIC = #{record.rotTexttopic,jdbcType=VARCHAR},
+      </if>
+      <if test="record.texttopicResult != null">
+        TEXTTOPIC_RESULT = #{record.texttopicResult,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rotTrueorfalse != null">
+        ROT_TRUEORFALSE = #{record.rotTrueorfalse,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trueorfalseResult != null">
+        TRUEORFALSE_RESULT = #{record.trueorfalseResult,jdbcType=INTEGER},
+      </if>
+      <if test="record.stuStudentid != null">
+        STU_STUDENTID = #{record.stuStudentid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update rleaseonlinetesting
+    set ROT_ID = #{record.rotId,jdbcType=INTEGER},
+      ROT_IDENTIFYING = #{record.rotIdentifying,jdbcType=INTEGER},
+      ROT_CLASS = #{record.rotClass,jdbcType=VARCHAR},
+      ROT_CHOICEQUESTION = #{record.rotChoicequestion,jdbcType=VARCHAR},
+      CHOICEQUESTION_RESULT = #{record.choicequestionResult,jdbcType=VARCHAR},
+      ROT_COMPLETION = #{record.rotCompletion,jdbcType=VARCHAR},
+      COMPLETION_RESULT = #{record.completionResult,jdbcType=VARCHAR},
+      ROT_TEXTTOPIC = #{record.rotTexttopic,jdbcType=VARCHAR},
+      TEXTTOPIC_RESULT = #{record.texttopicResult,jdbcType=VARCHAR},
+      ROT_TRUEORFALSE = #{record.rotTrueorfalse,jdbcType=VARCHAR},
+      TRUEORFALSE_RESULT = #{record.trueorfalseResult,jdbcType=INTEGER},
+      STU_STUDENTID = #{record.stuStudentid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Rleaseonlinetesting">
+    update rleaseonlinetesting
+    <set>
+      <if test="rotIdentifying != null">
+        ROT_IDENTIFYING = #{rotIdentifying,jdbcType=INTEGER},
+      </if>
+      <if test="rotClass != null">
+        ROT_CLASS = #{rotClass,jdbcType=VARCHAR},
+      </if>
+      <if test="rotChoicequestion != null">
+        ROT_CHOICEQUESTION = #{rotChoicequestion,jdbcType=VARCHAR},
+      </if>
+      <if test="choicequestionResult != null">
+        CHOICEQUESTION_RESULT = #{choicequestionResult,jdbcType=VARCHAR},
+      </if>
+      <if test="rotCompletion != null">
+        ROT_COMPLETION = #{rotCompletion,jdbcType=VARCHAR},
+      </if>
+      <if test="completionResult != null">
+        COMPLETION_RESULT = #{completionResult,jdbcType=VARCHAR},
+      </if>
+      <if test="rotTexttopic != null">
+        ROT_TEXTTOPIC = #{rotTexttopic,jdbcType=VARCHAR},
+      </if>
+      <if test="texttopicResult != null">
+        TEXTTOPIC_RESULT = #{texttopicResult,jdbcType=VARCHAR},
+      </if>
+      <if test="rotTrueorfalse != null">
+        ROT_TRUEORFALSE = #{rotTrueorfalse,jdbcType=VARCHAR},
+      </if>
+      <if test="trueorfalseResult != null">
+        TRUEORFALSE_RESULT = #{trueorfalseResult,jdbcType=INTEGER},
+      </if>
+      <if test="stuStudentid != null">
+        STU_STUDENTID = #{stuStudentid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ROT_ID = #{rotId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Rleaseonlinetesting">
+    update rleaseonlinetesting
+    set ROT_IDENTIFYING = #{rotIdentifying,jdbcType=INTEGER},
+      ROT_CLASS = #{rotClass,jdbcType=VARCHAR},
+      ROT_CHOICEQUESTION = #{rotChoicequestion,jdbcType=VARCHAR},
+      CHOICEQUESTION_RESULT = #{choicequestionResult,jdbcType=VARCHAR},
+      ROT_COMPLETION = #{rotCompletion,jdbcType=VARCHAR},
+      COMPLETION_RESULT = #{completionResult,jdbcType=VARCHAR},
+      ROT_TEXTTOPIC = #{rotTexttopic,jdbcType=VARCHAR},
+      TEXTTOPIC_RESULT = #{texttopicResult,jdbcType=VARCHAR},
+      ROT_TRUEORFALSE = #{rotTrueorfalse,jdbcType=VARCHAR},
+      TRUEORFALSE_RESULT = #{trueorfalseResult,jdbcType=INTEGER},
+      STU_STUDENTID = #{stuStudentid,jdbcType=VARCHAR}
+    where ROT_ID = #{rotId,jdbcType=INTEGER}
+  </update>
+</mapper>

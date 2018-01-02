@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learningsystem.dao.ReleasediscussionquestionsMapper">
+  <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Releasediscussionquestions">
+    <id column="RDQ_ID" jdbcType="INTEGER" property="rdqId" />
+    <result column="G_STUDENTID" jdbcType="VARCHAR" property="gStudentid" />
+    <result column="TAG_ID" jdbcType="INTEGER" property="tagId" />
+    <result column="RDQ_THEME" jdbcType="VARCHAR" property="rdqTheme" />
+    <result column="RDQ_CLASS" jdbcType="VARCHAR" property="rdqClass" />
+    <result column="RDQ_TEXT" jdbcType="VARCHAR" property="rdqText" />
+    <result column="RDQ_TIME" jdbcType="TIME" property="rdqTime" />
+    <result column="RDQ_UPLOADFILE" jdbcType="VARCHAR" property="rdqUploadfile" />
+  </resultMap>
+  <resultMap id="BaseResultMapAndTag" type="com.learningsystem.pojo.Releasediscussionquestions">
+    <id column="RDQ_ID" jdbcType="INTEGER" property="rdqId" />
+    <result column="G_STUDENTID" jdbcType="VARCHAR" property="gStudentid" />
+    <result column="TAG_ID" jdbcType="INTEGER" property="tagId" />
+    <result column="RDQ_THEME" jdbcType="VARCHAR" property="rdqTheme" />
+    <result column="RDQ_CLASS" jdbcType="VARCHAR" property="rdqClass" />
+    <result column="RDQ_TEXT" jdbcType="VARCHAR" property="rdqText" />
+    <result column="RDQ_TIME" jdbcType="TIME" property="rdqTime" />
+    <result column="RDQ_UPLOADFILE" jdbcType="VARCHAR" property="rdqUploadfile" />
+    <association property="tag" javaType="com.learningsystem.pojo.Tag">
+      <id column="TAG_ID" jdbcType="INTEGER" property="tagId" />
+      <result column="TAG_CONTEN" jdbcType="VARCHAR" property="tagConten" />
+    </association>
+  </resultMap>
+  <!--selectRdqAndTag-->
+  <select id="selectRdqAndTag" resultMap="BaseResultMapAndTag">
+    SELECT releasediscussionquestions.`G_STUDENTID`,releasediscussionquestions.`RDQ_THEME`,releasediscussionquestions.`RDQ_CLASS`,
+    releasediscussionquestions.`RDQ_TEXT`,tag.`TAG_CONTEN`
+    FROM tag,releasediscussionquestions
+    WHERE tag.`TAG_ID` = releasediscussionquestions.`TAG_ID`;
+  </select>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    RDQ_ID, G_STUDENTID, TAG_ID, RDQ_THEME, RDQ_CLASS, RDQ_TEXT, RDQ_TIME, RDQ_UPLOADFILE
+  </sql>
+  <select id="selectByExample" parameterType="com.learningsystem.pojo.ReleasediscussionquestionsExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from releasediscussionquestions
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from releasediscussionquestions
+    where RDQ_ID = #{rdqId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from releasediscussionquestions
+    where RDQ_ID = #{rdqId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.learningsystem.pojo.ReleasediscussionquestionsExample">
+    delete from releasediscussionquestions
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.learningsystem.pojo.Releasediscussionquestions">
+    insert into releasediscussionquestions (RDQ_ID, G_STUDENTID, TAG_ID, 
+      RDQ_THEME, RDQ_CLASS, RDQ_TEXT, 
+      RDQ_TIME, RDQ_UPLOADFILE)
+    values (#{rdqId,jdbcType=INTEGER}, #{gStudentid,jdbcType=VARCHAR}, #{tagId,jdbcType=INTEGER}, 
+      #{rdqTheme,jdbcType=VARCHAR}, #{rdqClass,jdbcType=VARCHAR}, #{rdqText,jdbcType=VARCHAR}, 
+      #{rdqTime,jdbcType=TIME}, #{rdqUploadfile,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.learningsystem.pojo.Releasediscussionquestions">
+    insert into releasediscussionquestions
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="rdqId != null">
+        RDQ_ID,
+      </if>
+      <if test="gStudentid != null">
+        G_STUDENTID,
+      </if>
+      <if test="tagId != null">
+        TAG_ID,
+      </if>
+      <if test="rdqTheme != null">
+        RDQ_THEME,
+      </if>
+      <if test="rdqClass != null">
+        RDQ_CLASS,
+      </if>
+      <if test="rdqText != null">
+        RDQ_TEXT,
+      </if>
+      <if test="rdqTime != null">
+        RDQ_TIME,
+      </if>
+      <if test="rdqUploadfile != null">
+        RDQ_UPLOADFILE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="rdqId != null">
+        #{rdqId,jdbcType=INTEGER},
+      </if>
+      <if test="gStudentid != null">
+        #{gStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="tagId != null">
+        #{tagId,jdbcType=INTEGER},
+      </if>
+      <if test="rdqTheme != null">
+        #{rdqTheme,jdbcType=VARCHAR},
+      </if>
+      <if test="rdqClass != null">
+        #{rdqClass,jdbcType=VARCHAR},
+      </if>
+      <if test="rdqText != null">
+        #{rdqText,jdbcType=VARCHAR},
+      </if>
+      <if test="rdqTime != null">
+        #{rdqTime,jdbcType=TIME},
+      </if>
+      <if test="rdqUploadfile != null">
+        #{rdqUploadfile,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.learningsystem.pojo.ReleasediscussionquestionsExample" resultType="java.lang.Long">
+    select count(*) from releasediscussionquestions
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update releasediscussionquestions
+    <set>
+      <if test="record.rdqId != null">
+        RDQ_ID = #{record.rdqId,jdbcType=INTEGER},
+      </if>
+      <if test="record.gStudentid != null">
+        G_STUDENTID = #{record.gStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tagId != null">
+        TAG_ID = #{record.tagId,jdbcType=INTEGER},
+      </if>
+      <if test="record.rdqTheme != null">
+        RDQ_THEME = #{record.rdqTheme,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rdqClass != null">
+        RDQ_CLASS = #{record.rdqClass,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rdqText != null">
+        RDQ_TEXT = #{record.rdqText,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rdqTime != null">
+        RDQ_TIME = #{record.rdqTime,jdbcType=TIME},
+      </if>
+      <if test="record.rdqUploadfile != null">
+        RDQ_UPLOADFILE = #{record.rdqUploadfile,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update releasediscussionquestions
+    set RDQ_ID = #{record.rdqId,jdbcType=INTEGER},
+      G_STUDENTID = #{record.gStudentid,jdbcType=VARCHAR},
+      TAG_ID = #{record.tagId,jdbcType=INTEGER},
+      RDQ_THEME = #{record.rdqTheme,jdbcType=VARCHAR},
+      RDQ_CLASS = #{record.rdqClass,jdbcType=VARCHAR},
+      RDQ_TEXT = #{record.rdqText,jdbcType=VARCHAR},
+      RDQ_TIME = #{record.rdqTime,jdbcType=TIME},
+      RDQ_UPLOADFILE = #{record.rdqUploadfile,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Releasediscussionquestions">
+    update releasediscussionquestions
+    <set>
+      <if test="gStudentid != null">
+        G_STUDENTID = #{gStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="tagId != null">
+        TAG_ID = #{tagId,jdbcType=INTEGER},
+      </if>
+      <if test="rdqTheme != null">
+        RDQ_THEME = #{rdqTheme,jdbcType=VARCHAR},
+      </if>
+      <if test="rdqClass != null">
+        RDQ_CLASS = #{rdqClass,jdbcType=VARCHAR},
+      </if>
+      <if test="rdqText != null">
+        RDQ_TEXT = #{rdqText,jdbcType=VARCHAR},
+      </if>
+      <if test="rdqTime != null">
+        RDQ_TIME = #{rdqTime,jdbcType=TIME},
+      </if>
+      <if test="rdqUploadfile != null">
+        RDQ_UPLOADFILE = #{rdqUploadfile,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where RDQ_ID = #{rdqId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Releasediscussionquestions">
+    update releasediscussionquestions
+    set G_STUDENTID = #{gStudentid,jdbcType=VARCHAR},
+      TAG_ID = #{tagId,jdbcType=INTEGER},
+      RDQ_THEME = #{rdqTheme,jdbcType=VARCHAR},
+      RDQ_CLASS = #{rdqClass,jdbcType=VARCHAR},
+      RDQ_TEXT = #{rdqText,jdbcType=VARCHAR},
+      RDQ_TIME = #{rdqTime,jdbcType=TIME},
+      RDQ_UPLOADFILE = #{rdqUploadfile,jdbcType=VARCHAR}
+    where RDQ_ID = #{rdqId,jdbcType=INTEGER}
+  </update>
+</mapper>

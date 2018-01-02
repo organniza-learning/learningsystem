@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learningsystem.dao.ReleaselearningcontentMapper">
+  <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Releaselearningcontent">
+    <id column="RLC_ID" jdbcType="INTEGER" property="rlcId" />
+    <result column="RLC_CLASS" jdbcType="VARCHAR" property="rlcClass" />
+    <result column="RLC_LEARNINGGOALS" jdbcType="VARCHAR" property="rlcLearninggoals" />
+    <result column="RLC_LEARNINGREQUIRE" jdbcType="VARCHAR" property="rlcLearningrequire" />
+    <result column="RLC_UPLOADACCESSORY" jdbcType="VARCHAR" property="rlcUploadaccessory" />
+    <result column="RLC_CONDITION" jdbcType="INTEGER" property="rlcCondition" />
+    <result column="RLC_TIME" jdbcType="TIME" property="rlcTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    RLC_ID, RLC_CLASS, RLC_LEARNINGGOALS, RLC_LEARNINGREQUIRE, RLC_UPLOADACCESSORY, RLC_CONDITION, 
+    RLC_TIME
+  </sql>
+  <select id="selectByExample" parameterType="com.learningsystem.pojo.ReleaselearningcontentExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from releaselearningcontent
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from releaselearningcontent
+    where RLC_ID = #{rlcId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from releaselearningcontent
+    where RLC_ID = #{rlcId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.learningsystem.pojo.ReleaselearningcontentExample">
+    delete from releaselearningcontent
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.learningsystem.pojo.Releaselearningcontent">
+    insert into releaselearningcontent (RLC_ID, RLC_CLASS, RLC_LEARNINGGOALS, 
+      RLC_LEARNINGREQUIRE, RLC_UPLOADACCESSORY, 
+      RLC_CONDITION, RLC_TIME)
+    values (#{rlcId,jdbcType=INTEGER}, #{rlcClass,jdbcType=VARCHAR}, #{rlcLearninggoals,jdbcType=VARCHAR}, 
+      #{rlcLearningrequire,jdbcType=VARCHAR}, #{rlcUploadaccessory,jdbcType=VARCHAR}, 
+      #{rlcCondition,jdbcType=INTEGER}, #{rlcTime,jdbcType=TIME})
+  </insert>
+  <insert id="insertSelective" parameterType="com.learningsystem.pojo.Releaselearningcontent">
+    insert into releaselearningcontent
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="rlcId != null">
+        RLC_ID,
+      </if>
+      <if test="rlcClass != null">
+        RLC_CLASS,
+      </if>
+      <if test="rlcLearninggoals != null">
+        RLC_LEARNINGGOALS,
+      </if>
+      <if test="rlcLearningrequire != null">
+        RLC_LEARNINGREQUIRE,
+      </if>
+      <if test="rlcUploadaccessory != null">
+        RLC_UPLOADACCESSORY,
+      </if>
+      <if test="rlcCondition != null">
+        RLC_CONDITION,
+      </if>
+      <if test="rlcTime != null">
+        RLC_TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="rlcId != null">
+        #{rlcId,jdbcType=INTEGER},
+      </if>
+      <if test="rlcClass != null">
+        #{rlcClass,jdbcType=VARCHAR},
+      </if>
+      <if test="rlcLearninggoals != null">
+        #{rlcLearninggoals,jdbcType=VARCHAR},
+      </if>
+      <if test="rlcLearningrequire != null">
+        #{rlcLearningrequire,jdbcType=VARCHAR},
+      </if>
+      <if test="rlcUploadaccessory != null">
+        #{rlcUploadaccessory,jdbcType=VARCHAR},
+      </if>
+      <if test="rlcCondition != null">
+        #{rlcCondition,jdbcType=INTEGER},
+      </if>
+      <if test="rlcTime != null">
+        #{rlcTime,jdbcType=TIME},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.learningsystem.pojo.ReleaselearningcontentExample" resultType="java.lang.Long">
+    select count(*) from releaselearningcontent
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update releaselearningcontent
+    <set>
+      <if test="record.rlcId != null">
+        RLC_ID = #{record.rlcId,jdbcType=INTEGER},
+      </if>
+      <if test="record.rlcClass != null">
+        RLC_CLASS = #{record.rlcClass,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rlcLearninggoals != null">
+        RLC_LEARNINGGOALS = #{record.rlcLearninggoals,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rlcLearningrequire != null">
+        RLC_LEARNINGREQUIRE = #{record.rlcLearningrequire,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rlcUploadaccessory != null">
+        RLC_UPLOADACCESSORY = #{record.rlcUploadaccessory,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rlcCondition != null">
+        RLC_CONDITION = #{record.rlcCondition,jdbcType=INTEGER},
+      </if>
+      <if test="record.rlcTime != null">
+        RLC_TIME = #{record.rlcTime,jdbcType=TIME},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update releaselearningcontent
+    set RLC_ID = #{record.rlcId,jdbcType=INTEGER},
+      RLC_CLASS = #{record.rlcClass,jdbcType=VARCHAR},
+      RLC_LEARNINGGOALS = #{record.rlcLearninggoals,jdbcType=VARCHAR},
+      RLC_LEARNINGREQUIRE = #{record.rlcLearningrequire,jdbcType=VARCHAR},
+      RLC_UPLOADACCESSORY = #{record.rlcUploadaccessory,jdbcType=VARCHAR},
+      RLC_CONDITION = #{record.rlcCondition,jdbcType=INTEGER},
+      RLC_TIME = #{record.rlcTime,jdbcType=TIME}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Releaselearningcontent">
+    update releaselearningcontent
+    <set>
+      <if test="rlcClass != null">
+        RLC_CLASS = #{rlcClass,jdbcType=VARCHAR},
+      </if>
+      <if test="rlcLearninggoals != null">
+        RLC_LEARNINGGOALS = #{rlcLearninggoals,jdbcType=VARCHAR},
+      </if>
+      <if test="rlcLearningrequire != null">
+        RLC_LEARNINGREQUIRE = #{rlcLearningrequire,jdbcType=VARCHAR},
+      </if>
+      <if test="rlcUploadaccessory != null">
+        RLC_UPLOADACCESSORY = #{rlcUploadaccessory,jdbcType=VARCHAR},
+      </if>
+      <if test="rlcCondition != null">
+        RLC_CONDITION = #{rlcCondition,jdbcType=INTEGER},
+      </if>
+      <if test="rlcTime != null">
+        RLC_TIME = #{rlcTime,jdbcType=TIME},
+      </if>
+    </set>
+    where RLC_ID = #{rlcId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Releaselearningcontent">
+    update releaselearningcontent
+    set RLC_CLASS = #{rlcClass,jdbcType=VARCHAR},
+      RLC_LEARNINGGOALS = #{rlcLearninggoals,jdbcType=VARCHAR},
+      RLC_LEARNINGREQUIRE = #{rlcLearningrequire,jdbcType=VARCHAR},
+      RLC_UPLOADACCESSORY = #{rlcUploadaccessory,jdbcType=VARCHAR},
+      RLC_CONDITION = #{rlcCondition,jdbcType=INTEGER},
+      RLC_TIME = #{rlcTime,jdbcType=TIME}
+    where RLC_ID = #{rlcId,jdbcType=INTEGER}
+  </update>
+</mapper>
