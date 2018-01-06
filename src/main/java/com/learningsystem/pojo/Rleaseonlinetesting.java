@@ -5,6 +5,8 @@ public class Rleaseonlinetesting {
 
     private Integer rotIdentifying;
 
+    private Integer tTeacher;
+
     private String rotClass;
 
     private String rotChoicequestion;
@@ -39,6 +41,14 @@ public class Rleaseonlinetesting {
 
     public void setRotIdentifying(Integer rotIdentifying) {
         this.rotIdentifying = rotIdentifying;
+    }
+
+    public Integer gettTeacher() {
+        return tTeacher;
+    }
+
+    public void settTeacher(Integer tTeacher) {
+        this.tTeacher = tTeacher;
     }
 
     public String getRotClass() {

@@ -3,6 +3,7 @@
 <mapper namespace="com.learningsystem.dao.ReleaseapplicationcaseMapper">
   <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Releaseapplicationcase">
     <id column="RAC_ID" jdbcType="INTEGER" property="racId" />
+    <result column="T_TEACHER" jdbcType="INTEGER" property="tTeacher" />
     <result column="RAC_CLASS" jdbcType="VARCHAR" property="racClass" />
     <result column="RAC_CASEDESCRIPTION" jdbcType="VARCHAR" property="racCasedescription" />
     <result column="RAC_CASEIMG" jdbcType="VARCHAR" property="racCaseimg" />
@@ -69,8 +70,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    RAC_ID, RAC_CLASS, RAC_CASEDESCRIPTION, RAC_CASEIMG, RAC_UPLOADACCESSORY, RAC_CONDITION, 
-    RAC_TIME
+    RAC_ID, T_TEACHER, RAC_CLASS, RAC_CASEDESCRIPTION, RAC_CASEIMG, RAC_UPLOADACCESSORY, 
+    RAC_CONDITION, RAC_TIME
   </sql>
   <select id="selectByExample" parameterType="com.learningsystem.pojo.ReleaseapplicationcaseExample" resultMap="BaseResultMap">
     select
@@ -103,18 +104,21 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.learningsystem.pojo.Releaseapplicationcase">
-    insert into releaseapplicationcase (RAC_ID, RAC_CLASS, RAC_CASEDESCRIPTION, 
-      RAC_CASEIMG, RAC_UPLOADACCESSORY, RAC_CONDITION, 
-      RAC_TIME)
-    values (#{racId,jdbcType=INTEGER}, #{racClass,jdbcType=VARCHAR}, #{racCasedescription,jdbcType=VARCHAR}, 
-      #{racCaseimg,jdbcType=VARCHAR}, #{racUploadaccessory,jdbcType=VARCHAR}, #{racCondition,jdbcType=INTEGER}, 
-      #{racTime,jdbcType=TIME})
+    insert into releaseapplicationcase (RAC_ID, T_TEACHER, RAC_CLASS, 
+      RAC_CASEDESCRIPTION, RAC_CASEIMG, RAC_UPLOADACCESSORY, 
+      RAC_CONDITION, RAC_TIME)
+    values (#{racId,jdbcType=INTEGER}, #{tTeacher,jdbcType=INTEGER}, #{racClass,jdbcType=VARCHAR}, 
+      #{racCasedescription,jdbcType=VARCHAR}, #{racCaseimg,jdbcType=VARCHAR}, #{racUploadaccessory,jdbcType=VARCHAR}, 
+      #{racCondition,jdbcType=INTEGER}, #{racTime,jdbcType=TIME})
   </insert>
   <insert id="insertSelective" parameterType="com.learningsystem.pojo.Releaseapplicationcase">
     insert into releaseapplicationcase
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="racId != null">
         RAC_ID,
+      </if>
+      <if test="tTeacher != null">
+        T_TEACHER,
       </if>
       <if test="racClass != null">
         RAC_CLASS,
@@ -138,6 +142,9 @@
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="racId != null">
         #{racId,jdbcType=INTEGER},
+      </if>
+      <if test="tTeacher != null">
+        #{tTeacher,jdbcType=INTEGER},
       </if>
       <if test="racClass != null">
         #{racClass,jdbcType=VARCHAR},
@@ -171,6 +178,9 @@
       <if test="record.racId != null">
         RAC_ID = #{record.racId,jdbcType=INTEGER},
       </if>
+      <if test="record.tTeacher != null">
+        T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
+      </if>
       <if test="record.racClass != null">
         RAC_CLASS = #{record.racClass,jdbcType=VARCHAR},
       </if>
@@ -197,6 +207,7 @@
   <update id="updateByExample" parameterType="map">
     update releaseapplicationcase
     set RAC_ID = #{record.racId,jdbcType=INTEGER},
+      T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
       RAC_CLASS = #{record.racClass,jdbcType=VARCHAR},
       RAC_CASEDESCRIPTION = #{record.racCasedescription,jdbcType=VARCHAR},
       RAC_CASEIMG = #{record.racCaseimg,jdbcType=VARCHAR},
@@ -210,6 +221,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Releaseapplicationcase">
     update releaseapplicationcase
     <set>
+      <if test="tTeacher != null">
+        T_TEACHER = #{tTeacher,jdbcType=INTEGER},
+      </if>
       <if test="racClass != null">
         RAC_CLASS = #{racClass,jdbcType=VARCHAR},
       </if>
@@ -233,7 +247,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Releaseapplicationcase">
     update releaseapplicationcase
-    set RAC_CLASS = #{racClass,jdbcType=VARCHAR},
+    set T_TEACHER = #{tTeacher,jdbcType=INTEGER},
+      RAC_CLASS = #{racClass,jdbcType=VARCHAR},
       RAC_CASEDESCRIPTION = #{racCasedescription,jdbcType=VARCHAR},
       RAC_CASEIMG = #{racCaseimg,jdbcType=VARCHAR},
       RAC_UPLOADACCESSORY = #{racUploadaccessory,jdbcType=VARCHAR},

@@ -2,18 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.learningsystem.dao.ReleasediscussionquestionsMapper">
   <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Releasediscussionquestions">
+  <id column="RDQ_ID" jdbcType="INTEGER" property="rdqId" />
+  <result column="G_STUDENTID" jdbcType="VARCHAR" property="gStudentid" />
+  <result column="T_TEACHER" jdbcType="INTEGER" property="tTeacher" />
+  <result column="TAG_ID" jdbcType="INTEGER" property="tagId" />
+  <result column="RDQ_THEME" jdbcType="VARCHAR" property="rdqTheme" />
+  <result column="RDQ_CLASS" jdbcType="VARCHAR" property="rdqClass" />
+  <result column="RDQ_TEXT" jdbcType="VARCHAR" property="rdqText" />
+  <result column="RDQ_TIME" jdbcType="TIME" property="rdqTime" />
+  <result column="RDQ_UPLOADFILE" jdbcType="VARCHAR" property="rdqUploadfile" />
+</resultMap>
+
+  <resultMap id="BaseResultMapAngTag" type="com.learningsystem.pojo.Releasediscussionquestions">
     <id column="RDQ_ID" jdbcType="INTEGER" property="rdqId" />
     <result column="G_STUDENTID" jdbcType="VARCHAR" property="gStudentid" />
-    <result column="TAG_ID" jdbcType="INTEGER" property="tagId" />
-    <result column="RDQ_THEME" jdbcType="VARCHAR" property="rdqTheme" />
-    <result column="RDQ_CLASS" jdbcType="VARCHAR" property="rdqClass" />
-    <result column="RDQ_TEXT" jdbcType="VARCHAR" property="rdqText" />
-    <result column="RDQ_TIME" jdbcType="TIME" property="rdqTime" />
-    <result column="RDQ_UPLOADFILE" jdbcType="VARCHAR" property="rdqUploadfile" />
-  </resultMap>
-  <resultMap id="BaseResultMapAndTag" type="com.learningsystem.pojo.Releasediscussionquestions">
-    <id column="RDQ_ID" jdbcType="INTEGER" property="rdqId" />
-    <result column="G_STUDENTID" jdbcType="VARCHAR" property="gStudentid" />
+    <result column="T_TEACHER" jdbcType="INTEGER" property="tTeacher" />
     <result column="TAG_ID" jdbcType="INTEGER" property="tagId" />
     <result column="RDQ_THEME" jdbcType="VARCHAR" property="rdqTheme" />
     <result column="RDQ_CLASS" jdbcType="VARCHAR" property="rdqClass" />
@@ -25,12 +28,11 @@
       <result column="TAG_CONTEN" jdbcType="VARCHAR" property="tagConten" />
     </association>
   </resultMap>
-  <!--selectRdqAndTag-->
-  <select id="selectRdqAndTag" resultMap="BaseResultMapAndTag">
+  <select id="selectRdqAndTag" resultMap="BaseResultMapAngTag">
     SELECT releasediscussionquestions.`G_STUDENTID`,releasediscussionquestions.`RDQ_THEME`,releasediscussionquestions.`RDQ_CLASS`,
     releasediscussionquestions.`RDQ_TEXT`,tag.`TAG_CONTEN`
     FROM tag,releasediscussionquestions
-    WHERE tag.`TAG_ID` = releasediscussionquestions.`TAG_ID`;
+    WHERE tag.`TAG_ID` = releasediscussionquestions.`TAG_ID`
   </select>
   <sql id="Example_Where_Clause">
     <where>
@@ -91,7 +93,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    RDQ_ID, G_STUDENTID, TAG_ID, RDQ_THEME, RDQ_CLASS, RDQ_TEXT, RDQ_TIME, RDQ_UPLOADFILE
+    RDQ_ID, G_STUDENTID, T_TEACHER, TAG_ID, RDQ_THEME, RDQ_CLASS, RDQ_TEXT, RDQ_TIME, 
+    RDQ_UPLOADFILE
   </sql>
   <select id="selectByExample" parameterType="com.learningsystem.pojo.ReleasediscussionquestionsExample" resultMap="BaseResultMap">
     select
@@ -124,12 +127,14 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.learningsystem.pojo.Releasediscussionquestions">
-    insert into releasediscussionquestions (RDQ_ID, G_STUDENTID, TAG_ID, 
-      RDQ_THEME, RDQ_CLASS, RDQ_TEXT, 
-      RDQ_TIME, RDQ_UPLOADFILE)
-    values (#{rdqId,jdbcType=INTEGER}, #{gStudentid,jdbcType=VARCHAR}, #{tagId,jdbcType=INTEGER}, 
-      #{rdqTheme,jdbcType=VARCHAR}, #{rdqClass,jdbcType=VARCHAR}, #{rdqText,jdbcType=VARCHAR}, 
-      #{rdqTime,jdbcType=TIME}, #{rdqUploadfile,jdbcType=VARCHAR})
+    insert into releasediscussionquestions (RDQ_ID, G_STUDENTID, T_TEACHER, 
+      TAG_ID, RDQ_THEME, RDQ_CLASS, 
+      RDQ_TEXT, RDQ_TIME, RDQ_UPLOADFILE
+      )
+    values (#{rdqId,jdbcType=INTEGER}, #{gStudentid,jdbcType=VARCHAR}, #{tTeacher,jdbcType=INTEGER}, 
+      #{tagId,jdbcType=INTEGER}, #{rdqTheme,jdbcType=VARCHAR}, #{rdqClass,jdbcType=VARCHAR}, 
+      #{rdqText,jdbcType=VARCHAR}, #{rdqTime,jdbcType=TIME}, #{rdqUploadfile,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.learningsystem.pojo.Releasediscussionquestions">
     insert into releasediscussionquestions
@@ -139,6 +144,9 @@
       </if>
       <if test="gStudentid != null">
         G_STUDENTID,
+      </if>
+      <if test="tTeacher != null">
+        T_TEACHER,
       </if>
       <if test="tagId != null">
         TAG_ID,
@@ -165,6 +173,9 @@
       </if>
       <if test="gStudentid != null">
         #{gStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="tTeacher != null">
+        #{tTeacher,jdbcType=INTEGER},
       </if>
       <if test="tagId != null">
         #{tagId,jdbcType=INTEGER},
@@ -201,6 +212,9 @@
       <if test="record.gStudentid != null">
         G_STUDENTID = #{record.gStudentid,jdbcType=VARCHAR},
       </if>
+      <if test="record.tTeacher != null">
+        T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
+      </if>
       <if test="record.tagId != null">
         TAG_ID = #{record.tagId,jdbcType=INTEGER},
       </if>
@@ -228,6 +242,7 @@
     update releasediscussionquestions
     set RDQ_ID = #{record.rdqId,jdbcType=INTEGER},
       G_STUDENTID = #{record.gStudentid,jdbcType=VARCHAR},
+      T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
       TAG_ID = #{record.tagId,jdbcType=INTEGER},
       RDQ_THEME = #{record.rdqTheme,jdbcType=VARCHAR},
       RDQ_CLASS = #{record.rdqClass,jdbcType=VARCHAR},
@@ -243,6 +258,9 @@
     <set>
       <if test="gStudentid != null">
         G_STUDENTID = #{gStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="tTeacher != null">
+        T_TEACHER = #{tTeacher,jdbcType=INTEGER},
       </if>
       <if test="tagId != null">
         TAG_ID = #{tagId,jdbcType=INTEGER},
@@ -268,6 +286,7 @@
   <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Releasediscussionquestions">
     update releasediscussionquestions
     set G_STUDENTID = #{gStudentid,jdbcType=VARCHAR},
+      T_TEACHER = #{tTeacher,jdbcType=INTEGER},
       TAG_ID = #{tagId,jdbcType=INTEGER},
       RDQ_THEME = #{rdqTheme,jdbcType=VARCHAR},
       RDQ_CLASS = #{rdqClass,jdbcType=VARCHAR},

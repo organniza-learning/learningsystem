@@ -4,9 +4,7 @@ import com.learningsystem.pojo.Releasediscussionquestions;
 import com.learningsystem.pojo.ReleasediscussionquestionsExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface ReleasediscussionquestionsMapper {
     long countByExample(ReleasediscussionquestionsExample example);
 
@@ -30,5 +28,6 @@ public interface ReleasediscussionquestionsMapper {
 
     int updateByPrimaryKey(Releasediscussionquestions record);
 
+    //查询问题讨论标题以及内容和所属的标签
     List<Releasediscussionquestions> selectRdqAndTag();
 }

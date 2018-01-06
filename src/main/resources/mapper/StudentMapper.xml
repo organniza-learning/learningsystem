@@ -4,12 +4,15 @@
   <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Student">
     <id column="STU_ID" jdbcType="INTEGER" property="stuId" />
     <result column="TG_OPENID" jdbcType="VARCHAR" property="tgOpenid" />
+    <result column="C_CLASSID" jdbcType="INTEGER" property="cClassid" />
     <result column="TG_IDENTIFYING" jdbcType="INTEGER" property="tgIdentifying" />
     <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
+    <result column="STU_PASSWORD" jdbcType="VARCHAR" property="stuPassword" />
     <result column="STU_NAME" jdbcType="VARCHAR" property="stuName" />
     <result column="STU_GROUP" jdbcType="VARCHAR" property="stuGroup" />
     <result column="STU_DUTY" jdbcType="VARCHAR" property="stuDuty" />
     <result column="G_SPEAKNUM" jdbcType="INTEGER" property="gSpeaknum" />
+    <result column="STU_EMAIL" jdbcType="VARCHAR" property="stuEmail" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -70,8 +73,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    STU_ID, TG_OPENID, TG_IDENTIFYING, STU_STUDENTID, STU_NAME, STU_GROUP, STU_DUTY, 
-    G_SPEAKNUM
+    STU_ID, TG_OPENID, C_CLASSID, TG_IDENTIFYING, STU_STUDENTID, STU_PASSWORD, STU_NAME, 
+    STU_GROUP, STU_DUTY, G_SPEAKNUM, STU_EMAIL
   </sql>
   <select id="selectByExample" parameterType="com.learningsystem.pojo.StudentExample" resultMap="BaseResultMap">
     select
@@ -104,12 +107,14 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.learningsystem.pojo.Student">
-    insert into student (STU_ID, TG_OPENID, TG_IDENTIFYING, 
-      STU_STUDENTID, STU_NAME, STU_GROUP, 
-      STU_DUTY, G_SPEAKNUM)
-    values (#{stuId,jdbcType=INTEGER}, #{tgOpenid,jdbcType=VARCHAR}, #{tgIdentifying,jdbcType=INTEGER}, 
-      #{stuStudentid,jdbcType=VARCHAR}, #{stuName,jdbcType=VARCHAR}, #{stuGroup,jdbcType=VARCHAR}, 
-      #{stuDuty,jdbcType=VARCHAR}, #{gSpeaknum,jdbcType=INTEGER})
+    insert into student (STU_ID, TG_OPENID, C_CLASSID, 
+      TG_IDENTIFYING, STU_STUDENTID, STU_PASSWORD, 
+      STU_NAME, STU_GROUP, STU_DUTY, 
+      G_SPEAKNUM, STU_EMAIL)
+    values (#{stuId,jdbcType=INTEGER}, #{tgOpenid,jdbcType=VARCHAR}, #{cClassid,jdbcType=INTEGER}, 
+      #{tgIdentifying,jdbcType=INTEGER}, #{stuStudentid,jdbcType=VARCHAR}, #{stuPassword,jdbcType=VARCHAR}, 
+      #{stuName,jdbcType=VARCHAR}, #{stuGroup,jdbcType=VARCHAR}, #{stuDuty,jdbcType=VARCHAR}, 
+      #{gSpeaknum,jdbcType=INTEGER}, #{stuEmail,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.learningsystem.pojo.Student">
     insert into student
@@ -120,11 +125,17 @@
       <if test="tgOpenid != null">
         TG_OPENID,
       </if>
+      <if test="cClassid != null">
+        C_CLASSID,
+      </if>
       <if test="tgIdentifying != null">
         TG_IDENTIFYING,
       </if>
       <if test="stuStudentid != null">
         STU_STUDENTID,
+      </if>
+      <if test="stuPassword != null">
+        STU_PASSWORD,
       </if>
       <if test="stuName != null">
         STU_NAME,
@@ -138,6 +149,9 @@
       <if test="gSpeaknum != null">
         G_SPEAKNUM,
       </if>
+      <if test="stuEmail != null">
+        STU_EMAIL,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="stuId != null">
@@ -146,11 +160,17 @@
       <if test="tgOpenid != null">
         #{tgOpenid,jdbcType=VARCHAR},
       </if>
+      <if test="cClassid != null">
+        #{cClassid,jdbcType=INTEGER},
+      </if>
       <if test="tgIdentifying != null">
         #{tgIdentifying,jdbcType=INTEGER},
       </if>
       <if test="stuStudentid != null">
         #{stuStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPassword != null">
+        #{stuPassword,jdbcType=VARCHAR},
       </if>
       <if test="stuName != null">
         #{stuName,jdbcType=VARCHAR},
@@ -163,6 +183,9 @@
       </if>
       <if test="gSpeaknum != null">
         #{gSpeaknum,jdbcType=INTEGER},
+      </if>
+      <if test="stuEmail != null">
+        #{stuEmail,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -181,11 +204,17 @@
       <if test="record.tgOpenid != null">
         TG_OPENID = #{record.tgOpenid,jdbcType=VARCHAR},
       </if>
+      <if test="record.cClassid != null">
+        C_CLASSID = #{record.cClassid,jdbcType=INTEGER},
+      </if>
       <if test="record.tgIdentifying != null">
         TG_IDENTIFYING = #{record.tgIdentifying,jdbcType=INTEGER},
       </if>
       <if test="record.stuStudentid != null">
         STU_STUDENTID = #{record.stuStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stuPassword != null">
+        STU_PASSWORD = #{record.stuPassword,jdbcType=VARCHAR},
       </if>
       <if test="record.stuName != null">
         STU_NAME = #{record.stuName,jdbcType=VARCHAR},
@@ -199,6 +228,9 @@
       <if test="record.gSpeaknum != null">
         G_SPEAKNUM = #{record.gSpeaknum,jdbcType=INTEGER},
       </if>
+      <if test="record.stuEmail != null">
+        STU_EMAIL = #{record.stuEmail,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -208,12 +240,15 @@
     update student
     set STU_ID = #{record.stuId,jdbcType=INTEGER},
       TG_OPENID = #{record.tgOpenid,jdbcType=VARCHAR},
+      C_CLASSID = #{record.cClassid,jdbcType=INTEGER},
       TG_IDENTIFYING = #{record.tgIdentifying,jdbcType=INTEGER},
       STU_STUDENTID = #{record.stuStudentid,jdbcType=VARCHAR},
+      STU_PASSWORD = #{record.stuPassword,jdbcType=VARCHAR},
       STU_NAME = #{record.stuName,jdbcType=VARCHAR},
       STU_GROUP = #{record.stuGroup,jdbcType=VARCHAR},
       STU_DUTY = #{record.stuDuty,jdbcType=VARCHAR},
-      G_SPEAKNUM = #{record.gSpeaknum,jdbcType=INTEGER}
+      G_SPEAKNUM = #{record.gSpeaknum,jdbcType=INTEGER},
+      STU_EMAIL = #{record.stuEmail,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -224,11 +259,17 @@
       <if test="tgOpenid != null">
         TG_OPENID = #{tgOpenid,jdbcType=VARCHAR},
       </if>
+      <if test="cClassid != null">
+        C_CLASSID = #{cClassid,jdbcType=INTEGER},
+      </if>
       <if test="tgIdentifying != null">
         TG_IDENTIFYING = #{tgIdentifying,jdbcType=INTEGER},
       </if>
       <if test="stuStudentid != null">
         STU_STUDENTID = #{stuStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="stuPassword != null">
+        STU_PASSWORD = #{stuPassword,jdbcType=VARCHAR},
       </if>
       <if test="stuName != null">
         STU_NAME = #{stuName,jdbcType=VARCHAR},
@@ -242,18 +283,24 @@
       <if test="gSpeaknum != null">
         G_SPEAKNUM = #{gSpeaknum,jdbcType=INTEGER},
       </if>
+      <if test="stuEmail != null">
+        STU_EMAIL = #{stuEmail,jdbcType=VARCHAR},
+      </if>
     </set>
     where STU_ID = #{stuId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Student">
     update student
     set TG_OPENID = #{tgOpenid,jdbcType=VARCHAR},
+      C_CLASSID = #{cClassid,jdbcType=INTEGER},
       TG_IDENTIFYING = #{tgIdentifying,jdbcType=INTEGER},
       STU_STUDENTID = #{stuStudentid,jdbcType=VARCHAR},
+      STU_PASSWORD = #{stuPassword,jdbcType=VARCHAR},
       STU_NAME = #{stuName,jdbcType=VARCHAR},
       STU_GROUP = #{stuGroup,jdbcType=VARCHAR},
       STU_DUTY = #{stuDuty,jdbcType=VARCHAR},
-      G_SPEAKNUM = #{gSpeaknum,jdbcType=INTEGER}
+      G_SPEAKNUM = #{gSpeaknum,jdbcType=INTEGER},
+      STU_EMAIL = #{stuEmail,jdbcType=VARCHAR}
     where STU_ID = #{stuId,jdbcType=INTEGER}
   </update>
 </mapper>

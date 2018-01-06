@@ -5,9 +5,13 @@ public class Student {
 
     private String tgOpenid;
 
+    private Integer cClassid;
+
     private Integer tgIdentifying;
 
     private String stuStudentid;
+
+    private String stuPassword;
 
     private String stuName;
 
@@ -16,6 +20,8 @@ public class Student {
     private String stuDuty;
 
     private Integer gSpeaknum;
+
+    private String stuEmail;
 
     public Integer getStuId() {
         return stuId;
@@ -33,6 +39,14 @@ public class Student {
         this.tgOpenid = tgOpenid == null ? null : tgOpenid.trim();
     }
 
+    public Integer getcClassid() {
+        return cClassid;
+    }
+
+    public void setcClassid(Integer cClassid) {
+        this.cClassid = cClassid;
+    }
+
     public Integer getTgIdentifying() {
         return tgIdentifying;
     }
@@ -47,6 +61,14 @@ public class Student {
 
     public void setStuStudentid(String stuStudentid) {
         this.stuStudentid = stuStudentid == null ? null : stuStudentid.trim();
+    }
+
+    public String getStuPassword() {
+        return stuPassword;
+    }
+
+    public void setStuPassword(String stuPassword) {
+        this.stuPassword = stuPassword == null ? null : stuPassword.trim();
     }
 
     public String getStuName() {
@@ -79,5 +101,13 @@ public class Student {
 
     public void setgSpeaknum(Integer gSpeaknum) {
         this.gSpeaknum = gSpeaknum;
+    }
+
+    public String getStuEmail() {
+        return stuEmail;
+    }
+
+    public void setStuEmail(String stuEmail) {
+        this.stuEmail = stuEmail == null ? null : stuEmail.trim();
     }
 }

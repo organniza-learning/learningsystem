@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.learningsystem.dao.ReleaseexerciseMapper">
-  <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Releaseexercise">
-    <id column="RE_ID" jdbcType="INTEGER" property="reId" />
-    <result column="RE_TITLE" jdbcType="VARCHAR" property="reTitle" />
+<mapper namespace="com.learningsystem.dao.TeacherMapper">
+  <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Teacher">
+    <id column="T_ID" jdbcType="INTEGER" property="tId" />
+    <result column="T_NAME" jdbcType="VARCHAR" property="tName" />
     <result column="T_TEACHER" jdbcType="INTEGER" property="tTeacher" />
-    <result column="RE_CLASS" jdbcType="VARCHAR" property="reClass" />
-    <result column="RE_TEXT" jdbcType="VARCHAR" property="reText" />
-    <result column="RE_FILE" jdbcType="VARCHAR" property="reFile" />
+    <result column="C_CLASS" jdbcType="VARCHAR" property="cClass" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -68,15 +66,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    RE_ID, RE_TITLE, T_TEACHER, RE_CLASS, RE_TEXT, RE_FILE
+    T_ID, T_NAME, T_TEACHER, C_CLASS
   </sql>
-  <select id="selectByExample" parameterType="com.learningsystem.pojo.ReleaseexerciseExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.learningsystem.pojo.TeacherExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from releaseexercise
+    from teacher
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -87,96 +85,76 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from releaseexercise
-    where RE_ID = #{reId,jdbcType=INTEGER}
+    from teacher
+    where T_ID = #{tId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from releaseexercise
-    where RE_ID = #{reId,jdbcType=INTEGER}
+    delete from teacher
+    where T_ID = #{tId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.learningsystem.pojo.ReleaseexerciseExample">
-    delete from releaseexercise
+  <delete id="deleteByExample" parameterType="com.learningsystem.pojo.TeacherExample">
+    delete from teacher
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.learningsystem.pojo.Releaseexercise">
-    insert into releaseexercise (RE_ID, RE_TITLE, T_TEACHER, 
-      RE_CLASS, RE_TEXT, RE_FILE
-      )
-    values (#{reId,jdbcType=INTEGER}, #{reTitle,jdbcType=VARCHAR}, #{tTeacher,jdbcType=INTEGER}, 
-      #{reClass,jdbcType=VARCHAR}, #{reText,jdbcType=VARCHAR}, #{reFile,jdbcType=VARCHAR}
-      )
+  <insert id="insert" parameterType="com.learningsystem.pojo.Teacher">
+    insert into teacher (T_ID, T_NAME, T_TEACHER, 
+      C_CLASS)
+    values (#{tId,jdbcType=INTEGER}, #{tName,jdbcType=VARCHAR}, #{tTeacher,jdbcType=INTEGER}, 
+      #{cClass,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.learningsystem.pojo.Releaseexercise">
-    insert into releaseexercise
+  <insert id="insertSelective" parameterType="com.learningsystem.pojo.Teacher">
+    insert into teacher
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="reId != null">
-        RE_ID,
+      <if test="tId != null">
+        T_ID,
       </if>
-      <if test="reTitle != null">
-        RE_TITLE,
+      <if test="tName != null">
+        T_NAME,
       </if>
       <if test="tTeacher != null">
         T_TEACHER,
       </if>
-      <if test="reClass != null">
-        RE_CLASS,
-      </if>
-      <if test="reText != null">
-        RE_TEXT,
-      </if>
-      <if test="reFile != null">
-        RE_FILE,
+      <if test="cClass != null">
+        C_CLASS,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="reId != null">
-        #{reId,jdbcType=INTEGER},
+      <if test="tId != null">
+        #{tId,jdbcType=INTEGER},
       </if>
-      <if test="reTitle != null">
-        #{reTitle,jdbcType=VARCHAR},
+      <if test="tName != null">
+        #{tName,jdbcType=VARCHAR},
       </if>
       <if test="tTeacher != null">
         #{tTeacher,jdbcType=INTEGER},
       </if>
-      <if test="reClass != null">
-        #{reClass,jdbcType=VARCHAR},
-      </if>
-      <if test="reText != null">
-        #{reText,jdbcType=VARCHAR},
-      </if>
-      <if test="reFile != null">
-        #{reFile,jdbcType=VARCHAR},
+      <if test="cClass != null">
+        #{cClass,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.learningsystem.pojo.ReleaseexerciseExample" resultType="java.lang.Long">
-    select count(*) from releaseexercise
+  <select id="countByExample" parameterType="com.learningsystem.pojo.TeacherExample" resultType="java.lang.Long">
+    select count(*) from teacher
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update releaseexercise
+    update teacher
     <set>
-      <if test="record.reId != null">
-        RE_ID = #{record.reId,jdbcType=INTEGER},
+      <if test="record.tId != null">
+        T_ID = #{record.tId,jdbcType=INTEGER},
       </if>
-      <if test="record.reTitle != null">
-        RE_TITLE = #{record.reTitle,jdbcType=VARCHAR},
+      <if test="record.tName != null">
+        T_NAME = #{record.tName,jdbcType=VARCHAR},
       </if>
       <if test="record.tTeacher != null">
         T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
       </if>
-      <if test="record.reClass != null">
-        RE_CLASS = #{record.reClass,jdbcType=VARCHAR},
-      </if>
-      <if test="record.reText != null">
-        RE_TEXT = #{record.reText,jdbcType=VARCHAR},
-      </if>
-      <if test="record.reFile != null">
-        RE_FILE = #{record.reFile,jdbcType=VARCHAR},
+      <if test="record.cClass != null">
+        C_CLASS = #{record.cClass,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -184,45 +162,35 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update releaseexercise
-    set RE_ID = #{record.reId,jdbcType=INTEGER},
-      RE_TITLE = #{record.reTitle,jdbcType=VARCHAR},
+    update teacher
+    set T_ID = #{record.tId,jdbcType=INTEGER},
+      T_NAME = #{record.tName,jdbcType=VARCHAR},
       T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
-      RE_CLASS = #{record.reClass,jdbcType=VARCHAR},
-      RE_TEXT = #{record.reText,jdbcType=VARCHAR},
-      RE_FILE = #{record.reFile,jdbcType=VARCHAR}
+      C_CLASS = #{record.cClass,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Releaseexercise">
-    update releaseexercise
+  <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Teacher">
+    update teacher
     <set>
-      <if test="reTitle != null">
-        RE_TITLE = #{reTitle,jdbcType=VARCHAR},
+      <if test="tName != null">
+        T_NAME = #{tName,jdbcType=VARCHAR},
       </if>
       <if test="tTeacher != null">
         T_TEACHER = #{tTeacher,jdbcType=INTEGER},
       </if>
-      <if test="reClass != null">
-        RE_CLASS = #{reClass,jdbcType=VARCHAR},
-      </if>
-      <if test="reText != null">
-        RE_TEXT = #{reText,jdbcType=VARCHAR},
-      </if>
-      <if test="reFile != null">
-        RE_FILE = #{reFile,jdbcType=VARCHAR},
+      <if test="cClass != null">
+        C_CLASS = #{cClass,jdbcType=VARCHAR},
       </if>
     </set>
-    where RE_ID = #{reId,jdbcType=INTEGER}
+    where T_ID = #{tId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Releaseexercise">
-    update releaseexercise
-    set RE_TITLE = #{reTitle,jdbcType=VARCHAR},
+  <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Teacher">
+    update teacher
+    set T_NAME = #{tName,jdbcType=VARCHAR},
       T_TEACHER = #{tTeacher,jdbcType=INTEGER},
-      RE_CLASS = #{reClass,jdbcType=VARCHAR},
-      RE_TEXT = #{reText,jdbcType=VARCHAR},
-      RE_FILE = #{reFile,jdbcType=VARCHAR}
-    where RE_ID = #{reId,jdbcType=INTEGER}
+      C_CLASS = #{cClass,jdbcType=VARCHAR}
+    where T_ID = #{tId,jdbcType=INTEGER}
   </update>
 </mapper>

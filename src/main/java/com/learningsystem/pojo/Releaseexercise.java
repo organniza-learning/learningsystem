@@ -5,6 +5,8 @@ public class Releaseexercise {
 
     private String reTitle;
 
+    private Integer tTeacher;
+
     private String reClass;
 
     private String reText;
@@ -25,6 +27,14 @@ public class Releaseexercise {
 
     public void setReTitle(String reTitle) {
         this.reTitle = reTitle == null ? null : reTitle.trim();
+    }
+
+    public Integer gettTeacher() {
+        return tTeacher;
+    }
+
+    public void settTeacher(Integer tTeacher) {
+        this.tTeacher = tTeacher;
     }
 
     public String getReClass() {

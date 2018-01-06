@@ -6,110 +6,37 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb286246-3a04-4c51-81c9-322d85e73b60" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/artifacts/learningsystem_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/artifacts/learningsystem_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__com_alibaba_fastjson_1_2_35.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_0_b07.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__jstl_jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_mybatis_generator_mybatis_generator_core_1_3_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_mybatis_mybatis_3_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_aop_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_beans_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_context_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_core_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_expression_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_oxm_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_test_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_tx_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_web_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/learningsystem.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassworkMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/GroupingMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleaseapplicationcaseMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleaseexerciseMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleaselearningcontentMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/RleaseonlinetestingMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/StudentMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/TagMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/TestgradeMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/WritebackMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Classwork.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ClassworkExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Grouping.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/GroupingExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseapplicationcase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleaseapplicationcaseExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleasediscussionquestionsExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseexercise.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleaseexerciseExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaselearningcontent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleaselearningcontentExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Rleaseonlinetesting.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/RleaseonlinetestingExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Student.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/StudentExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Tag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/TagExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Testgrade.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/TestgradeExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Writeback.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/WritebackExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/utils/GeneratorSqlmap.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/generatorConfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ClassworkMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/GroupingMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleaseapplicationcaseMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleaseexerciseMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleaselearningcontentMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/RleaseonlinetestingMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/StudentMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/TagMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/TestgradeMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/WritebackMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mybatis/mybatis-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/spring/applicationContext.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/spring/dispatcherServlet-servlet.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/webapp/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/webapp/index.jsp" />
+    <list default="true" id="bb286246-3a04-4c51-81c9-322d85e73b60" name="Default" comment="网上学习平台">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/TeacherMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Class.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ClassExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Teacher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/TeacherExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ClassMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/TeacherMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../learningsystem/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseapplicationcase.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseapplicationcase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleaseapplicationcaseExample.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleaseapplicationcaseExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleasediscussionquestionsExample.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleasediscussionquestionsExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseexercise.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseexercise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleaseexerciseExample.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleaseexerciseExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Rleaseonlinetesting.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Rleaseonlinetesting.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/RleaseonlinetestingExample.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/RleaseonlinetestingExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Student.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Student.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/StudentExample.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/StudentExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/utils/GeneratorSqlmap.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/utils/GeneratorSqlmap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleaseapplicationcaseMapper.xml" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleaseapplicationcaseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleaseexerciseMapper.xml" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleaseexerciseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/RleaseonlinetestingMapper.xml" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/RleaseonlinetestingMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/StudentMapper.xml" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/StudentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/resources/spring/applicationContext.xml" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/spring/applicationContext.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../learningsystem/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mybatis/generatorConfig.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../learningsystem/out/" />
     <ignored path="$PROJECT_DIR$/../learningsystem/target/" />
@@ -121,7 +48,112 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="ReleasediscussionquestionsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
+                <element signature="e#1048#1049#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReleasediscussionquestionsMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+              <folding>
+                <marker date="1515247282398" expanded="true" signature="2020:2306" ph="SELECT relea... tag" />
+                <marker date="1515247282398" expanded="true" signature="5313:5442" ph="select from releasediscussionquestions" />
+                <marker date="1515247282398" expanded="true" signature="5528:5611" ph="delete from " />
+                <marker date="1515247282398" expanded="true" signature="5734:5772" ph="delete from " />
+                <marker date="1515247282398" expanded="true" signature="5971:6428" ph="insert into releasediscussionquestions... " />
+                <marker date="1515247282398" expanded="true" signature="8221:8268" ph="select count... releasediscussionquestions" />
+                <marker date="1515247282398" expanded="true" signature="9656:10180" ph="update relea... " />
+                <marker date="1515247282398" expanded="true" signature="10410:11288" ph="update relea... " />
+                <marker date="1515247282398" expanded="true" signature="11407:11871" ph="update relea... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReleasediscussionquestionsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReleasediscussionquestionsServiceIml.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="3" column="58" lean-forward="false" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+              <folding>
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#531#532#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReleasediscussionquestionsMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="31" column="52" lean-forward="false" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReleasediscussionquestionsExample.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleasediscussionquestionsExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Releasediscussionquestions.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#430#431#0" expanded="true" />
+                <element signature="e#456#457#0" expanded="true" />
+                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TagMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/TagMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="5" column="74" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -151,18 +183,21 @@
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/GeneratorSqlmap.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/utils/GeneratorSqlmap.java" />
-        <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/spring/dispatcherServlet-servlet.xml" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/mybatis/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/../learningsystem/pom.xml" />
+        <option value="$PROJECT_DIR$/../learningsystem/src/main/test/com/learningsystem/test/Test.java" />
+        <option value="$PROJECT_DIR$/../learningsystem/src/main/test/com/learningsystem/test/Tets.java" />
+        <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/utils/GeneratorSqlmap.java" />
+        <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/mybatis/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/spring/applicationContext.xml" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java" />
-        <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java" />
+        <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml" />
+        <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" />
       </list>
     </option>
   </component>
@@ -222,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -308,6 +342,15 @@
               <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -324,19 +367,35 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../learningsystem" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -344,6 +403,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\learningsystem\src\main\resources\mybatis" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.learningsystem.service.iml" />
       <recent name="com.learningsystem.service" />
@@ -553,12 +615,23 @@
       <option name="presentableId" value="Default" />
       <updated>1514806680019</updated>
       <workItem from="1514806682061" duration="5676000" />
-      <workItem from="1514867667050" duration="4995000" />
+      <workItem from="1514867667050" duration="5321000" />
+      <workItem from="1514877607786" duration="157000" />
+      <workItem from="1515142661138" duration="3643000" />
+      <workItem from="1515245074269" duration="2361000" />
     </task>
+    <task id="LOCAL-00001" summary="网上学习平台">
+      <created>1514874023305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1514874023305</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10671000" />
+    <option name="totallyTimeSpent" value="17158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -573,18 +646,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18002322" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2601626" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25900117" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31126598" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2485482" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25375536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26502147" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -637,11 +710,69 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="网上学习平台" />
+    <option name="LAST_COMMIT_MESSAGE" value="网上学习平台" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -662,29 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/utils/GeneratorSqlmap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleasediscussionquestionsExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-780">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -716,6 +824,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -723,16 +832,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4330">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1514808091699" expanded="true" signature="3554:3664" ph="select from classwork" />
-            <marker date="1514808091699" expanded="true" signature="3750:3814" ph="delete from " />
-            <marker date="1514808091699" expanded="true" signature="3920:3941" ph="delete from " />
-            <marker date="1514808091699" expanded="true" signature="4123:4366" ph="insert into classwork... " />
-            <marker date="1514808091699" expanded="true" signature="5491:5521" ph="select count... classwork" />
-            <marker date="1514808091699" expanded="true" signature="6439:6721" ph="update class... " />
-            <marker date="1514808091699" expanded="true" signature="6934:7399" ph="update class... " />
-            <marker date="1514808091699" expanded="true" signature="7501:7751" ph="update class... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -743,51 +843,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/test/com/learningsystem/test/Test.java" />
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/test/com/learningsystem/test/Tets.java" />
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/mybatis/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="68" column="63" lean-forward="true" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3325">
-          <caret line="205" column="16" lean-forward="true" selection-start-line="205" selection-start-column="16" selection-end-line="205" selection-end-column="16" />
+        <state relative-caret-position="240">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/TeacherMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/spring/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="67" selection-end-column="26" />
+        <state relative-caret-position="210">
+          <caret line="62" column="90" lean-forward="false" selection-start-line="62" selection-start-column="90" selection-end-line="62" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassworkMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/utils/GeneratorSqlmap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="22" column="63" lean-forward="false" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/RleaseonlinetestingMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/TagMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="62" lean-forward="true" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-          <folding>
-            <marker date="1514808091728" expanded="true" signature="3287:3393" ph="select from tag" />
-            <marker date="1514808091728" expanded="true" signature="3479:3539" ph="delete from " />
-            <marker date="1514808091728" expanded="true" signature="3639:3654" ph="delete from " />
-            <marker date="1514808091728" expanded="true" signature="3830:3936" ph="insert into tag... " />
-            <marker date="1514808091728" expanded="true" signature="4602:4626" ph="select count... tag" />
-            <marker date="1514808091728" expanded="true" signature="5214:5331" ph="update tag s... " />
-            <marker date="1514808091728" expanded="true" signature="5538:5714" ph="update tag T... " />
-            <marker date="1514808091728" expanded="true" signature="5810:5916" ph="update tag s... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="150">
+          <caret line="5" column="74" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="3" column="58" lean-forward="false" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
           <folding>
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#531#532#0" expanded="true" />
@@ -795,46 +928,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java">
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="402">
+          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="450">
+          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java">
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="365">
+          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding>
+            <marker date="1515247282398" expanded="true" signature="2020:2306" ph="SELECT relea... tag" />
+            <marker date="1515247282398" expanded="true" signature="5313:5442" ph="select from releasediscussionquestions" />
+            <marker date="1515247282398" expanded="true" signature="5528:5611" ph="delete from " />
+            <marker date="1515247282398" expanded="true" signature="5734:5772" ph="delete from " />
+            <marker date="1515247282398" expanded="true" signature="5971:6428" ph="insert into releasediscussionquestions... " />
+            <marker date="1515247282398" expanded="true" signature="8221:8268" ph="select count... releasediscussionquestions" />
+            <marker date="1515247282398" expanded="true" signature="9656:10180" ph="update relea... " />
+            <marker date="1515247282398" expanded="true" signature="10410:11288" ph="update relea... " />
+            <marker date="1515247282398" expanded="true" signature="11407:11871" ph="update relea... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="31" column="52" lean-forward="false" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml">
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleasediscussionquestionsExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="63" lean-forward="false" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
+        <state relative-caret-position="120">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <marker date="1514873652635" expanded="true" signature="1918:2204" ph="SELECT relea... tag" />
-            <marker date="1514873652635" expanded="true" signature="5196:5325" ph="select from releasediscussionquestions" />
-            <marker date="1514873652635" expanded="true" signature="5411:5494" ph="delete from " />
-            <marker date="1514873652635" expanded="true" signature="5617:5655" ph="delete from " />
-            <marker date="1514873652635" expanded="true" signature="5854:6256" ph="insert into releasediscussionquestions... " />
-            <marker date="1514873652635" expanded="true" signature="7898:7945" ph="select count... releasediscussionquestions" />
-            <marker date="1514873652635" expanded="true" signature="9222:9691" ph="update relea... " />
-            <marker date="1514873652635" expanded="true" signature="9921:10702" ph="update relea... " />
-            <marker date="1514873652635" expanded="true" signature="10821:11237" ph="update relea... " />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
           </folding>
         </state>
       </provider>

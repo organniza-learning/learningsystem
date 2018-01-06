@@ -11,9 +11,9 @@ import java.util.List;
 public class ReleasediscussionquestionsService {
 
     @Autowired
-    ReleasediscussionquestionsServiceIml serviceIml;
+    ReleasediscussionquestionsServiceIml releasediscussionquestionsServiceIml;
 
-    public List<Releasediscussionquestions> selectRdqAndTag() {
-        return serviceIml.selectRdqAndTag();
+   public List<Releasediscussionquestions> selectRdqAndTag(){
+        return releasediscussionquestionsServiceIml.selectRdqAndTag();
     }
 }

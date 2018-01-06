@@ -7,6 +7,8 @@ public class Releasediscussionquestions {
 
     private String gStudentid;
 
+    private Integer tTeacher;
+
     private Integer tagId;
 
     private String rdqTheme;
@@ -19,7 +21,7 @@ public class Releasediscussionquestions {
 
     private String rdqUploadfile;
 
-    //多表联合查询
+    //查询Tag标签
     private Tag tag;
 
     public Tag getTag() {
@@ -44,6 +46,14 @@ public class Releasediscussionquestions {
 
     public void setgStudentid(String gStudentid) {
         this.gStudentid = gStudentid == null ? null : gStudentid.trim();
+    }
+
+    public Integer gettTeacher() {
+        return tTeacher;
+    }
+
+    public void settTeacher(Integer tTeacher) {
+        this.tTeacher = tTeacher;
     }
 
     public Integer getTagId() {

@@ -262,6 +262,66 @@ public class ReleasediscussionquestionsExample {
             return (Criteria) this;
         }
 
+        public Criteria andTTeacherIsNull() {
+            addCriterion("T_TEACHER is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherIsNotNull() {
+            addCriterion("T_TEACHER is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherEqualTo(Integer value) {
+            addCriterion("T_TEACHER =", value, "tTeacher");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherNotEqualTo(Integer value) {
+            addCriterion("T_TEACHER <>", value, "tTeacher");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherGreaterThan(Integer value) {
+            addCriterion("T_TEACHER >", value, "tTeacher");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherGreaterThanOrEqualTo(Integer value) {
+            addCriterion("T_TEACHER >=", value, "tTeacher");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherLessThan(Integer value) {
+            addCriterion("T_TEACHER <", value, "tTeacher");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherLessThanOrEqualTo(Integer value) {
+            addCriterion("T_TEACHER <=", value, "tTeacher");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherIn(List<Integer> values) {
+            addCriterion("T_TEACHER in", values, "tTeacher");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherNotIn(List<Integer> values) {
+            addCriterion("T_TEACHER not in", values, "tTeacher");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherBetween(Integer value1, Integer value2) {
+            addCriterion("T_TEACHER between", value1, value2, "tTeacher");
+            return (Criteria) this;
+        }
+
+        public Criteria andTTeacherNotBetween(Integer value1, Integer value2) {
+            addCriterion("T_TEACHER not between", value1, value2, "tTeacher");
+            return (Criteria) this;
+        }
+
         public Criteria andTagIdIsNull() {
             addCriterion("TAG_ID is null");
             return (Criteria) this;

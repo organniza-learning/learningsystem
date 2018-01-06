@@ -4,6 +4,7 @@
   <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Rleaseonlinetesting">
     <id column="ROT_ID" jdbcType="INTEGER" property="rotId" />
     <result column="ROT_IDENTIFYING" jdbcType="INTEGER" property="rotIdentifying" />
+    <result column="T_TEACHER" jdbcType="INTEGER" property="tTeacher" />
     <result column="ROT_CLASS" jdbcType="VARCHAR" property="rotClass" />
     <result column="ROT_CHOICEQUESTION" jdbcType="VARCHAR" property="rotChoicequestion" />
     <result column="CHOICEQUESTION_RESULT" jdbcType="VARCHAR" property="choicequestionResult" />
@@ -74,9 +75,9 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    ROT_ID, ROT_IDENTIFYING, ROT_CLASS, ROT_CHOICEQUESTION, CHOICEQUESTION_RESULT, ROT_COMPLETION, 
-    COMPLETION_RESULT, ROT_TEXTTOPIC, TEXTTOPIC_RESULT, ROT_TRUEORFALSE, TRUEORFALSE_RESULT, 
-    STU_STUDENTID
+    ROT_ID, ROT_IDENTIFYING, T_TEACHER, ROT_CLASS, ROT_CHOICEQUESTION, CHOICEQUESTION_RESULT, 
+    ROT_COMPLETION, COMPLETION_RESULT, ROT_TEXTTOPIC, TEXTTOPIC_RESULT, ROT_TRUEORFALSE, 
+    TRUEORFALSE_RESULT, STU_STUDENTID
   </sql>
   <select id="selectByExample" parameterType="com.learningsystem.pojo.RleaseonlinetestingExample" resultMap="BaseResultMap">
     select
@@ -109,13 +110,13 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.learningsystem.pojo.Rleaseonlinetesting">
-    insert into rleaseonlinetesting (ROT_ID, ROT_IDENTIFYING, ROT_CLASS, 
-      ROT_CHOICEQUESTION, CHOICEQUESTION_RESULT, 
+    insert into rleaseonlinetesting (ROT_ID, ROT_IDENTIFYING, T_TEACHER, 
+      ROT_CLASS, ROT_CHOICEQUESTION, CHOICEQUESTION_RESULT, 
       ROT_COMPLETION, COMPLETION_RESULT, ROT_TEXTTOPIC, 
       TEXTTOPIC_RESULT, ROT_TRUEORFALSE, TRUEORFALSE_RESULT, 
       STU_STUDENTID)
-    values (#{rotId,jdbcType=INTEGER}, #{rotIdentifying,jdbcType=INTEGER}, #{rotClass,jdbcType=VARCHAR}, 
-      #{rotChoicequestion,jdbcType=VARCHAR}, #{choicequestionResult,jdbcType=VARCHAR}, 
+    values (#{rotId,jdbcType=INTEGER}, #{rotIdentifying,jdbcType=INTEGER}, #{tTeacher,jdbcType=INTEGER}, 
+      #{rotClass,jdbcType=VARCHAR}, #{rotChoicequestion,jdbcType=VARCHAR}, #{choicequestionResult,jdbcType=VARCHAR}, 
       #{rotCompletion,jdbcType=VARCHAR}, #{completionResult,jdbcType=VARCHAR}, #{rotTexttopic,jdbcType=VARCHAR}, 
       #{texttopicResult,jdbcType=VARCHAR}, #{rotTrueorfalse,jdbcType=VARCHAR}, #{trueorfalseResult,jdbcType=INTEGER}, 
       #{stuStudentid,jdbcType=VARCHAR})
@@ -128,6 +129,9 @@
       </if>
       <if test="rotIdentifying != null">
         ROT_IDENTIFYING,
+      </if>
+      <if test="tTeacher != null">
+        T_TEACHER,
       </if>
       <if test="rotClass != null">
         ROT_CLASS,
@@ -166,6 +170,9 @@
       </if>
       <if test="rotIdentifying != null">
         #{rotIdentifying,jdbcType=INTEGER},
+      </if>
+      <if test="tTeacher != null">
+        #{tTeacher,jdbcType=INTEGER},
       </if>
       <if test="rotClass != null">
         #{rotClass,jdbcType=VARCHAR},
@@ -214,6 +221,9 @@
       <if test="record.rotIdentifying != null">
         ROT_IDENTIFYING = #{record.rotIdentifying,jdbcType=INTEGER},
       </if>
+      <if test="record.tTeacher != null">
+        T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
+      </if>
       <if test="record.rotClass != null">
         ROT_CLASS = #{record.rotClass,jdbcType=VARCHAR},
       </if>
@@ -253,6 +263,7 @@
     update rleaseonlinetesting
     set ROT_ID = #{record.rotId,jdbcType=INTEGER},
       ROT_IDENTIFYING = #{record.rotIdentifying,jdbcType=INTEGER},
+      T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
       ROT_CLASS = #{record.rotClass,jdbcType=VARCHAR},
       ROT_CHOICEQUESTION = #{record.rotChoicequestion,jdbcType=VARCHAR},
       CHOICEQUESTION_RESULT = #{record.choicequestionResult,jdbcType=VARCHAR},
@@ -272,6 +283,9 @@
     <set>
       <if test="rotIdentifying != null">
         ROT_IDENTIFYING = #{rotIdentifying,jdbcType=INTEGER},
+      </if>
+      <if test="tTeacher != null">
+        T_TEACHER = #{tTeacher,jdbcType=INTEGER},
       </if>
       <if test="rotClass != null">
         ROT_CLASS = #{rotClass,jdbcType=VARCHAR},
@@ -309,6 +323,7 @@
   <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Rleaseonlinetesting">
     update rleaseonlinetesting
     set ROT_IDENTIFYING = #{rotIdentifying,jdbcType=INTEGER},
+      T_TEACHER = #{tTeacher,jdbcType=INTEGER},
       ROT_CLASS = #{rotClass,jdbcType=VARCHAR},
       ROT_CHOICEQUESTION = #{rotChoicequestion,jdbcType=VARCHAR},
       CHOICEQUESTION_RESULT = #{choicequestionResult,jdbcType=VARCHAR},

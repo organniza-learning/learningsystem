@@ -5,6 +5,8 @@ import java.util.Date;
 public class Releaseapplicationcase {
     private Integer racId;
 
+    private Integer tTeacher;
+
     private String racClass;
 
     private String racCasedescription;
@@ -23,6 +25,14 @@ public class Releaseapplicationcase {
 
     public void setRacId(Integer racId) {
         this.racId = racId;
+    }
+
+    public Integer gettTeacher() {
+        return tTeacher;
+    }
+
+    public void settTeacher(Integer tTeacher) {
+        this.tTeacher = tTeacher;
     }
 
     public String getRacClass() {
