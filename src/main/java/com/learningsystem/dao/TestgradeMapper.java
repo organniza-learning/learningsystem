@@ -5,6 +5,12 @@ import com.learningsystem.pojo.TestgradeExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+/**
+*@Author : YangGuang
+*@Description:单元测试成绩类dao层接口
+*@Date:Created in 12:15 2018/1/7
+*
+**/
 public interface TestgradeMapper {
     long countByExample(TestgradeExample example);
 

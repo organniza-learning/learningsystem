@@ -1,5 +1,11 @@
 package com.learningsystem.pojo;
 
+/**
+*@Author : YangGuang
+*@Description:问题回复实体类
+*@Date:Created in 12:18 2018/1/7
+*
+**/
 public class Writeback {
     private Integer wbId;
 

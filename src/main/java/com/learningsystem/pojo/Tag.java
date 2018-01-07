@@ -1,5 +1,11 @@
 package com.learningsystem.pojo;
 
+/**
+*@Author : YangGuang
+*@Description:标签实体类
+*@Date:Created in 12:17 2018/1/7
+*
+**/
 public class Tag {
     private Integer tagId;
 

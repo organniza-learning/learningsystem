@@ -1,5 +1,11 @@
 package com.learningsystem.pojo;
 
+/**
+*@Author : YangGuang
+*@Description:发布课后习题实体类
+*@Date:Created in 12:17 2018/1/7
+*
+**/
 public class Releaseexercise {
     private Integer reId;
 

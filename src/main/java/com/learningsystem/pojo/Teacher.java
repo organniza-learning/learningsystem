@@ -1,5 +1,11 @@
 package com.learningsystem.pojo;
 
+/**
+*@Author : YangGuang
+*@Description:老师实体类
+*@Date:Created in 12:18 2018/1/7
+*
+**/
 public class Teacher {
     private Integer tId;
 

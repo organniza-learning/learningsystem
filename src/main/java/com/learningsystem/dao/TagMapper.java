@@ -5,6 +5,12 @@ import com.learningsystem.pojo.TagExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+/**
+*@Author : YangGuang
+*@Description:标签类dao层接口
+*@Date:Created in 12:14 2018/1/7
+*
+**/
 public interface TagMapper {
     long countByExample(TagExample example);
 

@@ -5,6 +5,12 @@ import com.learningsystem.pojo.ReleaselearningcontentExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+/**
+*@Author : YangGuang
+*@Description:发布学习内容类dao层接口
+*@Date:Created in 12:14 2018/1/7
+*
+**/
 public interface ReleaselearningcontentMapper {
     long countByExample(ReleaselearningcontentExample example);
 

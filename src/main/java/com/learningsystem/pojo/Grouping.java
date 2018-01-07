@@ -1,5 +1,11 @@
 package com.learningsystem.pojo;
 
+/**
+*@Author : YangGuang
+*@Description:分组实体类
+*@Date:Created in 12:16 2018/1/7
+*
+**/
 public class Grouping {
     private Integer gId;
 

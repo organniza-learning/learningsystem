@@ -1,5 +1,11 @@
 package com.learningsystem.pojo;
 
+/**
+*@Author : YangGuang
+*@Description:班级作业实体类
+*@Date:Created in 12:16 2018/1/7
+*
+**/
 public class Classwork {
     private Integer ckId;
 

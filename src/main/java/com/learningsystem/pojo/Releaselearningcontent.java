@@ -2,6 +2,12 @@ package com.learningsystem.pojo;
 
 import java.util.Date;
 
+/**
+*@Author : YangGuang
+*@Description:发布学习内容实体类
+*@Date:Created in 12:17 2018/1/7
+*
+**/
 public class Releaselearningcontent {
     private Integer rlcId;
 

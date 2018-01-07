@@ -5,6 +5,12 @@ import com.learningsystem.pojo.GroupingExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+/**
+*@Author : YangGuang
+*@Description:分组类dao层接口
+*@Date:Created in 12:12 2018/1/7
+*
+**/
 public interface GroupingMapper {
     long countByExample(GroupingExample example);
 

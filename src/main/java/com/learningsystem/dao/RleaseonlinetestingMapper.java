@@ -5,6 +5,12 @@ import com.learningsystem.pojo.RleaseonlinetestingExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+/**
+*@Author : YangGuang
+*@Description:发布在线测试类dao层接口
+*@Date:Created in 12:14 2018/1/7
+*
+**/
 public interface RleaseonlinetestingMapper {
     long countByExample(RleaseonlinetestingExample example);
 

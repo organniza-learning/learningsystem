@@ -5,6 +5,12 @@ import com.learningsystem.pojo.WritebackExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+/**
+*@Author : YangGuang
+*@Description:问题讨论回复类dao层接口
+*@Date:Created in 12:15 2018/1/7
+*
+**/
 public interface WritebackMapper {
     long countByExample(WritebackExample example);
 

@@ -2,6 +2,12 @@ package com.learningsystem.pojo;
 
 import java.util.Date;
 
+/**
+*@Author : YangGuang
+*@Description:发布问题讨论实体类
+*@Date:Created in 12:16 2018/1/7
+*
+**/
 public class Releasediscussionquestions {
     private Integer rdqId;
 

@@ -5,6 +5,12 @@ import com.learningsystem.pojo.ClassExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+/**
+*@Author : YangGuang
+*@Description:班级dao层接口
+*@Date:Created in 12:10 2018/1/7
+*
+**/
 public interface ClassMapper {
     long countByExample(ClassExample example);
 

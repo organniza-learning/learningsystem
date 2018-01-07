@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
 *@Author : YangGuang
-*@Description:问题发布讨论表
+*@Description:问题发布讨论Controller
 *@Date:Created in 21:24 2017/01/03
 *
 **/
@@ -30,7 +30,7 @@ public class ReleasediscussionquestionsController {
     *
     **/
     @ResponseBody
-    @RequestMapping("selectRdqAndTag")
+    @RequestMapping("selectRdqAndTag")//查询问题讨论及关联的标签
     public List<Releasediscussionquestions> selectRdqAndTag(){
         return rdqservice.selectRdqAndTag();
     }

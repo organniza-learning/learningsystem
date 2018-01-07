@@ -2,6 +2,12 @@ package com.learningsystem.pojo;
 
 import java.util.Date;
 
+/**
+*@Author : YangGuang
+*@Description:发布应用案例实体类
+*@Date:Created in 12:16 2018/1/7
+*
+**/
 public class Releaseapplicationcase {
     private Integer racId;
 
