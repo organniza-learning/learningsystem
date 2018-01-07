@@ -8,35 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bb286246-3a04-4c51-81c9-322d85e73b60" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../learningsystem/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassworkMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassworkMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/GroupingMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/GroupingMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleaseapplicationcaseMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleaseapplicationcaseMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleaseexerciseMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleaseexerciseMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleaselearningcontentMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleaselearningcontentMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/RleaseonlinetestingMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/RleaseonlinetestingMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/StudentMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/StudentMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/TagMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/TagMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/TeacherMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/TeacherMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/TestgradeMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/TestgradeMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/WritebackMapper.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/WritebackMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Class.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Class.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Classwork.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Classwork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Grouping.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Grouping.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseapplicationcase.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseapplicationcase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseexercise.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseexercise.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaselearningcontent.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaselearningcontent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Rleaseonlinetesting.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Rleaseonlinetesting.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Student.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Student.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Tag.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Tag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Teacher.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Teacher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Testgrade.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Testgrade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Writeback.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Writeback.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/README.md" afterPath="$PROJECT_DIR$/../learningsystem/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/../learningsystem/out/" />
     <ignored path="$PROJECT_DIR$/../learningsystem/target/" />
@@ -47,18 +19,42 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ReleasediscussionquestionsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReleasediscussionquestionsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state relative-caret-position="83">
+              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1020#1021#0" expanded="true" />
                 <element signature="e#1071#1072#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="240">
+                <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -132,6 +128,7 @@
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java" />
+        <option value="$PROJECT_DIR$/../learningsystem/README.md" />
       </list>
     </option>
   </component>
@@ -226,33 +223,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
@@ -553,7 +523,7 @@
       <workItem from="1514877607786" duration="157000" />
       <workItem from="1515142661138" duration="3643000" />
       <workItem from="1515245074269" duration="2641000" />
-      <workItem from="1515298220159" duration="769000" />
+      <workItem from="1515298220159" duration="1836000" />
     </task>
     <task id="LOCAL-00001" summary="网上学习平台">
       <created>1514874023305</created>
@@ -569,11 +539,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515247530369</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加各个类的类头注释信息">
+      <created>1515298996380</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1515298996380</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18207000" />
+    <option name="totallyTimeSpent" value="19274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -584,7 +561,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -595,7 +572,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53077817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28106853" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2543554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -663,16 +640,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -1067,13 +1034,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="83">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1020#1021#0" expanded="true" />
             <element signature="e#1071#1072#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="240">
+            <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
