@@ -3,7 +3,7 @@ package com.learningsystem.pojo;
 /**
 *@Author : YangGuang
 *@Description:分组实体类
-*@Date:Created in 12:16 2018/1/7
+*@Date:Created in 13:12 2018/1/7
 *
 **/
 public class Grouping {
@@ -16,6 +16,8 @@ public class Grouping {
     private String gStudentid;
 
     private Integer gSpeaknum;
+
+    private String gDuty;
 
     public Integer getgId() {
         return gId;
@@ -55,5 +57,13 @@ public class Grouping {
 
     public void setgSpeaknum(Integer gSpeaknum) {
         this.gSpeaknum = gSpeaknum;
+    }
+
+    public String getgDuty() {
+        return gDuty;
+    }
+
+    public void setgDuty(String gDuty) {
+        this.gDuty = gDuty == null ? null : gDuty.trim();
     }
 }

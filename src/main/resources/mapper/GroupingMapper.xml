@@ -7,6 +7,7 @@
     <result column="G_NAME" jdbcType="VARCHAR" property="gName" />
     <result column="G_STUDENTID" jdbcType="VARCHAR" property="gStudentid" />
     <result column="G_SPEAKNUM" jdbcType="INTEGER" property="gSpeaknum" />
+    <result column="G_DUTY" jdbcType="VARCHAR" property="gDuty" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -67,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    G_ID, G_IDENTIFYING, G_NAME, G_STUDENTID, G_SPEAKNUM
+    G_ID, G_IDENTIFYING, G_NAME, G_STUDENTID, G_SPEAKNUM, G_DUTY
   </sql>
   <select id="selectByExample" parameterType="com.learningsystem.pojo.GroupingExample" resultMap="BaseResultMap">
     select
@@ -101,9 +102,11 @@
   </delete>
   <insert id="insert" parameterType="com.learningsystem.pojo.Grouping">
     insert into grouping (G_ID, G_IDENTIFYING, G_NAME, 
-      G_STUDENTID, G_SPEAKNUM)
+      G_STUDENTID, G_SPEAKNUM, G_DUTY
+      )
     values (#{gId,jdbcType=INTEGER}, #{gIdentifying,jdbcType=INTEGER}, #{gName,jdbcType=VARCHAR}, 
-      #{gStudentid,jdbcType=VARCHAR}, #{gSpeaknum,jdbcType=INTEGER})
+      #{gStudentid,jdbcType=VARCHAR}, #{gSpeaknum,jdbcType=INTEGER}, #{gDuty,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.learningsystem.pojo.Grouping">
     insert into grouping
@@ -123,6 +126,9 @@
       <if test="gSpeaknum != null">
         G_SPEAKNUM,
       </if>
+      <if test="gDuty != null">
+        G_DUTY,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="gId != null">
@@ -139,6 +145,9 @@
       </if>
       <if test="gSpeaknum != null">
         #{gSpeaknum,jdbcType=INTEGER},
+      </if>
+      <if test="gDuty != null">
+        #{gDuty,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -166,6 +175,9 @@
       <if test="record.gSpeaknum != null">
         G_SPEAKNUM = #{record.gSpeaknum,jdbcType=INTEGER},
       </if>
+      <if test="record.gDuty != null">
+        G_DUTY = #{record.gDuty,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -177,7 +189,8 @@
       G_IDENTIFYING = #{record.gIdentifying,jdbcType=INTEGER},
       G_NAME = #{record.gName,jdbcType=VARCHAR},
       G_STUDENTID = #{record.gStudentid,jdbcType=VARCHAR},
-      G_SPEAKNUM = #{record.gSpeaknum,jdbcType=INTEGER}
+      G_SPEAKNUM = #{record.gSpeaknum,jdbcType=INTEGER},
+      G_DUTY = #{record.gDuty,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -197,6 +210,9 @@
       <if test="gSpeaknum != null">
         G_SPEAKNUM = #{gSpeaknum,jdbcType=INTEGER},
       </if>
+      <if test="gDuty != null">
+        G_DUTY = #{gDuty,jdbcType=VARCHAR},
+      </if>
     </set>
     where G_ID = #{gId,jdbcType=INTEGER}
   </update>
@@ -205,7 +221,8 @@
     set G_IDENTIFYING = #{gIdentifying,jdbcType=INTEGER},
       G_NAME = #{gName,jdbcType=VARCHAR},
       G_STUDENTID = #{gStudentid,jdbcType=VARCHAR},
-      G_SPEAKNUM = #{gSpeaknum,jdbcType=INTEGER}
+      G_SPEAKNUM = #{gSpeaknum,jdbcType=INTEGER},
+      G_DUTY = #{gDuty,jdbcType=VARCHAR}
     where G_ID = #{gId,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -423,6 +423,76 @@ public class GroupingExample {
             addCriterion("G_SPEAKNUM not between", value1, value2, "gSpeaknum");
             return (Criteria) this;
         }
+
+        public Criteria andGDutyIsNull() {
+            addCriterion("G_DUTY is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyIsNotNull() {
+            addCriterion("G_DUTY is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyEqualTo(String value) {
+            addCriterion("G_DUTY =", value, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyNotEqualTo(String value) {
+            addCriterion("G_DUTY <>", value, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyGreaterThan(String value) {
+            addCriterion("G_DUTY >", value, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyGreaterThanOrEqualTo(String value) {
+            addCriterion("G_DUTY >=", value, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyLessThan(String value) {
+            addCriterion("G_DUTY <", value, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyLessThanOrEqualTo(String value) {
+            addCriterion("G_DUTY <=", value, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyLike(String value) {
+            addCriterion("G_DUTY like", value, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyNotLike(String value) {
+            addCriterion("G_DUTY not like", value, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyIn(List<String> values) {
+            addCriterion("G_DUTY in", values, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyNotIn(List<String> values) {
+            addCriterion("G_DUTY not in", values, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyBetween(String value1, String value2) {
+            addCriterion("G_DUTY between", value1, value2, "gDuty");
+            return (Criteria) this;
+        }
+
+        public Criteria andGDutyNotBetween(String value1, String value2) {
+            addCriterion("G_DUTY not between", value1, value2, "gDuty");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

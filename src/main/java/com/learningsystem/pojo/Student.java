@@ -3,7 +3,7 @@ package com.learningsystem.pojo;
 /**
 *@Author : YangGuang
 *@Description:学生实体类
-*@Date:Created in 12:17 2018/1/7
+*@Date:Created in 13:12 2018/1/7
 *
 **/
 public class Student {
@@ -21,13 +21,11 @@ public class Student {
 
     private String stuName;
 
-    private String stuGroup;
-
-    private String stuDuty;
-
     private Integer gSpeaknum;
 
     private String stuEmail;
+
+    private Integer gIdentifying;
 
     public Integer getStuId() {
         return stuId;
@@ -85,22 +83,6 @@ public class Student {
         this.stuName = stuName == null ? null : stuName.trim();
     }
 
-    public String getStuGroup() {
-        return stuGroup;
-    }
-
-    public void setStuGroup(String stuGroup) {
-        this.stuGroup = stuGroup == null ? null : stuGroup.trim();
-    }
-
-    public String getStuDuty() {
-        return stuDuty;
-    }
-
-    public void setStuDuty(String stuDuty) {
-        this.stuDuty = stuDuty == null ? null : stuDuty.trim();
-    }
-
     public Integer getgSpeaknum() {
         return gSpeaknum;
     }
@@ -115,5 +97,13 @@ public class Student {
 
     public void setStuEmail(String stuEmail) {
         this.stuEmail = stuEmail == null ? null : stuEmail.trim();
+    }
+
+    public Integer getgIdentifying() {
+        return gIdentifying;
+    }
+
+    public void setgIdentifying(Integer gIdentifying) {
+        this.gIdentifying = gIdentifying;
     }
 }

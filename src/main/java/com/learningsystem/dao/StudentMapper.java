@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Param;
 /**
 *@Author : YangGuang
 *@Description:学生类dao层接口
-*@Date:Created in 12:14 2018/1/7
+*@Date:Created in 13:13 2018/1/7
 *
 **/
 public interface StudentMapper {
