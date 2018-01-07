@@ -8,7 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bb286246-3a04-4c51-81c9-322d85e73b60" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../learningsystem/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/README.md" afterPath="$PROJECT_DIR$/../learningsystem/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" afterPath="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml" afterPath="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../learningsystem/out/" />
     <ignored path="$PROJECT_DIR$/../learningsystem/target/" />
@@ -35,8 +36,8 @@
       <file leaf-file-name="ReleasediscussionquestionsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="293">
+              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1020#1021#0" expanded="true" />
@@ -46,15 +47,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../learningsystem/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="240">
-                <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="ReleasediscussionquestionsMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="31" column="128" lean-forward="false" selection-start-line="31" selection-start-column="90" selection-end-line="31" selection-end-column="128" />
+              <folding>
+                <marker date="1515301193088" expanded="true" signature="2023:2347" ph="SELECT relea... tag" />
+                <marker date="1515301193088" expanded="true" signature="5354:5483" ph="select from releasediscussionquestions" />
+                <marker date="1515301193088" expanded="true" signature="5569:5652" ph="delete from " />
+                <marker date="1515301193088" expanded="true" signature="5775:5813" ph="delete from " />
+                <marker date="1515301193088" expanded="true" signature="6012:6469" ph="insert into releasediscussionquestions... " />
+                <marker date="1515301193088" expanded="true" signature="8262:8309" ph="select count... releasediscussionquestions" />
+                <marker date="1515301193088" expanded="true" signature="9697:10221" ph="update relea... " />
+                <marker date="1515301193088" expanded="true" signature="10451:11329" ph="update relea... " />
+                <marker date="1515301193088" expanded="true" signature="11448:11912" ph="update relea... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReleasediscussionquestionsMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-180">
+              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReleasediscussionquestionsServiceIml.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="584">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReleasediscussionquestionsExample.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleasediscussionquestionsExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Releasediscussionquestions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1364">
+              <caret line="100" column="33" lean-forward="false" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,7 +149,6 @@
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/utils/GeneratorSqlmap.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/mybatis/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/spring/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassMapper.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassworkMapper.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/GroupingMapper.java" />
@@ -116,7 +166,6 @@
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Classwork.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Grouping.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseapplicationcase.java" />
-        <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseexercise.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaselearningcontent.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Rleaseonlinetesting.java" />
@@ -129,6 +178,8 @@
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/ReleasediscussionquestionsService.java" />
         <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java" />
         <option value="$PROJECT_DIR$/../learningsystem/README.md" />
+        <option value="$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java" />
+        <option value="$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml" />
       </list>
     </option>
   </component>
@@ -223,6 +274,33 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="learningsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learningsystem" type="b2602c69:ProjectViewProjectNode" />
@@ -523,7 +601,7 @@
       <workItem from="1514877607786" duration="157000" />
       <workItem from="1515142661138" duration="3643000" />
       <workItem from="1515245074269" duration="2641000" />
-      <workItem from="1515298220159" duration="1836000" />
+      <workItem from="1515298220159" duration="3022000" />
     </task>
     <task id="LOCAL-00001" summary="网上学习平台">
       <created>1514874023305</created>
@@ -546,11 +624,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515298996380</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updete readme.md">
+      <created>1515300106653</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1515300106653</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19274000" />
+    <option name="totallyTimeSpent" value="20460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -572,11 +657,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28106853" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29036003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2543554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26877683" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26877683" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -633,7 +718,8 @@
     <MESSAGE value="网上学习平台" />
     <MESSAGE value="update database insert teacher and class table" />
     <MESSAGE value="添加各个类的类头注释信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加各个类的类头注释信息" />
+    <MESSAGE value="updete readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="updete readme.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -778,32 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-          <folding>
-            <marker date="1515247282398" expanded="true" signature="2020:2306" ph="SELECT relea... tag" />
-            <marker date="1515247282398" expanded="true" signature="5313:5442" ph="select from releasediscussionquestions" />
-            <marker date="1515247282398" expanded="true" signature="5528:5611" ph="delete from " />
-            <marker date="1515247282398" expanded="true" signature="5734:5772" ph="delete from " />
-            <marker date="1515247282398" expanded="true" signature="5971:6428" ph="insert into releasediscussionquestions... " />
-            <marker date="1515247282398" expanded="true" signature="8221:8268" ph="select count... releasediscussionquestions" />
-            <marker date="1515247282398" expanded="true" signature="9656:10180" ph="update relea... " />
-            <marker date="1515247282398" expanded="true" signature="10410:11288" ph="update relea... " />
-            <marker date="1515247282398" expanded="true" signature="11407:11871" ph="update relea... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleasediscussionquestionsExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ClassMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -832,14 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -940,14 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaseexercise.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1004,16 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releaselearningcontent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1032,18 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../learningsystem/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1052,6 +1074,71 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/ReleasediscussionquestionsExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/controller/ReleasediscussionquestionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/service/iml/ReleasediscussionquestionsServiceIml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/pojo/Releasediscussionquestions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="100" column="33" lean-forward="false" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/java/com/learningsystem/dao/ReleasediscussionquestionsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learningsystem/src/main/resources/mapper/ReleasediscussionquestionsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="31" column="128" lean-forward="false" selection-start-line="31" selection-start-column="90" selection-end-line="31" selection-end-column="128" />
+          <folding>
+            <marker date="1515301193088" expanded="true" signature="2023:2347" ph="SELECT relea... tag" />
+            <marker date="1515301193088" expanded="true" signature="5354:5483" ph="select from releasediscussionquestions" />
+            <marker date="1515301193088" expanded="true" signature="5569:5652" ph="delete from " />
+            <marker date="1515301193088" expanded="true" signature="5775:5813" ph="delete from " />
+            <marker date="1515301193088" expanded="true" signature="6012:6469" ph="insert into releasediscussionquestions... " />
+            <marker date="1515301193088" expanded="true" signature="8262:8309" ph="select count... releasediscussionquestions" />
+            <marker date="1515301193088" expanded="true" signature="9697:10221" ph="update relea... " />
+            <marker date="1515301193088" expanded="true" signature="10451:11329" ph="update relea... " />
+            <marker date="1515301193088" expanded="true" signature="11448:11912" ph="update relea... " />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -21,7 +21,7 @@
     <result column="RDQ_THEME" jdbcType="VARCHAR" property="rdqTheme" />
     <result column="RDQ_CLASS" jdbcType="VARCHAR" property="rdqClass" />
     <result column="RDQ_TEXT" jdbcType="VARCHAR" property="rdqText" />
-    <result column="RDQ_TIME" jdbcType="TIME" property="rdqTime" />
+    <result column="RDQ_TIME" jdbcType="VARCHAR" property="rdqDate" />
     <result column="RDQ_UPLOADFILE" jdbcType="VARCHAR" property="rdqUploadfile" />
     <association property="tag" javaType="com.learningsystem.pojo.Tag">
       <id column="TAG_ID" jdbcType="INTEGER" property="tagId" />
@@ -29,7 +29,7 @@
     </association>
   </resultMap>
   <select id="selectRdqAndTag" resultMap="BaseResultMapAngTag">
-    SELECT releasediscussionquestions.`G_STUDENTID`,releasediscussionquestions.`RDQ_THEME`,releasediscussionquestions.`RDQ_CLASS`,
+    SELECT releasediscussionquestions.`G_STUDENTID`,releasediscussionquestions.`RDQ_THEME`,releasediscussionquestions.`RDQ_TIME`,releasediscussionquestions.`RDQ_CLASS`,
     releasediscussionquestions.`RDQ_TEXT`,tag.`TAG_CONTEN`
     FROM tag,releasediscussionquestions
     WHERE tag.`TAG_ID` = releasediscussionquestions.`TAG_ID`

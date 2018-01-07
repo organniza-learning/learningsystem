@@ -23,7 +23,7 @@ public class Releasediscussionquestions {
 
     private String rdqText;
 
-    private Date rdqTime;
+    private String rdqDate;
 
     private String rdqUploadfile;
 
@@ -94,12 +94,12 @@ public class Releasediscussionquestions {
         this.rdqText = rdqText == null ? null : rdqText.trim();
     }
 
-    public Date getRdqTime() {
-        return rdqTime;
+    public String getRdqTate() {
+        return rdqDate;
     }
 
-    public void setRdqTime(Date rdqTime) {
-        this.rdqTime = rdqTime;
+    public void setRdqTate(String rdqDate) {
+        this.rdqDate = rdqDate;
     }
 
     public String getRdqUploadfile() {
