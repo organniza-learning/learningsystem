@@ -75,6 +75,23 @@
     STU_ID, TG_OPENID, C_CLASSID, TG_IDENTIFYING, STU_STUDENTID, STU_PASSWORD, STU_NAME, 
     G_SPEAKNUM, STU_EMAIL, G_IDENTIFYING
   </sql>
+  
+  <!-- 验证账号密码 -->
+   <select id="selectByIdAndPassword" parameterType="map" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from student
+    where STU_STUDENTID = #{id} AND STU_PASSWORD =#{password}
+  </select>
+  
+  <!-- 根据openid查询 -->
+   <select id="selectByTgOpenid" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from student
+    where TG_OPENID = #{openid}
+  </select>
+  
   <select id="selectByExample" parameterType="com.learningsystem.pojo.StudentExample" resultMap="BaseResultMap">
     select
     <if test="distinct">

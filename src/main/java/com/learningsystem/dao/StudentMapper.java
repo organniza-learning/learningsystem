@@ -3,6 +3,8 @@ package com.learningsystem.dao;
 import com.learningsystem.pojo.Student;
 import com.learningsystem.pojo.StudentExample;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -12,6 +14,12 @@ import org.apache.ibatis.annotations.Param;
 *
 **/
 public interface StudentMapper {
+	
+	// 根据openid查询
+    Student selectByTgOpenid(String openid);
+    // 验证账号密码
+    Student selectByIdAndPassword(Map<String, String> map);
+    
     long countByExample(StudentExample example);
 
     int deleteByExample(StudentExample example);
@@ -33,4 +41,7 @@ public interface StudentMapper {
     int updateByPrimaryKeySelective(Student record);
 
     int updateByPrimaryKey(Student record);
+    
+ 
+    
 }
