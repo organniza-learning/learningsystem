@@ -33,4 +33,7 @@ public interface WritebackMapper {
     int updateByPrimaryKeySelective(Writeback record);
 
     int updateByPrimaryKey(Writeback record);
+
+    //自更新回复表统计回复数量
+    void insertWritebackCount(Integer rdqId);
 }

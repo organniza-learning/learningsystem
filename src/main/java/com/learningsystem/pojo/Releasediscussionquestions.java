@@ -30,6 +30,26 @@ public class Releasediscussionquestions {
     //查询Tag标签
     private Tag tag;
 
+    //查询回复数
+    private Writeback writeback;
+
+
+    public Writeback getWriteback() {
+        return writeback;
+    }
+
+    public void setWriteback(Writeback writeback) {
+        this.writeback = writeback;
+    }
+
+    public String getRdqDate() {
+        return rdqDate;
+    }
+
+    public void setRdqDate(String rdqDate) {
+        this.rdqDate = rdqDate;
+    }
+
     public Tag getTag() {
         return tag;
     }

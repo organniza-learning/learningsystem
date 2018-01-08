@@ -2,6 +2,7 @@ package com.learningsystem.service.iml;
 
 import com.learningsystem.dao.ReleasediscussionquestionsMapper;
 import com.learningsystem.pojo.Releasediscussionquestions;
+import com.learningsystem.service.ReleasediscussionquestionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ import java.util.List;
 *
 **/
 @Service
-public class ReleasediscussionquestionsServiceIml {
+public class ReleasediscussionquestionsServiceIml implements ReleasediscussionquestionsService {
 
     @Autowired
     ReleasediscussionquestionsMapper mapper;

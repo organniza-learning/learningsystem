@@ -13,7 +13,7 @@
   <result column="RDQ_UPLOADFILE" jdbcType="VARCHAR" property="rdqUploadfile" />
 </resultMap>
 
-  <resultMap id="BaseResultMapAngTag" type="com.learningsystem.pojo.Releasediscussionquestions">
+  <resultMap id="BaseResultMapAngTag"  type="com.learningsystem.pojo.Releasediscussionquestions">
     <id column="RDQ_ID" jdbcType="INTEGER" property="rdqId" />
     <result column="G_STUDENTID" jdbcType="VARCHAR" property="gStudentid" />
     <result column="T_TEACHER" jdbcType="INTEGER" property="tTeacher" />
@@ -23,16 +23,35 @@
     <result column="RDQ_TEXT" jdbcType="VARCHAR" property="rdqText" />
     <result column="RDQ_TIME" jdbcType="VARCHAR" property="rdqDate" />
     <result column="RDQ_UPLOADFILE" jdbcType="VARCHAR" property="rdqUploadfile" />
-    <association property="tag" javaType="com.learningsystem.pojo.Tag">
+    <association property="tag" javaType="com.learningsystem.pojo.Tag" >
       <id column="TAG_ID" jdbcType="INTEGER" property="tagId" />
       <result column="TAG_CONTEN" jdbcType="VARCHAR" property="tagConten" />
     </association>
+    <association property="writeback" javaType="com.learningsystem.pojo.Writeback">
+      <id column="WB_ID" jdbcType="INTEGER" property="wbId" />
+      <result column="RDQ_ID" jdbcType="INTEGER" property="rdqId" />
+      <result column="WB_CONTENT" jdbcType="VARCHAR" property="wbContent" />
+      <result column="WB_UPLOADFILE" jdbcType="VARCHAR" property="wbUploadfile" />
+      <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
+      <result column="WB_CONTENT_NUM" javaType="INT" property="wbCcontenNum"/>
+    </association>
   </resultMap>
   <select id="selectRdqAndTag" resultMap="BaseResultMapAngTag">
-    SELECT releasediscussionquestions.`G_STUDENTID`,releasediscussionquestions.`RDQ_THEME`,releasediscussionquestions.`RDQ_TIME`,releasediscussionquestions.`RDQ_CLASS`,
-    releasediscussionquestions.`RDQ_TEXT`,tag.`TAG_CONTEN`
-    FROM tag,releasediscussionquestions
-    WHERE tag.`TAG_ID` = releasediscussionquestions.`TAG_ID`
+    SELECT
+    DISTINCT
+    releasediscussionquestions.`G_STUDENTID`,
+    releasediscussionquestions.`RDQ_THEME`,
+    releasediscussionquestions.`RDQ_TIME`,
+    releasediscussionquestions.`RDQ_CLASS`,
+    releasediscussionquestions.`RDQ_TEXT`,
+    writeback.`WB_CONTENT_NUM`,
+    tag.`TAG_CONTEN`
+    FROM
+    releasediscussionquestions,tag,writeback
+    WHERE
+    tag.`TAG_ID` = releasediscussionquestions.`TAG_ID`
+    AND
+    releasediscussionquestions.`RDQ_ID` = writeback.`RDQ_ID`
   </select>
   <sql id="Example_Where_Clause">
     <where>

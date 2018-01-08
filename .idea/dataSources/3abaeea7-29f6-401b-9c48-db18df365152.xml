@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="learningsystemdatabase@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="learningsystemdatabase">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="photoshoot"/>
+    <schema id="7" parent="1" name="sakila"/>
+    <schema id="8" parent="1" name="ssmtest"/>
+    <schema id="9" parent="1" name="sys"/>
+    <schema id="10" parent="1" name="test"/>
+    <schema id="11" parent="1" name="world"/>
+    <schema id="12" parent="1" name="ygblog"/>
+    <table id="13" parent="2" name="class"/>
+    <table id="14" parent="2" name="classwork"/>
+    <table id="15" parent="2" name="grouping"/>
+    <table id="16" parent="2" name="releaseapplicationcase"/>
+    <table id="17" parent="2" name="releasediscussionquestions"/>
+    <table id="18" parent="2" name="releaseexercise"/>
+    <table id="19" parent="2" name="releaselearningcontent"/>
+    <table id="20" parent="2" name="rleaseonlinetesting"/>
+    <table id="21" parent="2" name="student"/>
+    <table id="22" parent="2" name="tag"/>
+    <table id="23" parent="2" name="teacher"/>
+    <table id="24" parent="2" name="testgrade"/>
+    <table id="25" parent="2" name="writeback"/>
+    <column id="26" parent="13" name="C_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="13" name="C_CLASSID">
+      <Position>2</Position>
+      <Comment>班级标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="28" parent="13" name="T_TEACHER">
+      <Position>3</Position>
+      <Comment>授课老师</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="29" parent="13" name="C_NAME">
+      <Position>4</Position>
+      <Comment>班级名称</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="30" parent="13" name="C_COLLEGE">
+      <Position>5</Position>
+      <Comment>所属学院</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="31" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>C_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="14" name="CK_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="14" name="CK_CALSS">
+      <Position>2</Position>
+      <Comment>班级</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="34" parent="14" name="G_IDENTIFYING">
+      <Position>3</Position>
+      <Comment>分组标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="35" parent="14" name="CK_WEEK">
+      <Position>4</Position>
+      <Comment>每周数</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="36" parent="14" name="CK_FILE">
+      <Position>5</Position>
+      <Comment>作业上传</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="37" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CK_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="15" name="G_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="15" name="G_IDENTIFYING">
+      <Position>2</Position>
+      <Comment>分组标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="40" parent="15" name="G_NAME">
+      <Position>3</Position>
+      <Comment>学生姓名</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="41" parent="15" name="G_STUDENTID">
+      <Position>4</Position>
+      <Comment>学生学号</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="42" parent="15" name="G_SPEAKNUM">
+      <Position>5</Position>
+      <Comment>学生发言数</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="43" parent="15" name="G_DUTY">
+      <Position>6</Position>
+      <Comment>组内职务</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="44" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>G_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="45" parent="16" name="RAC_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="16" name="T_TEACHER">
+      <Position>2</Position>
+      <Comment>老师标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="47" parent="16" name="RAC_CLASS">
+      <Position>3</Position>
+      <Comment>对应班级</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="48" parent="16" name="RAC_CASEDESCRIPTION">
+      <Position>4</Position>
+      <Comment>案列描述</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="49" parent="16" name="RAC_CASEIMG">
+      <Position>5</Position>
+      <Comment>案列图片</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="50" parent="16" name="RAC_UPLOADACCESSORY">
+      <Position>6</Position>
+      <Comment>附件上传</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="51" parent="16" name="RAC_CONDITION">
+      <Position>7</Position>
+      <Comment>此条案例状态/完成/废弃....</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="52" parent="16" name="RAC_TIME">
+      <Position>8</Position>
+      <Comment>发布时间</Comment>
+      <DataType>time(6)|0</DataType>
+    </column>
+    <key id="53" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>RAC_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="17" name="RDQ_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="17" name="G_STUDENTID">
+      <Position>2</Position>
+      <Comment>学生学号</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="56" parent="17" name="T_TEACHER">
+      <Position>3</Position>
+      <Comment>老师标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="57" parent="17" name="TAG_ID">
+      <Position>4</Position>
+      <Comment>标签ID</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="58" parent="17" name="RDQ_THEME">
+      <Position>5</Position>
+      <Comment>讨论主题</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="59" parent="17" name="RDQ_CLASS">
+      <Position>6</Position>
+      <Comment>对应班级</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="60" parent="17" name="RDQ_TEXT">
+      <Position>7</Position>
+      <Comment>讨论内容</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="61" parent="17" name="RDQ_TIME">
+      <Position>8</Position>
+      <Comment>发布时间</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="62" parent="17" name="RDQ_UPLOADFILE">
+      <Position>9</Position>
+      <Comment>文件上传</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="63" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>RDQ_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="64" parent="18" name="RE_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="18" name="RE_TITLE">
+      <Position>2</Position>
+      <Comment>习题标题</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="66" parent="18" name="T_TEACHER">
+      <Position>3</Position>
+      <Comment>老师标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="67" parent="18" name="RE_CLASS">
+      <Position>4</Position>
+      <Comment>对应班级</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="68" parent="18" name="RE_TEXT">
+      <Position>5</Position>
+      <Comment>习题内容</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="69" parent="18" name="RE_FILE">
+      <Position>6</Position>
+      <Comment>习题文件</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="70" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>RE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="71" parent="19" name="RLC_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="72" parent="19" name="RLC_CLASS">
+      <Position>2</Position>
+      <Comment>对应班级</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="73" parent="19" name="RLC_LEARNINGGOALS">
+      <Position>3</Position>
+      <Comment>学习目的</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="74" parent="19" name="RLC_LEARNINGREQUIRE">
+      <Position>4</Position>
+      <Comment>学习要求</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="75" parent="19" name="RLC_UPLOADACCESSORY">
+      <Position>5</Position>
+      <Comment>附件上传</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="76" parent="19" name="RLC_CONDITION">
+      <Position>6</Position>
+      <Comment>此条记录状态/完成/废弃....</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="77" parent="19" name="RLC_TIME">
+      <Position>7</Position>
+      <Comment>发布时间</Comment>
+      <DataType>time(6)|0</DataType>
+    </column>
+    <key id="78" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>RLC_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="79" parent="20" name="ROT_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="20" name="ROT_IDENTIFYING">
+      <Position>2</Position>
+      <Comment>习题在线测试标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="81" parent="20" name="T_TEACHER">
+      <Position>3</Position>
+      <Comment>老师标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="82" parent="20" name="ROT_CLASS">
+      <Position>4</Position>
+      <Comment>对应班级</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="83" parent="20" name="ROT_CHOICEQUESTION">
+      <Position>5</Position>
+      <Comment>选择题</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="84" parent="20" name="CHOICEQUESTION_RESULT">
+      <Position>6</Position>
+      <Comment>选择题答案</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="85" parent="20" name="ROT_COMPLETION">
+      <Position>7</Position>
+      <Comment>填空题</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="86" parent="20" name="COMPLETION_RESULT">
+      <Position>8</Position>
+      <Comment>填空题答案</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="87" parent="20" name="ROT_TEXTTOPIC">
+      <Position>9</Position>
+      <Comment>文字题</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="88" parent="20" name="TEXTTOPIC_RESULT">
+      <Position>10</Position>
+      <Comment>文字题答案</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="89" parent="20" name="ROT_TRUEORFALSE">
+      <Position>11</Position>
+      <Comment>判断题</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="90" parent="20" name="TRUEORFALSE_RESULT">
+      <Position>12</Position>
+      <Comment>判断题答案</Comment>
+      <DataType>int(2)|0</DataType>
+    </column>
+    <column id="91" parent="20" name="STU_STUDENTID">
+      <Position>13</Position>
+      <Comment>学生学号</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="92" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ROT_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="93" parent="21" name="STU_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="21" name="TG_OPENID">
+      <Position>2</Position>
+      <Comment>微信登录绑定ID</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="95" parent="21" name="C_CLASSID">
+      <Position>3</Position>
+      <Comment>班级标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="96" parent="21" name="TG_IDENTIFYING">
+      <Position>4</Position>
+      <Comment>成绩表绑定学生</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="97" parent="21" name="STU_STUDENTID">
+      <Position>5</Position>
+      <Comment>学生学号</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="98" parent="21" name="STU_PASSWORD">
+      <Position>6</Position>
+      <Comment>学生密码（以防万一要用）</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="99" parent="21" name="STU_NAME">
+      <Position>7</Position>
+      <Comment>学生姓名</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="100" parent="21" name="G_SPEAKNUM">
+      <Position>8</Position>
+      <Comment>学生发言数</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="101" parent="21" name="STU_EMAIL">
+      <Position>9</Position>
+      <Comment>学生邮箱</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="102" parent="21" name="G_IDENTIFYING">
+      <Position>10</Position>
+      <Comment>分组标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <key id="103" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>STU_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="104" parent="22" name="TAG_ID">
+      <Position>1</Position>
+      <Comment>标签ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="22" name="TAG_CONTEN">
+      <Position>2</Position>
+      <Comment>标签内容</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="106" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TAG_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="107" parent="23" name="T_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="108" parent="23" name="T_NAME">
+      <Position>2</Position>
+      <Comment>老师姓名</Comment>
+      <DataType>varchar(35)|0</DataType>
+    </column>
+    <column id="109" parent="23" name="T_TEACHER">
+      <Position>3</Position>
+      <Comment>老师标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="110" parent="23" name="C_CLASS">
+      <Position>4</Position>
+      <Comment>班级标识</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="111" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>T_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="112" parent="24" name="TG_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="113" parent="24" name="TG_IDENTIFYING">
+      <Position>2</Position>
+      <Comment>单元标识</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="114" parent="24" name="TG_GRADE">
+      <Position>3</Position>
+      <Comment>测试成绩</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <key id="115" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TG_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="116" parent="25" name="WB_ID">
+      <Position>1</Position>
+      <Comment>表ID</Comment>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="117" parent="25" name="RDQ_ID">
+      <Position>2</Position>
+      <Comment>问题讨论表ID</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="118" parent="25" name="WB_CONTENT">
+      <Position>3</Position>
+      <Comment>回复内容</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="119" parent="25" name="WB_UPLOADFILE">
+      <Position>4</Position>
+      <Comment>回复文件</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="120" parent="25" name="STU_STUDENTID">
+      <Position>5</Position>
+      <Comment>学生学号</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="121" parent="25" name="WB_CONTENT_NUM">
+      <Position>6</Position>
+      <Comment>统计回复数</Comment>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <key id="122" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>WB_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

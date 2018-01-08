@@ -9,17 +9,12 @@ import java.util.List;
 
 /**
  *@Author : YangGuang
- *@Description:发布学习内容Service层
+ *@Description:发布学习内容接口
  *@Date:Created in 12:17 2018/1/7
  *
  **/
-@Service
-public class ReleasediscussionquestionsService {
+public interface ReleasediscussionquestionsService {
 
-    @Autowired
-    ReleasediscussionquestionsServiceIml releasediscussionquestionsServiceIml;
+   List<Releasediscussionquestions> selectRdqAndTag();
 
-   public List<Releasediscussionquestions> selectRdqAndTag(){
-        return releasediscussionquestionsServiceIml.selectRdqAndTag();
-    }
 }

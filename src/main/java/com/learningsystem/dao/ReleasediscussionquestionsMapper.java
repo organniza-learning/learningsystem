@@ -34,6 +34,6 @@ public interface ReleasediscussionquestionsMapper {
 
     int updateByPrimaryKey(Releasediscussionquestions record);
 
-    //查询问题讨论标题以及内容和所属的标签
+    //查询问题讨论标题以及内容和所属的标签，以及恢复条数
     List<Releasediscussionquestions> selectRdqAndTag();
 }

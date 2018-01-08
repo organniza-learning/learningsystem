@@ -7,7 +7,10 @@
     <result column="WB_CONTENT" jdbcType="VARCHAR" property="wbContent" />
     <result column="WB_UPLOADFILE" jdbcType="VARCHAR" property="wbUploadfile" />
     <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
+    <result column="WB_CONTENT_NUM" javaType="INT" property="wbCcontenNum"/>
   </resultMap>
+
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

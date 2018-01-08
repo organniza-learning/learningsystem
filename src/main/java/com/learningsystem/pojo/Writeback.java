@@ -17,6 +17,16 @@ public class Writeback {
 
     private String stuStudentid;
 
+    private Integer wbCcontenNum;
+
+    public Integer getWbCcontenNum() {
+        return wbCcontenNum;
+    }
+
+    public void setWbCcontenNum(Integer wbCcontenNum) {
+        this.wbCcontenNum = wbCcontenNum;
+    }
+
     public Integer getWbId() {
         return wbId;
     }
