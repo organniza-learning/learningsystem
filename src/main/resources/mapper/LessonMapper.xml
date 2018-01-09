@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.learningsystem.dao.WritebackMapper">
-  <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Writeback">
-    <id column="WB_ID" jdbcType="INTEGER" property="wbId" />
-    <result column="RDQ_ID" jdbcType="INTEGER" property="rdqId" />
-    <result column="WB_CONTENT" jdbcType="VARCHAR" property="wbContent" />
-    <result column="WB_UPLOADFILE" jdbcType="VARCHAR" property="wbUploadfile" />
+<mapper namespace="com.learningsystem.dao.LessonMapper">
+  <resultMap id="BaseResultMap" type="com.learningsystem.pojo.Lesson">
+    <id column="L_ID" jdbcType="INTEGER" property="lId" />
+    <result column="L_NAME" jdbcType="VARCHAR" property="lName" />
+    <result column="L_NUMBER" jdbcType="VARCHAR" property="lNumber" />
+    <result column="C_CLASSID" jdbcType="INTEGER" property="cClassid" />
+    <result column="T_TEACHER" jdbcType="INTEGER" property="tTeacher" />
     <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
-    <result column="WB_CONTENT_NUM" javaType="INT" property="wbCcontenNum"/>
   </resultMap>
-
-  <update id="insertWritebackCount" parameterType="java.lang.Integer">
-
-   UPDATE writeback
-    SET writeback.WB_CONTENT_NUM = (
-	SELECT
-		count(WB_CONTENT)
-	FROM
-		(SELECT RDQ_ID FROM writeback) AS x
-	WHERE
-		x.RDQ_ID = #{rdqId,jdbcType=INTEGER}
-    )
-    WHERE
-	  writeback.RDQ_ID = #{rdqId,jdbcType=INTEGER}
-  </update>
-
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -84,15 +68,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    WB_ID, RDQ_ID, WB_CONTENT, WB_UPLOADFILE, STU_STUDENTID
+    L_ID, L_NAME, L_NUMBER, C_CLASSID, T_TEACHER, STU_STUDENTID
   </sql>
-  <select id="selectByExample" parameterType="com.learningsystem.pojo.WritebackExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.learningsystem.pojo.LessonExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from writeback
+    from lesson
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -103,82 +87,93 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from writeback
-    where WB_ID = #{wbId,jdbcType=INTEGER}
+    from lesson
+    where L_ID = #{lId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from writeback
-    where WB_ID = #{wbId,jdbcType=INTEGER}
+    delete from lesson
+    where L_ID = #{lId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.learningsystem.pojo.WritebackExample">
-    delete from writeback
+  <delete id="deleteByExample" parameterType="com.learningsystem.pojo.LessonExample">
+    delete from lesson
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.learningsystem.pojo.Writeback">
-    insert into writeback (WB_ID, RDQ_ID, WB_CONTENT, 
-      WB_UPLOADFILE, STU_STUDENTID)
-    values (#{wbId,jdbcType=INTEGER}, #{rdqId,jdbcType=INTEGER}, #{wbContent,jdbcType=VARCHAR}, 
-      #{wbUploadfile,jdbcType=VARCHAR}, #{stuStudentid,jdbcType=VARCHAR})
+  <insert id="insert" parameterType="com.learningsystem.pojo.Lesson">
+    insert into lesson (L_ID, L_NAME, L_NUMBER, 
+      C_CLASSID, T_TEACHER, STU_STUDENTID
+      )
+    values (#{lId,jdbcType=INTEGER}, #{lName,jdbcType=VARCHAR}, #{lNumber,jdbcType=VARCHAR}, 
+      #{cClassid,jdbcType=INTEGER}, #{tTeacher,jdbcType=INTEGER}, #{stuStudentid,jdbcType=VARCHAR}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="com.learningsystem.pojo.Writeback">
-    insert into writeback
+  <insert id="insertSelective" parameterType="com.learningsystem.pojo.Lesson">
+    insert into lesson
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="wbId != null">
-        WB_ID,
+      <if test="lId != null">
+        L_ID,
       </if>
-      <if test="rdqId != null">
-        RDQ_ID,
+      <if test="lName != null">
+        L_NAME,
       </if>
-      <if test="wbContent != null">
-        WB_CONTENT,
+      <if test="lNumber != null">
+        L_NUMBER,
       </if>
-      <if test="wbUploadfile != null">
-        WB_UPLOADFILE,
+      <if test="cClassid != null">
+        C_CLASSID,
+      </if>
+      <if test="tTeacher != null">
+        T_TEACHER,
       </if>
       <if test="stuStudentid != null">
         STU_STUDENTID,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="wbId != null">
-        #{wbId,jdbcType=INTEGER},
+      <if test="lId != null">
+        #{lId,jdbcType=INTEGER},
       </if>
-      <if test="rdqId != null">
-        #{rdqId,jdbcType=INTEGER},
+      <if test="lName != null">
+        #{lName,jdbcType=VARCHAR},
       </if>
-      <if test="wbContent != null">
-        #{wbContent,jdbcType=VARCHAR},
+      <if test="lNumber != null">
+        #{lNumber,jdbcType=VARCHAR},
       </if>
-      <if test="wbUploadfile != null">
-        #{wbUploadfile,jdbcType=VARCHAR},
+      <if test="cClassid != null">
+        #{cClassid,jdbcType=INTEGER},
+      </if>
+      <if test="tTeacher != null">
+        #{tTeacher,jdbcType=INTEGER},
       </if>
       <if test="stuStudentid != null">
         #{stuStudentid,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.learningsystem.pojo.WritebackExample" resultType="java.lang.Long">
-    select count(*) from writeback
+  <select id="countByExample" parameterType="com.learningsystem.pojo.LessonExample" resultType="java.lang.Long">
+    select count(*) from lesson
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update writeback
+    update lesson
     <set>
-      <if test="record.wbId != null">
-        WB_ID = #{record.wbId,jdbcType=INTEGER},
+      <if test="record.lId != null">
+        L_ID = #{record.lId,jdbcType=INTEGER},
       </if>
-      <if test="record.rdqId != null">
-        RDQ_ID = #{record.rdqId,jdbcType=INTEGER},
+      <if test="record.lName != null">
+        L_NAME = #{record.lName,jdbcType=VARCHAR},
       </if>
-      <if test="record.wbContent != null">
-        WB_CONTENT = #{record.wbContent,jdbcType=VARCHAR},
+      <if test="record.lNumber != null">
+        L_NUMBER = #{record.lNumber,jdbcType=VARCHAR},
       </if>
-      <if test="record.wbUploadfile != null">
-        WB_UPLOADFILE = #{record.wbUploadfile,jdbcType=VARCHAR},
+      <if test="record.cClassid != null">
+        C_CLASSID = #{record.cClassid,jdbcType=INTEGER},
+      </if>
+      <if test="record.tTeacher != null">
+        T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
       </if>
       <if test="record.stuStudentid != null">
         STU_STUDENTID = #{record.stuStudentid,jdbcType=VARCHAR},
@@ -189,40 +184,45 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update writeback
-    set WB_ID = #{record.wbId,jdbcType=INTEGER},
-      RDQ_ID = #{record.rdqId,jdbcType=INTEGER},
-      WB_CONTENT = #{record.wbContent,jdbcType=VARCHAR},
-      WB_UPLOADFILE = #{record.wbUploadfile,jdbcType=VARCHAR},
+    update lesson
+    set L_ID = #{record.lId,jdbcType=INTEGER},
+      L_NAME = #{record.lName,jdbcType=VARCHAR},
+      L_NUMBER = #{record.lNumber,jdbcType=VARCHAR},
+      C_CLASSID = #{record.cClassid,jdbcType=INTEGER},
+      T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
       STU_STUDENTID = #{record.stuStudentid,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Writeback">
-    update writeback
+  <update id="updateByPrimaryKeySelective" parameterType="com.learningsystem.pojo.Lesson">
+    update lesson
     <set>
-      <if test="rdqId != null">
-        RDQ_ID = #{rdqId,jdbcType=INTEGER},
+      <if test="lName != null">
+        L_NAME = #{lName,jdbcType=VARCHAR},
       </if>
-      <if test="wbContent != null">
-        WB_CONTENT = #{wbContent,jdbcType=VARCHAR},
+      <if test="lNumber != null">
+        L_NUMBER = #{lNumber,jdbcType=VARCHAR},
       </if>
-      <if test="wbUploadfile != null">
-        WB_UPLOADFILE = #{wbUploadfile,jdbcType=VARCHAR},
+      <if test="cClassid != null">
+        C_CLASSID = #{cClassid,jdbcType=INTEGER},
+      </if>
+      <if test="tTeacher != null">
+        T_TEACHER = #{tTeacher,jdbcType=INTEGER},
       </if>
       <if test="stuStudentid != null">
         STU_STUDENTID = #{stuStudentid,jdbcType=VARCHAR},
       </if>
     </set>
-    where WB_ID = #{wbId,jdbcType=INTEGER}
+    where L_ID = #{lId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Writeback">
-    update writeback
-    set RDQ_ID = #{rdqId,jdbcType=INTEGER},
-      WB_CONTENT = #{wbContent,jdbcType=VARCHAR},
-      WB_UPLOADFILE = #{wbUploadfile,jdbcType=VARCHAR},
+  <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Lesson">
+    update lesson
+    set L_NAME = #{lName,jdbcType=VARCHAR},
+      L_NUMBER = #{lNumber,jdbcType=VARCHAR},
+      C_CLASSID = #{cClassid,jdbcType=INTEGER},
+      T_TEACHER = #{tTeacher,jdbcType=INTEGER},
       STU_STUDENTID = #{stuStudentid,jdbcType=VARCHAR}
-    where WB_ID = #{wbId,jdbcType=INTEGER}
+    where L_ID = #{lId,jdbcType=INTEGER}
   </update>
 </mapper>

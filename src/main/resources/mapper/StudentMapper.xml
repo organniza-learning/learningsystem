@@ -9,9 +9,12 @@
     <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
     <result column="STU_PASSWORD" jdbcType="VARCHAR" property="stuPassword" />
     <result column="STU_NAME" jdbcType="VARCHAR" property="stuName" />
-    <result column="G_SPEAKNUM" jdbcType="INTEGER" property="gSpeaknum" />
-    <result column="STU_EMAIL" jdbcType="VARCHAR" property="stuEmail" />
+    <result column="STU_GRADE" jdbcType="VARCHAR" property="stuGrade" />
     <result column="G_IDENTIFYING" jdbcType="INTEGER" property="gIdentifying" />
+    <result column="STU_EMAIL" jdbcType="VARCHAR" property="stuEmail" />
+    <result column="STU_PHONER" jdbcType="INTEGER" property="stuPhoner" />
+    <result column="STU_QQ" jdbcType="INTEGER" property="stuQq" />
+    <result column="STU_WECHAT" jdbcType="VARCHAR" property="stuWechat" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -73,7 +76,7 @@
   </sql>
   <sql id="Base_Column_List">
     STU_ID, TG_OPENID, C_CLASSID, TG_IDENTIFYING, STU_STUDENTID, STU_PASSWORD, STU_NAME, 
-    G_SPEAKNUM, STU_EMAIL, G_IDENTIFYING
+    STU_GRADE, G_IDENTIFYING, STU_EMAIL, STU_PHONER, STU_QQ, STU_WECHAT
   </sql>
   
   <!-- 验证账号密码 -->

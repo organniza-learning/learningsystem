@@ -37,21 +37,23 @@
     </association>
   </resultMap>
   <select id="selectRdqAndTag" resultMap="BaseResultMapAngTag">
-    SELECT
-    DISTINCT
-    releasediscussionquestions.`G_STUDENTID`,
-    releasediscussionquestions.`RDQ_THEME`,
-    releasediscussionquestions.`RDQ_TIME`,
-    releasediscussionquestions.`RDQ_CLASS`,
-    releasediscussionquestions.`RDQ_TEXT`,
-    writeback.`WB_CONTENT_NUM`,
-    tag.`TAG_CONTEN`
+    SELECT DISTINCT
+    releasediscussionquestions.RDQ_THEME,
+    releasediscussionquestions.RDQ_TEXT,
+    releasediscussionquestions.RDQ_TIME,
+    writeback.RDQ_ID,
+    releasediscussionquestions.RDQ_ID,
+    tag.TAG_CONTEN,
+    writeback.WB_CONTENT_NUM
     FROM
-    releasediscussionquestions,tag,writeback
+    releasediscussionquestions ,
+    writeback ,
+    tag
     WHERE
-    tag.`TAG_ID` = releasediscussionquestions.`TAG_ID`
-    AND
-    releasediscussionquestions.`RDQ_ID` = writeback.`RDQ_ID`
+    releasediscussionquestions.RDQ_ID = writeback.RDQ_ID AND
+    releasediscussionquestions.TAG_ID = tag.TAG_ID
+    ORDER BY
+    releasediscussionquestions.RDQ_TIME DESC
   </select>
   <sql id="Example_Where_Clause">
     <where>

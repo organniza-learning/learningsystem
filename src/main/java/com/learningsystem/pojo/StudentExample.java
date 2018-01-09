@@ -564,63 +564,133 @@ public class StudentExample {
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumIsNull() {
-            addCriterion("G_SPEAKNUM is null");
+        public Criteria andStuGradeIsNull() {
+            addCriterion("STU_GRADE is null");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumIsNotNull() {
-            addCriterion("G_SPEAKNUM is not null");
+        public Criteria andStuGradeIsNotNull() {
+            addCriterion("STU_GRADE is not null");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumEqualTo(Integer value) {
-            addCriterion("G_SPEAKNUM =", value, "gSpeaknum");
+        public Criteria andStuGradeEqualTo(String value) {
+            addCriterion("STU_GRADE =", value, "stuGrade");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumNotEqualTo(Integer value) {
-            addCriterion("G_SPEAKNUM <>", value, "gSpeaknum");
+        public Criteria andStuGradeNotEqualTo(String value) {
+            addCriterion("STU_GRADE <>", value, "stuGrade");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumGreaterThan(Integer value) {
-            addCriterion("G_SPEAKNUM >", value, "gSpeaknum");
+        public Criteria andStuGradeGreaterThan(String value) {
+            addCriterion("STU_GRADE >", value, "stuGrade");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumGreaterThanOrEqualTo(Integer value) {
-            addCriterion("G_SPEAKNUM >=", value, "gSpeaknum");
+        public Criteria andStuGradeGreaterThanOrEqualTo(String value) {
+            addCriterion("STU_GRADE >=", value, "stuGrade");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumLessThan(Integer value) {
-            addCriterion("G_SPEAKNUM <", value, "gSpeaknum");
+        public Criteria andStuGradeLessThan(String value) {
+            addCriterion("STU_GRADE <", value, "stuGrade");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumLessThanOrEqualTo(Integer value) {
-            addCriterion("G_SPEAKNUM <=", value, "gSpeaknum");
+        public Criteria andStuGradeLessThanOrEqualTo(String value) {
+            addCriterion("STU_GRADE <=", value, "stuGrade");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumIn(List<Integer> values) {
-            addCriterion("G_SPEAKNUM in", values, "gSpeaknum");
+        public Criteria andStuGradeLike(String value) {
+            addCriterion("STU_GRADE like", value, "stuGrade");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumNotIn(List<Integer> values) {
-            addCriterion("G_SPEAKNUM not in", values, "gSpeaknum");
+        public Criteria andStuGradeNotLike(String value) {
+            addCriterion("STU_GRADE not like", value, "stuGrade");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumBetween(Integer value1, Integer value2) {
-            addCriterion("G_SPEAKNUM between", value1, value2, "gSpeaknum");
+        public Criteria andStuGradeIn(List<String> values) {
+            addCriterion("STU_GRADE in", values, "stuGrade");
             return (Criteria) this;
         }
 
-        public Criteria andGSpeaknumNotBetween(Integer value1, Integer value2) {
-            addCriterion("G_SPEAKNUM not between", value1, value2, "gSpeaknum");
+        public Criteria andStuGradeNotIn(List<String> values) {
+            addCriterion("STU_GRADE not in", values, "stuGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuGradeBetween(String value1, String value2) {
+            addCriterion("STU_GRADE between", value1, value2, "stuGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuGradeNotBetween(String value1, String value2) {
+            addCriterion("STU_GRADE not between", value1, value2, "stuGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingIsNull() {
+            addCriterion("G_IDENTIFYING is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingIsNotNull() {
+            addCriterion("G_IDENTIFYING is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingEqualTo(Integer value) {
+            addCriterion("G_IDENTIFYING =", value, "gIdentifying");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingNotEqualTo(Integer value) {
+            addCriterion("G_IDENTIFYING <>", value, "gIdentifying");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingGreaterThan(Integer value) {
+            addCriterion("G_IDENTIFYING >", value, "gIdentifying");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingGreaterThanOrEqualTo(Integer value) {
+            addCriterion("G_IDENTIFYING >=", value, "gIdentifying");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingLessThan(Integer value) {
+            addCriterion("G_IDENTIFYING <", value, "gIdentifying");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingLessThanOrEqualTo(Integer value) {
+            addCriterion("G_IDENTIFYING <=", value, "gIdentifying");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingIn(List<Integer> values) {
+            addCriterion("G_IDENTIFYING in", values, "gIdentifying");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingNotIn(List<Integer> values) {
+            addCriterion("G_IDENTIFYING not in", values, "gIdentifying");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingBetween(Integer value1, Integer value2) {
+            addCriterion("G_IDENTIFYING between", value1, value2, "gIdentifying");
+            return (Criteria) this;
+        }
+
+        public Criteria andGIdentifyingNotBetween(Integer value1, Integer value2) {
+            addCriterion("G_IDENTIFYING not between", value1, value2, "gIdentifying");
             return (Criteria) this;
         }
 
@@ -694,63 +764,193 @@ public class StudentExample {
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingIsNull() {
-            addCriterion("G_IDENTIFYING is null");
+        public Criteria andStuPhonerIsNull() {
+            addCriterion("STU_PHONER is null");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingIsNotNull() {
-            addCriterion("G_IDENTIFYING is not null");
+        public Criteria andStuPhonerIsNotNull() {
+            addCriterion("STU_PHONER is not null");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingEqualTo(Integer value) {
-            addCriterion("G_IDENTIFYING =", value, "gIdentifying");
+        public Criteria andStuPhonerEqualTo(Integer value) {
+            addCriterion("STU_PHONER =", value, "stuPhoner");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingNotEqualTo(Integer value) {
-            addCriterion("G_IDENTIFYING <>", value, "gIdentifying");
+        public Criteria andStuPhonerNotEqualTo(Integer value) {
+            addCriterion("STU_PHONER <>", value, "stuPhoner");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingGreaterThan(Integer value) {
-            addCriterion("G_IDENTIFYING >", value, "gIdentifying");
+        public Criteria andStuPhonerGreaterThan(Integer value) {
+            addCriterion("STU_PHONER >", value, "stuPhoner");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingGreaterThanOrEqualTo(Integer value) {
-            addCriterion("G_IDENTIFYING >=", value, "gIdentifying");
+        public Criteria andStuPhonerGreaterThanOrEqualTo(Integer value) {
+            addCriterion("STU_PHONER >=", value, "stuPhoner");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingLessThan(Integer value) {
-            addCriterion("G_IDENTIFYING <", value, "gIdentifying");
+        public Criteria andStuPhonerLessThan(Integer value) {
+            addCriterion("STU_PHONER <", value, "stuPhoner");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingLessThanOrEqualTo(Integer value) {
-            addCriterion("G_IDENTIFYING <=", value, "gIdentifying");
+        public Criteria andStuPhonerLessThanOrEqualTo(Integer value) {
+            addCriterion("STU_PHONER <=", value, "stuPhoner");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingIn(List<Integer> values) {
-            addCriterion("G_IDENTIFYING in", values, "gIdentifying");
+        public Criteria andStuPhonerIn(List<Integer> values) {
+            addCriterion("STU_PHONER in", values, "stuPhoner");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingNotIn(List<Integer> values) {
-            addCriterion("G_IDENTIFYING not in", values, "gIdentifying");
+        public Criteria andStuPhonerNotIn(List<Integer> values) {
+            addCriterion("STU_PHONER not in", values, "stuPhoner");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingBetween(Integer value1, Integer value2) {
-            addCriterion("G_IDENTIFYING between", value1, value2, "gIdentifying");
+        public Criteria andStuPhonerBetween(Integer value1, Integer value2) {
+            addCriterion("STU_PHONER between", value1, value2, "stuPhoner");
             return (Criteria) this;
         }
 
-        public Criteria andGIdentifyingNotBetween(Integer value1, Integer value2) {
-            addCriterion("G_IDENTIFYING not between", value1, value2, "gIdentifying");
+        public Criteria andStuPhonerNotBetween(Integer value1, Integer value2) {
+            addCriterion("STU_PHONER not between", value1, value2, "stuPhoner");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqIsNull() {
+            addCriterion("STU_QQ is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqIsNotNull() {
+            addCriterion("STU_QQ is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqEqualTo(Integer value) {
+            addCriterion("STU_QQ =", value, "stuQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqNotEqualTo(Integer value) {
+            addCriterion("STU_QQ <>", value, "stuQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqGreaterThan(Integer value) {
+            addCriterion("STU_QQ >", value, "stuQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqGreaterThanOrEqualTo(Integer value) {
+            addCriterion("STU_QQ >=", value, "stuQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqLessThan(Integer value) {
+            addCriterion("STU_QQ <", value, "stuQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqLessThanOrEqualTo(Integer value) {
+            addCriterion("STU_QQ <=", value, "stuQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqIn(List<Integer> values) {
+            addCriterion("STU_QQ in", values, "stuQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqNotIn(List<Integer> values) {
+            addCriterion("STU_QQ not in", values, "stuQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqBetween(Integer value1, Integer value2) {
+            addCriterion("STU_QQ between", value1, value2, "stuQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuQqNotBetween(Integer value1, Integer value2) {
+            addCriterion("STU_QQ not between", value1, value2, "stuQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatIsNull() {
+            addCriterion("STU_WECHAT is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatIsNotNull() {
+            addCriterion("STU_WECHAT is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatEqualTo(String value) {
+            addCriterion("STU_WECHAT =", value, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatNotEqualTo(String value) {
+            addCriterion("STU_WECHAT <>", value, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatGreaterThan(String value) {
+            addCriterion("STU_WECHAT >", value, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatGreaterThanOrEqualTo(String value) {
+            addCriterion("STU_WECHAT >=", value, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatLessThan(String value) {
+            addCriterion("STU_WECHAT <", value, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatLessThanOrEqualTo(String value) {
+            addCriterion("STU_WECHAT <=", value, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatLike(String value) {
+            addCriterion("STU_WECHAT like", value, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatNotLike(String value) {
+            addCriterion("STU_WECHAT not like", value, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatIn(List<String> values) {
+            addCriterion("STU_WECHAT in", values, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatNotIn(List<String> values) {
+            addCriterion("STU_WECHAT not in", values, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatBetween(String value1, String value2) {
+            addCriterion("STU_WECHAT between", value1, value2, "stuWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andStuWechatNotBetween(String value1, String value2) {
+            addCriterion("STU_WECHAT not between", value1, value2, "stuWechat");
             return (Criteria) this;
         }
     }

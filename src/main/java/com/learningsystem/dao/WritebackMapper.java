@@ -1,5 +1,6 @@
 package com.learningsystem.dao;
 
+import com.learningsystem.pojo.Releasediscussionquestions;
 import com.learningsystem.pojo.Writeback;
 import com.learningsystem.pojo.WritebackExample;
 import java.util.List;
@@ -35,5 +36,5 @@ public interface WritebackMapper {
     int updateByPrimaryKey(Writeback record);
 
     //自更新回复表统计回复数量
-    void insertWritebackCount(Integer rdqId);
+    int insertWritebackCount(Integer rdqId);
 }

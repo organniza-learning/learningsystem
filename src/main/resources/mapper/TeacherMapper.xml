@@ -6,6 +6,10 @@
     <result column="T_NAME" jdbcType="VARCHAR" property="tName" />
     <result column="T_TEACHER" jdbcType="INTEGER" property="tTeacher" />
     <result column="C_CLASS" jdbcType="VARCHAR" property="cClass" />
+    <result column="T_GRNDER" jdbcType="VARCHAR" property="tGrnder" />
+    <result column="T_PHONE" jdbcType="INTEGER" property="tPhone" />
+    <result column="T_QQ" jdbcType="INTEGER" property="tQq" />
+    <result column="T_WECHAT" jdbcType="VARCHAR" property="tWechat" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -66,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    T_ID, T_NAME, T_TEACHER, C_CLASS
+    T_ID, T_NAME, T_TEACHER, C_CLASS, T_GRNDER, T_PHONE, T_QQ, T_WECHAT
   </sql>
   <select id="selectByExample" parameterType="com.learningsystem.pojo.TeacherExample" resultMap="BaseResultMap">
     select
@@ -100,9 +104,11 @@
   </delete>
   <insert id="insert" parameterType="com.learningsystem.pojo.Teacher">
     insert into teacher (T_ID, T_NAME, T_TEACHER, 
-      C_CLASS)
+      C_CLASS, T_GRNDER, T_PHONE, 
+      T_QQ, T_WECHAT)
     values (#{tId,jdbcType=INTEGER}, #{tName,jdbcType=VARCHAR}, #{tTeacher,jdbcType=INTEGER}, 
-      #{cClass,jdbcType=VARCHAR})
+      #{cClass,jdbcType=VARCHAR}, #{tGrnder,jdbcType=VARCHAR}, #{tPhone,jdbcType=INTEGER}, 
+      #{tQq,jdbcType=INTEGER}, #{tWechat,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.learningsystem.pojo.Teacher">
     insert into teacher
@@ -119,6 +125,18 @@
       <if test="cClass != null">
         C_CLASS,
       </if>
+      <if test="tGrnder != null">
+        T_GRNDER,
+      </if>
+      <if test="tPhone != null">
+        T_PHONE,
+      </if>
+      <if test="tQq != null">
+        T_QQ,
+      </if>
+      <if test="tWechat != null">
+        T_WECHAT,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="tId != null">
@@ -132,6 +150,18 @@
       </if>
       <if test="cClass != null">
         #{cClass,jdbcType=VARCHAR},
+      </if>
+      <if test="tGrnder != null">
+        #{tGrnder,jdbcType=VARCHAR},
+      </if>
+      <if test="tPhone != null">
+        #{tPhone,jdbcType=INTEGER},
+      </if>
+      <if test="tQq != null">
+        #{tQq,jdbcType=INTEGER},
+      </if>
+      <if test="tWechat != null">
+        #{tWechat,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -156,6 +186,18 @@
       <if test="record.cClass != null">
         C_CLASS = #{record.cClass,jdbcType=VARCHAR},
       </if>
+      <if test="record.tGrnder != null">
+        T_GRNDER = #{record.tGrnder,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tPhone != null">
+        T_PHONE = #{record.tPhone,jdbcType=INTEGER},
+      </if>
+      <if test="record.tQq != null">
+        T_QQ = #{record.tQq,jdbcType=INTEGER},
+      </if>
+      <if test="record.tWechat != null">
+        T_WECHAT = #{record.tWechat,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -166,7 +208,11 @@
     set T_ID = #{record.tId,jdbcType=INTEGER},
       T_NAME = #{record.tName,jdbcType=VARCHAR},
       T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
-      C_CLASS = #{record.cClass,jdbcType=VARCHAR}
+      C_CLASS = #{record.cClass,jdbcType=VARCHAR},
+      T_GRNDER = #{record.tGrnder,jdbcType=VARCHAR},
+      T_PHONE = #{record.tPhone,jdbcType=INTEGER},
+      T_QQ = #{record.tQq,jdbcType=INTEGER},
+      T_WECHAT = #{record.tWechat,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -183,6 +229,18 @@
       <if test="cClass != null">
         C_CLASS = #{cClass,jdbcType=VARCHAR},
       </if>
+      <if test="tGrnder != null">
+        T_GRNDER = #{tGrnder,jdbcType=VARCHAR},
+      </if>
+      <if test="tPhone != null">
+        T_PHONE = #{tPhone,jdbcType=INTEGER},
+      </if>
+      <if test="tQq != null">
+        T_QQ = #{tQq,jdbcType=INTEGER},
+      </if>
+      <if test="tWechat != null">
+        T_WECHAT = #{tWechat,jdbcType=VARCHAR},
+      </if>
     </set>
     where T_ID = #{tId,jdbcType=INTEGER}
   </update>
@@ -190,7 +248,11 @@
     update teacher
     set T_NAME = #{tName,jdbcType=VARCHAR},
       T_TEACHER = #{tTeacher,jdbcType=INTEGER},
-      C_CLASS = #{cClass,jdbcType=VARCHAR}
+      C_CLASS = #{cClass,jdbcType=VARCHAR},
+      T_GRNDER = #{tGrnder,jdbcType=VARCHAR},
+      T_PHONE = #{tPhone,jdbcType=INTEGER},
+      T_QQ = #{tQq,jdbcType=INTEGER},
+      T_WECHAT = #{tWechat,jdbcType=VARCHAR}
     where T_ID = #{tId,jdbcType=INTEGER}
   </update>
 </mapper>

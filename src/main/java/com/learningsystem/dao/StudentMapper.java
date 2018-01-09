@@ -19,7 +19,7 @@ public interface StudentMapper {
     Student selectByTgOpenid(String openid);
     // 验证账号密码
     Student selectByIdAndPassword(Map<String, String> map);
-    
+
     long countByExample(StudentExample example);
 
     int deleteByExample(StudentExample example);
@@ -41,7 +41,5 @@ public interface StudentMapper {
     int updateByPrimaryKeySelective(Student record);
 
     int updateByPrimaryKey(Student record);
-    
- 
-    
+
 }

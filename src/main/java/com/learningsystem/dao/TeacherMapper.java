@@ -2,15 +2,10 @@ package com.learningsystem.dao;
 
 import com.learningsystem.pojo.Teacher;
 import com.learningsystem.pojo.TeacherExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-/**
-*@Author : YangGuang
-*@Description:老师类dao层接口
-*@Date:Created in 12:14 2018/1/7
-*
-**/
+import java.util.List;
+
 public interface TeacherMapper {
     long countByExample(TeacherExample example);
 

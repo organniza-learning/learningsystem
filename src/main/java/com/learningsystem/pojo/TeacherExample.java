@@ -363,6 +363,266 @@ public class TeacherExample {
             addCriterion("C_CLASS not between", value1, value2, "cClass");
             return (Criteria) this;
         }
+
+        public Criteria andTGrnderIsNull() {
+            addCriterion("T_GRNDER is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderIsNotNull() {
+            addCriterion("T_GRNDER is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderEqualTo(String value) {
+            addCriterion("T_GRNDER =", value, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderNotEqualTo(String value) {
+            addCriterion("T_GRNDER <>", value, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderGreaterThan(String value) {
+            addCriterion("T_GRNDER >", value, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderGreaterThanOrEqualTo(String value) {
+            addCriterion("T_GRNDER >=", value, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderLessThan(String value) {
+            addCriterion("T_GRNDER <", value, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderLessThanOrEqualTo(String value) {
+            addCriterion("T_GRNDER <=", value, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderLike(String value) {
+            addCriterion("T_GRNDER like", value, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderNotLike(String value) {
+            addCriterion("T_GRNDER not like", value, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderIn(List<String> values) {
+            addCriterion("T_GRNDER in", values, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderNotIn(List<String> values) {
+            addCriterion("T_GRNDER not in", values, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderBetween(String value1, String value2) {
+            addCriterion("T_GRNDER between", value1, value2, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTGrnderNotBetween(String value1, String value2) {
+            addCriterion("T_GRNDER not between", value1, value2, "tGrnder");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneIsNull() {
+            addCriterion("T_PHONE is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneIsNotNull() {
+            addCriterion("T_PHONE is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneEqualTo(Integer value) {
+            addCriterion("T_PHONE =", value, "tPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneNotEqualTo(Integer value) {
+            addCriterion("T_PHONE <>", value, "tPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneGreaterThan(Integer value) {
+            addCriterion("T_PHONE >", value, "tPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneGreaterThanOrEqualTo(Integer value) {
+            addCriterion("T_PHONE >=", value, "tPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneLessThan(Integer value) {
+            addCriterion("T_PHONE <", value, "tPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneLessThanOrEqualTo(Integer value) {
+            addCriterion("T_PHONE <=", value, "tPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneIn(List<Integer> values) {
+            addCriterion("T_PHONE in", values, "tPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneNotIn(List<Integer> values) {
+            addCriterion("T_PHONE not in", values, "tPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneBetween(Integer value1, Integer value2) {
+            addCriterion("T_PHONE between", value1, value2, "tPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTPhoneNotBetween(Integer value1, Integer value2) {
+            addCriterion("T_PHONE not between", value1, value2, "tPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqIsNull() {
+            addCriterion("T_QQ is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqIsNotNull() {
+            addCriterion("T_QQ is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqEqualTo(Integer value) {
+            addCriterion("T_QQ =", value, "tQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqNotEqualTo(Integer value) {
+            addCriterion("T_QQ <>", value, "tQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqGreaterThan(Integer value) {
+            addCriterion("T_QQ >", value, "tQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqGreaterThanOrEqualTo(Integer value) {
+            addCriterion("T_QQ >=", value, "tQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqLessThan(Integer value) {
+            addCriterion("T_QQ <", value, "tQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqLessThanOrEqualTo(Integer value) {
+            addCriterion("T_QQ <=", value, "tQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqIn(List<Integer> values) {
+            addCriterion("T_QQ in", values, "tQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqNotIn(List<Integer> values) {
+            addCriterion("T_QQ not in", values, "tQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqBetween(Integer value1, Integer value2) {
+            addCriterion("T_QQ between", value1, value2, "tQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andTQqNotBetween(Integer value1, Integer value2) {
+            addCriterion("T_QQ not between", value1, value2, "tQq");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatIsNull() {
+            addCriterion("T_WECHAT is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatIsNotNull() {
+            addCriterion("T_WECHAT is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatEqualTo(String value) {
+            addCriterion("T_WECHAT =", value, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatNotEqualTo(String value) {
+            addCriterion("T_WECHAT <>", value, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatGreaterThan(String value) {
+            addCriterion("T_WECHAT >", value, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatGreaterThanOrEqualTo(String value) {
+            addCriterion("T_WECHAT >=", value, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatLessThan(String value) {
+            addCriterion("T_WECHAT <", value, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatLessThanOrEqualTo(String value) {
+            addCriterion("T_WECHAT <=", value, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatLike(String value) {
+            addCriterion("T_WECHAT like", value, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatNotLike(String value) {
+            addCriterion("T_WECHAT not like", value, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatIn(List<String> values) {
+            addCriterion("T_WECHAT in", values, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatNotIn(List<String> values) {
+            addCriterion("T_WECHAT not in", values, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatBetween(String value1, String value2) {
+            addCriterion("T_WECHAT between", value1, value2, "tWechat");
+            return (Criteria) this;
+        }
+
+        public Criteria andTWechatNotBetween(String value1, String value2) {
+            addCriterion("T_WECHAT not between", value1, value2, "tWechat");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

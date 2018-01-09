@@ -1,11 +1,5 @@
 package com.learningsystem.pojo;
 
-/**
-*@Author : YangGuang
-*@Description:学生实体类
-*@Date:Created in 13:12 2018/1/7
-*
-**/
 public class Student {
     private Integer stuId;
 
@@ -21,11 +15,17 @@ public class Student {
 
     private String stuName;
 
-    private Integer gSpeaknum;
+    private String stuGrade;
+
+    private Integer gIdentifying;
 
     private String stuEmail;
 
-    private Integer gIdentifying;
+    private Integer stuPhoner;
+
+    private Integer stuQq;
+
+    private String stuWechat;
 
     public Integer getStuId() {
         return stuId;
@@ -83,12 +83,20 @@ public class Student {
         this.stuName = stuName == null ? null : stuName.trim();
     }
 
-    public Integer getgSpeaknum() {
-        return gSpeaknum;
+    public String getStuGrade() {
+        return stuGrade;
     }
 
-    public void setgSpeaknum(Integer gSpeaknum) {
-        this.gSpeaknum = gSpeaknum;
+    public void setStuGrade(String stuGrade) {
+        this.stuGrade = stuGrade == null ? null : stuGrade.trim();
+    }
+
+    public Integer getgIdentifying() {
+        return gIdentifying;
+    }
+
+    public void setgIdentifying(Integer gIdentifying) {
+        this.gIdentifying = gIdentifying;
     }
 
     public String getStuEmail() {
@@ -99,11 +107,27 @@ public class Student {
         this.stuEmail = stuEmail == null ? null : stuEmail.trim();
     }
 
-    public Integer getgIdentifying() {
-        return gIdentifying;
+    public Integer getStuPhoner() {
+        return stuPhoner;
     }
 
-    public void setgIdentifying(Integer gIdentifying) {
-        this.gIdentifying = gIdentifying;
+    public void setStuPhoner(Integer stuPhoner) {
+        this.stuPhoner = stuPhoner;
+    }
+
+    public Integer getStuQq() {
+        return stuQq;
+    }
+
+    public void setStuQq(Integer stuQq) {
+        this.stuQq = stuQq;
+    }
+
+    public String getStuWechat() {
+        return stuWechat;
+    }
+
+    public void setStuWechat(String stuWechat) {
+        this.stuWechat = stuWechat == null ? null : stuWechat.trim();
     }
 }

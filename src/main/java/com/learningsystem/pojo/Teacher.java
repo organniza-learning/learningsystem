@@ -1,11 +1,5 @@
 package com.learningsystem.pojo;
 
-/**
-*@Author : YangGuang
-*@Description:老师实体类
-*@Date:Created in 12:18 2018/1/7
-*
-**/
 public class Teacher {
     private Integer tId;
 
@@ -14,6 +8,14 @@ public class Teacher {
     private Integer tTeacher;
 
     private String cClass;
+
+    private String tGrnder;
+
+    private Integer tPhone;
+
+    private Integer tQq;
+
+    private String tWechat;
 
     public Integer gettId() {
         return tId;
@@ -45,5 +47,37 @@ public class Teacher {
 
     public void setcClass(String cClass) {
         this.cClass = cClass == null ? null : cClass.trim();
+    }
+
+    public String gettGrnder() {
+        return tGrnder;
+    }
+
+    public void settGrnder(String tGrnder) {
+        this.tGrnder = tGrnder == null ? null : tGrnder.trim();
+    }
+
+    public Integer gettPhone() {
+        return tPhone;
+    }
+
+    public void settPhone(Integer tPhone) {
+        this.tPhone = tPhone;
+    }
+
+    public Integer gettQq() {
+        return tQq;
+    }
+
+    public void settQq(Integer tQq) {
+        this.tQq = tQq;
+    }
+
+    public String gettWechat() {
+        return tWechat;
+    }
+
+    public void settWechat(String tWechat) {
+        this.tWechat = tWechat == null ? null : tWechat.trim();
     }
 }

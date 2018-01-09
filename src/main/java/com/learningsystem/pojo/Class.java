@@ -1,11 +1,5 @@
 package com.learningsystem.pojo;
 
-/**
-*@Author : YangGuang
-*@Description:班级实体类
-*@Date:Created in 12:16 2018/1/7
-*
-**/
 public class Class {
     private Integer cId;
 
@@ -16,6 +10,8 @@ public class Class {
     private String cName;
 
     private String cCollege;
+
+    private byte[] cMajor;
 
     public Integer getcId() {
         return cId;
@@ -55,5 +51,13 @@ public class Class {
 
     public void setcCollege(String cCollege) {
         this.cCollege = cCollege == null ? null : cCollege.trim();
+    }
+
+    public byte[] getcMajor() {
+        return cMajor;
+    }
+
+    public void setcMajor(byte[] cMajor) {
+        this.cMajor = cMajor;
     }
 }
