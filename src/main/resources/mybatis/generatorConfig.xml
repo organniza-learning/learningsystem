@@ -62,8 +62,8 @@
         <!--<table schema="learningsystemdatabase" tableName="testgrade"></table>-->
         <!--<table schema="learningsystemdatabase" tableName="writeback"></table>-->
         <!--<table schema="learningsystemdatabase" tableName="student"></table>-->
-        <table schema="learningsystemdatabase" tableName="class"></table>
-        <!--<table schema="learningsystemdatabase" tableName="teacher"></table>-->
+        <!--<table schema="learningsystemdatabase" tableName="class"></table>-->
+        <table schema="learningsystemdatabase" tableName="teacher"></table>
         <!--<table schema="learningsystemdatabase" tableName="lesson"></table>-->
 
         <!--<table schema="ygblog" tableName="blog_like"></table>

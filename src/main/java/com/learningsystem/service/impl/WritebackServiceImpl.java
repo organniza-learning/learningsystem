@@ -1,4 +1,4 @@
-package com.learningsystem.service.iml;
+package com.learningsystem.service.impl;
 
 import com.learningsystem.dao.WritebackMapper;
 import com.learningsystem.service.WritebackService;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * @Modified By:
  **/
 @Service
-public class WritebackServiceIml implements WritebackService {
+public class WritebackServiceImpl implements WritebackService {
 
     @Autowired
     private WritebackMapper writebackMapper;

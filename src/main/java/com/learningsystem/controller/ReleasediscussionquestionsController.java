@@ -2,13 +2,10 @@ package com.learningsystem.controller;
 
 import com.learningsystem.pojo.Releasediscussionquestions;
 import com.learningsystem.service.ReleasediscussionquestionsService;
-import com.learningsystem.service.iml.ReleasediscussionquestionsServiceIml;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;

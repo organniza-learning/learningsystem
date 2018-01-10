@@ -7,7 +7,7 @@
     <result column="T_TEACHER" jdbcType="INTEGER" property="tTeacher" />
     <result column="C_CLASS" jdbcType="VARCHAR" property="cClass" />
     <result column="T_GRNDER" jdbcType="VARCHAR" property="tGrnder" />
-    <result column="T_PHONE" jdbcType="INTEGER" property="tPhone" />
+    <result column="T_PHONE" jdbcType="CHAR" property="tPhone" />
     <result column="T_QQ" jdbcType="INTEGER" property="tQq" />
     <result column="T_WECHAT" jdbcType="VARCHAR" property="tWechat" />
   </resultMap>
@@ -107,7 +107,7 @@
       C_CLASS, T_GRNDER, T_PHONE, 
       T_QQ, T_WECHAT)
     values (#{tId,jdbcType=INTEGER}, #{tName,jdbcType=VARCHAR}, #{tTeacher,jdbcType=INTEGER}, 
-      #{cClass,jdbcType=VARCHAR}, #{tGrnder,jdbcType=VARCHAR}, #{tPhone,jdbcType=INTEGER}, 
+      #{cClass,jdbcType=VARCHAR}, #{tGrnder,jdbcType=VARCHAR}, #{tPhone,jdbcType=CHAR}, 
       #{tQq,jdbcType=INTEGER}, #{tWechat,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.learningsystem.pojo.Teacher">
@@ -155,7 +155,7 @@
         #{tGrnder,jdbcType=VARCHAR},
       </if>
       <if test="tPhone != null">
-        #{tPhone,jdbcType=INTEGER},
+        #{tPhone,jdbcType=CHAR},
       </if>
       <if test="tQq != null">
         #{tQq,jdbcType=INTEGER},
@@ -190,7 +190,7 @@
         T_GRNDER = #{record.tGrnder,jdbcType=VARCHAR},
       </if>
       <if test="record.tPhone != null">
-        T_PHONE = #{record.tPhone,jdbcType=INTEGER},
+        T_PHONE = #{record.tPhone,jdbcType=CHAR},
       </if>
       <if test="record.tQq != null">
         T_QQ = #{record.tQq,jdbcType=INTEGER},
@@ -210,7 +210,7 @@
       T_TEACHER = #{record.tTeacher,jdbcType=INTEGER},
       C_CLASS = #{record.cClass,jdbcType=VARCHAR},
       T_GRNDER = #{record.tGrnder,jdbcType=VARCHAR},
-      T_PHONE = #{record.tPhone,jdbcType=INTEGER},
+      T_PHONE = #{record.tPhone,jdbcType=CHAR},
       T_QQ = #{record.tQq,jdbcType=INTEGER},
       T_WECHAT = #{record.tWechat,jdbcType=VARCHAR}
     <if test="_parameter != null">
@@ -233,7 +233,7 @@
         T_GRNDER = #{tGrnder,jdbcType=VARCHAR},
       </if>
       <if test="tPhone != null">
-        T_PHONE = #{tPhone,jdbcType=INTEGER},
+        T_PHONE = #{tPhone,jdbcType=CHAR},
       </if>
       <if test="tQq != null">
         T_QQ = #{tQq,jdbcType=INTEGER},
@@ -250,7 +250,7 @@
       T_TEACHER = #{tTeacher,jdbcType=INTEGER},
       C_CLASS = #{cClass,jdbcType=VARCHAR},
       T_GRNDER = #{tGrnder,jdbcType=VARCHAR},
-      T_PHONE = #{tPhone,jdbcType=INTEGER},
+      T_PHONE = #{tPhone,jdbcType=CHAR},
       T_QQ = #{tQq,jdbcType=INTEGER},
       T_WECHAT = #{tWechat,jdbcType=VARCHAR}
     where T_ID = #{tId,jdbcType=INTEGER}

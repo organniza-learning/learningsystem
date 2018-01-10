@@ -1,4 +1,4 @@
-package com.learningsystem.service.iml;
+package com.learningsystem.service.impl;
 
 import com.learningsystem.dao.ReleasediscussionquestionsMapper;
 import com.learningsystem.pojo.Releasediscussionquestions;
@@ -15,7 +15,7 @@ import java.util.List;
 *
 **/
 @Service
-public class ReleasediscussionquestionsServiceIml implements ReleasediscussionquestionsService {
+public class ReleasediscussionquestionsServiceImpl implements ReleasediscussionquestionsService {
 
     @Autowired
     ReleasediscussionquestionsMapper mapper;

@@ -11,7 +11,7 @@ public class Teacher {
 
     private String tGrnder;
 
-    private Integer tPhone;
+    private String tPhone;
 
     private Integer tQq;
 
@@ -57,12 +57,12 @@ public class Teacher {
         this.tGrnder = tGrnder == null ? null : tGrnder.trim();
     }
 
-    public Integer gettPhone() {
+    public String gettPhone() {
         return tPhone;
     }
 
-    public void settPhone(Integer tPhone) {
-        this.tPhone = tPhone;
+    public void settPhone(String tPhone) {
+        this.tPhone = tPhone == null ? null : tPhone.trim();
     }
 
     public Integer gettQq() {

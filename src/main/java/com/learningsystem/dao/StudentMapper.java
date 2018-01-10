@@ -5,6 +5,7 @@ import com.learningsystem.pojo.StudentExample;
 import java.util.List;
 import java.util.Map;
 
+import com.learningsystem.vo.ResponseVo;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -42,4 +43,5 @@ public interface StudentMapper {
 
     int updateByPrimaryKey(Student record);
 
+    Integer insertStuInfo(Student student);
 }

@@ -21,9 +21,9 @@ public class Student {
 
     private String stuEmail;//学生邮箱
 
-    private Integer stuPhoner;//学生手机
+    private String stuPhoner;//学生手机
 
-    private Integer stuQq;//学生QQ
+    private String stuQq;//学生QQ
 
     private String stuWechat;//学生微信
 
@@ -107,19 +107,19 @@ public class Student {
         this.stuEmail = stuEmail == null ? null : stuEmail.trim();
     }
 
-    public Integer getStuPhoner() {
+    public String getStuPhoner() {
         return stuPhoner;
     }
 
-    public void setStuPhoner(Integer stuPhoner) {
+    public void setStuPhoner(String stuPhoner) {
         this.stuPhoner = stuPhoner;
     }
 
-    public Integer getStuQq() {
+    public String getStuQq() {
         return stuQq;
     }
 
-    public void setStuQq(Integer stuQq) {
+    public void setStuQq(String stuQq) {
         this.stuQq = stuQq;
     }
 
