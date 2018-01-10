@@ -11,7 +11,9 @@ public class Class {
 
     private String cCollege;
 
-    private byte[] cMajor;
+    private String cMajor;
+
+    private String cGrade;
 
     public Integer getcId() {
         return cId;
@@ -53,11 +55,19 @@ public class Class {
         this.cCollege = cCollege == null ? null : cCollege.trim();
     }
 
-    public byte[] getcMajor() {
+    public String getcMajor() {
         return cMajor;
     }
 
-    public void setcMajor(byte[] cMajor) {
-        this.cMajor = cMajor;
+    public void setcMajor(String cMajor) {
+        this.cMajor = cMajor == null ? null : cMajor.trim();
+    }
+
+    public String getcGrade() {
+        return cGrade;
+    }
+
+    public void setcGrade(String cGrade) {
+        this.cGrade = cGrade == null ? null : cGrade.trim();
     }
 }

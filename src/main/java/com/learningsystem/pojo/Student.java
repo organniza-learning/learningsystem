@@ -1,31 +1,31 @@
 package com.learningsystem.pojo;
 
 public class Student {
-    private Integer stuId;
+    private Integer stuId;//表ID
 
-    private String tgOpenid;
+    private String tgOpenid;//微信登录绑定ID
 
-    private Integer cClassid;
+    private Integer cClassid;//班级标识
 
-    private Integer tgIdentifying;
+    private Integer tgIdentifying;//成绩表绑定学生
 
-    private String stuStudentid;
+    private String stuStudentid;//学生学号
 
-    private String stuPassword;
+    private String stuPassword;//学生密码
 
-    private String stuName;
+    private String stuName;//学生姓名
 
-    private String stuGrade;
+    private String stuGender;//学生性别
 
-    private Integer gIdentifying;
+    private Integer gIdentifying;//分组标识
 
-    private String stuEmail;
+    private String stuEmail;//学生邮箱
 
-    private Integer stuPhoner;
+    private Integer stuPhoner;//学生手机
 
-    private Integer stuQq;
+    private Integer stuQq;//学生QQ
 
-    private String stuWechat;
+    private String stuWechat;//学生微信
 
     public Integer getStuId() {
         return stuId;
@@ -83,12 +83,12 @@ public class Student {
         this.stuName = stuName == null ? null : stuName.trim();
     }
 
-    public String getStuGrade() {
-        return stuGrade;
+    public String getGtuGender() {
+        return stuGender;
     }
 
-    public void setStuGrade(String stuGrade) {
-        this.stuGrade = stuGrade == null ? null : stuGrade.trim();
+    public void setStuGender(String stuGender) {
+        this.stuGender = stuGender == null ? null : stuGender.trim();
     }
 
     public Integer getgIdentifying() {

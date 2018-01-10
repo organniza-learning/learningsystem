@@ -433,6 +433,146 @@ public class ClassExample {
             addCriterion("C_COLLEGE not between", value1, value2, "cCollege");
             return (Criteria) this;
         }
+
+        public Criteria andCMajorIsNull() {
+            addCriterion("C_MAJOR is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorIsNotNull() {
+            addCriterion("C_MAJOR is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorEqualTo(String value) {
+            addCriterion("C_MAJOR =", value, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorNotEqualTo(String value) {
+            addCriterion("C_MAJOR <>", value, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorGreaterThan(String value) {
+            addCriterion("C_MAJOR >", value, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorGreaterThanOrEqualTo(String value) {
+            addCriterion("C_MAJOR >=", value, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorLessThan(String value) {
+            addCriterion("C_MAJOR <", value, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorLessThanOrEqualTo(String value) {
+            addCriterion("C_MAJOR <=", value, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorLike(String value) {
+            addCriterion("C_MAJOR like", value, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorNotLike(String value) {
+            addCriterion("C_MAJOR not like", value, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorIn(List<String> values) {
+            addCriterion("C_MAJOR in", values, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorNotIn(List<String> values) {
+            addCriterion("C_MAJOR not in", values, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorBetween(String value1, String value2) {
+            addCriterion("C_MAJOR between", value1, value2, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCMajorNotBetween(String value1, String value2) {
+            addCriterion("C_MAJOR not between", value1, value2, "cMajor");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeIsNull() {
+            addCriterion("C_GRADE is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeIsNotNull() {
+            addCriterion("C_GRADE is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeEqualTo(String value) {
+            addCriterion("C_GRADE =", value, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeNotEqualTo(String value) {
+            addCriterion("C_GRADE <>", value, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeGreaterThan(String value) {
+            addCriterion("C_GRADE >", value, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeGreaterThanOrEqualTo(String value) {
+            addCriterion("C_GRADE >=", value, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeLessThan(String value) {
+            addCriterion("C_GRADE <", value, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeLessThanOrEqualTo(String value) {
+            addCriterion("C_GRADE <=", value, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeLike(String value) {
+            addCriterion("C_GRADE like", value, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeNotLike(String value) {
+            addCriterion("C_GRADE not like", value, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeIn(List<String> values) {
+            addCriterion("C_GRADE in", values, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeNotIn(List<String> values) {
+            addCriterion("C_GRADE not in", values, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeBetween(String value1, String value2) {
+            addCriterion("C_GRADE between", value1, value2, "cGrade");
+            return (Criteria) this;
+        }
+
+        public Criteria andCGradeNotBetween(String value1, String value2) {
+            addCriterion("C_GRADE not between", value1, value2, "cGrade");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

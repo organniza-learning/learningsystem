@@ -7,9 +7,8 @@
     <result column="T_TEACHER" jdbcType="VARCHAR" property="tTeacher" />
     <result column="C_NAME" jdbcType="VARCHAR" property="cName" />
     <result column="C_COLLEGE" jdbcType="VARCHAR" property="cCollege" />
-  </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.learningsystem.pojo.Class">
-    <result column="C_MAJOR" jdbcType="VARBINARY" property="cMajor" />
+    <result column="C_MAJOR" jdbcType="VARCHAR" property="cMajor" />
+    <result column="C_GRADE" jdbcType="VARCHAR" property="cGrade" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -70,27 +69,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    C_ID, C_CLASSID, T_TEACHER, C_NAME, C_COLLEGE
+    C_ID, C_CLASSID, T_TEACHER, C_NAME, C_COLLEGE, C_MAJOR, C_GRADE
   </sql>
-  <sql id="Blob_Column_List">
-    C_MAJOR
-  </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.learningsystem.pojo.ClassExample" resultMap="ResultMapWithBLOBs">
-    select
-    <if test="distinct">
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
-    from class
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null">
-      order by ${orderByClause}
-    </if>
-  </select>
   <select id="selectByExample" parameterType="com.learningsystem.pojo.ClassExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -105,11 +85,9 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
     from class
     where C_ID = #{cId,jdbcType=INTEGER}
   </select>
@@ -125,11 +103,11 @@
   </delete>
   <insert id="insert" parameterType="com.learningsystem.pojo.Class">
     insert into class (C_ID, C_CLASSID, T_TEACHER, 
-      C_NAME, C_COLLEGE, C_MAJOR
-      )
+      C_NAME, C_COLLEGE, C_MAJOR, 
+      C_GRADE)
     values (#{cId,jdbcType=INTEGER}, #{cClassid,jdbcType=INTEGER}, #{tTeacher,jdbcType=VARCHAR}, 
-      #{cName,jdbcType=VARCHAR}, #{cCollege,jdbcType=VARCHAR}, #{cMajor,jdbcType=VARBINARY}
-      )
+      #{cName,jdbcType=VARCHAR}, #{cCollege,jdbcType=VARCHAR}, #{cMajor,jdbcType=VARCHAR}, 
+      #{cGrade,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.learningsystem.pojo.Class">
     insert into class
@@ -152,6 +130,9 @@
       <if test="cMajor != null">
         C_MAJOR,
       </if>
+      <if test="cGrade != null">
+        C_GRADE,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="cId != null">
@@ -170,7 +151,10 @@
         #{cCollege,jdbcType=VARCHAR},
       </if>
       <if test="cMajor != null">
-        #{cMajor,jdbcType=VARBINARY},
+        #{cMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="cGrade != null">
+        #{cGrade,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -199,21 +183,12 @@
         C_COLLEGE = #{record.cCollege,jdbcType=VARCHAR},
       </if>
       <if test="record.cMajor != null">
-        C_MAJOR = #{record.cMajor,jdbcType=VARBINARY},
+        C_MAJOR = #{record.cMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cGrade != null">
+        C_GRADE = #{record.cGrade,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExampleWithBLOBs" parameterType="map">
-    update class
-    set C_ID = #{record.cId,jdbcType=INTEGER},
-      C_CLASSID = #{record.cClassid,jdbcType=INTEGER},
-      T_TEACHER = #{record.tTeacher,jdbcType=VARCHAR},
-      C_NAME = #{record.cName,jdbcType=VARCHAR},
-      C_COLLEGE = #{record.cCollege,jdbcType=VARCHAR},
-      C_MAJOR = #{record.cMajor,jdbcType=VARBINARY}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -224,7 +199,9 @@
       C_CLASSID = #{record.cClassid,jdbcType=INTEGER},
       T_TEACHER = #{record.tTeacher,jdbcType=VARCHAR},
       C_NAME = #{record.cName,jdbcType=VARCHAR},
-      C_COLLEGE = #{record.cCollege,jdbcType=VARCHAR}
+      C_COLLEGE = #{record.cCollege,jdbcType=VARCHAR},
+      C_MAJOR = #{record.cMajor,jdbcType=VARCHAR},
+      C_GRADE = #{record.cGrade,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -245,18 +222,12 @@
         C_COLLEGE = #{cCollege,jdbcType=VARCHAR},
       </if>
       <if test="cMajor != null">
-        C_MAJOR = #{cMajor,jdbcType=VARBINARY},
+        C_MAJOR = #{cMajor,jdbcType=VARCHAR},
+      </if>
+      <if test="cGrade != null">
+        C_GRADE = #{cGrade,jdbcType=VARCHAR},
       </if>
     </set>
-    where C_ID = #{cId,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.learningsystem.pojo.Class">
-    update class
-    set C_CLASSID = #{cClassid,jdbcType=INTEGER},
-      T_TEACHER = #{tTeacher,jdbcType=VARCHAR},
-      C_NAME = #{cName,jdbcType=VARCHAR},
-      C_COLLEGE = #{cCollege,jdbcType=VARCHAR},
-      C_MAJOR = #{cMajor,jdbcType=VARBINARY}
     where C_ID = #{cId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.learningsystem.pojo.Class">
@@ -264,7 +235,9 @@
     set C_CLASSID = #{cClassid,jdbcType=INTEGER},
       T_TEACHER = #{tTeacher,jdbcType=VARCHAR},
       C_NAME = #{cName,jdbcType=VARCHAR},
-      C_COLLEGE = #{cCollege,jdbcType=VARCHAR}
+      C_COLLEGE = #{cCollege,jdbcType=VARCHAR},
+      C_MAJOR = #{cMajor,jdbcType=VARCHAR},
+      C_GRADE = #{cGrade,jdbcType=VARCHAR}
     where C_ID = #{cId,jdbcType=INTEGER}
   </update>
 </mapper>

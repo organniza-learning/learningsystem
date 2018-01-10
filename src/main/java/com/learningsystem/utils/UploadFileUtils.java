@@ -59,7 +59,7 @@ public class UploadFileUtils {
                 String filepaths = FilePath.replaceAll("\\/", "\\\\");
 
                 //判断文件类型
-                if (filetype.equals("jpg") || filetype.equals("png") || filetype.equals("gif")){
+                if (filetype.equals("jpg") || filetype.equals("png")|| filetype.equals("jpeg") || filetype.equals("gif")){
                     File dir = new File(FilePathImg);
                     if (!dir.exists()) {
                         dir.mkdirs();
