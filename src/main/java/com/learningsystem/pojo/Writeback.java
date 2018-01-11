@@ -19,6 +19,27 @@ public class Writeback {
 
     private Integer wbCcontenNum;
 
+    private String wbTime;
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    //加载Student
+    private Student student;
+
+    public String getWbTime() {
+        return wbTime;
+    }
+
+    public void setWbTime(String wbTime) {
+        this.wbTime = wbTime;
+    }
+
     public Integer getWbCcontenNum() {
         return wbCcontenNum;
     }

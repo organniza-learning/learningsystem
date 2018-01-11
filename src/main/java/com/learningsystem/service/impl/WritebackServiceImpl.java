@@ -1,9 +1,13 @@
 package com.learningsystem.service.impl;
 
 import com.learningsystem.dao.WritebackMapper;
+import com.learningsystem.pojo.Writeback;
 import com.learningsystem.service.WritebackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 /**
  * @Author : YangGuang
@@ -26,5 +30,15 @@ public class WritebackServiceImpl implements WritebackService {
     @Override
     public int insertWritebackCount(Integer rdqId) {
         return writebackMapper.insertWritebackCount(rdqId);
+    }
+
+    @Override
+    public List<Writeback> selectRdqAndWrite(Integer rdqId) {
+        return writebackMapper.selectRdqAndWrite(rdqId);
+    }
+
+    @Override
+    public String replyMessage(Integer rdqId, String content, MultipartFile file) {
+        return null;
     }
 }

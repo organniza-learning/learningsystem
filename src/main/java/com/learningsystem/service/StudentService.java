@@ -12,7 +12,6 @@ public interface StudentService {
 	Student queryStudentByMap(Map<String, String> map);
 	// 插入openid
 	int uadateStudent(Student stu);
-	//插入学生信息
-	Integer insertStuInfo(Student student);
+
 
 }

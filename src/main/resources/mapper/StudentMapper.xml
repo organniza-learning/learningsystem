@@ -80,24 +80,6 @@
     STU_ID, TG_OPENID, C_CLASSID, TG_IDENTIFYING, STU_STUDENTID, STU_PASSWORD, STU_NAME, 
     STU_GENDER, G_IDENTIFYING, STU_EMAIL, STU_PHONER, STU_QQ, STU_WECHAT
   </sql>
-
-    <!--insertStuInfo 插入用户数据-->
-    <insert id="insertStuInfo" parameterType="com.learningsystem.pojo.Student">
-        INSERT INTO `learningsystemdatabase`.`student` (
-        `STU_STUDENTID`,
-        `STU_NAME`,
-        `STU_GENDER`,
-        `G_IDENTIFYING`,
-        `STU_EMAIL`,
-        `STU_PHONER`,
-        `STU_QQ`,
-        `STU_WECHAT`
-        )
-        VALUES
-            (
-              #{stuStudentid},#{stuName},#{stuGender},#{stuEmail},#{stuPhoner},#{stuQq},#{stuWechat},#{},#{},#{},#{},#{}
-            );
-    </insert>
   
   <!-- 验证账号密码 -->
    <select id="selectByIdAndPassword" parameterType="map" resultMap="BaseResultMap">

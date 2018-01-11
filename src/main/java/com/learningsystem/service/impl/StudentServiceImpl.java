@@ -11,6 +11,7 @@ import com.learningsystem.pojo.Student;
 import com.learningsystem.service.StudentService;
 @Service
 public class StudentServiceImpl implements StudentService{
+
 	@Autowired
 	StudentMapper sm;
 	
@@ -26,11 +27,6 @@ public class StudentServiceImpl implements StudentService{
 	public int uadateStudent(Student stu) {
 		// TODO Auto-generated method stub
 		return sm.updateByPrimaryKey(stu);
-	}
-
-	@Override
-	public Integer insertStuInfo(Student student) {
-		return sm.insertStuInfo(student);
 	}
 
 }

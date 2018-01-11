@@ -34,8 +34,11 @@
       <result column="WB_UPLOADFILE" jdbcType="VARCHAR" property="wbUploadfile" />
       <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
       <result column="WB_CONTENT_NUM" javaType="INT" property="wbCcontenNum"/>
+
     </association>
   </resultMap>
+
+  <!--查询论坛帖子标题内容标签和发布时间-->
   <select id="selectRdqAndTag" resultMap="BaseResultMapAngTag">
     SELECT DISTINCT
     releasediscussionquestions.RDQ_THEME,

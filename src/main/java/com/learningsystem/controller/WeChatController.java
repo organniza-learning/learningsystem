@@ -38,7 +38,7 @@ public class WeChatController {
 
 		JSONObject userInfo = WechatUtil.accessWechat(code, key, iv);
 		String openid = userInfo.getString("openId");
-		// String openid = "1";
+		//String openid = "1";
 		Map<String, Object> data = new HashMap<String, Object>();
 		Student stu = stuS.queryStudentByOpenid(openid);
 

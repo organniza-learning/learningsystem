@@ -8,7 +8,40 @@
     <result column="WB_UPLOADFILE" jdbcType="VARCHAR" property="wbUploadfile" />
     <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
     <result column="WB_CONTENT_NUM" javaType="INT" property="wbCcontenNum"/>
+    <result column="WB_TIME" jdbcType="VARCHAR" property="wbTime" />
   </resultMap>
+  <resultMap id="BaseResultMapAndStudent" type="com.learningsystem.pojo.Writeback">
+    <id column="WB_ID" jdbcType="INTEGER" property="wbId" />
+    <result column="RDQ_ID" jdbcType="INTEGER" property="rdqId" />
+    <result column="WB_CONTENT" jdbcType="VARCHAR" property="wbContent" />
+    <result column="WB_UPLOADFILE" jdbcType="VARCHAR" property="wbUploadfile" />
+    <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
+    <result column="WB_CONTENT_NUM" javaType="INT" property="wbCcontenNum"/>
+    <result column="WB_TIME" jdbcType="VARCHAR" property="wbTime" />
+    <association property="student" javaType="com.learningsystem.pojo.Student">
+      <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
+      <result column="STU_NAME" jdbcType="VARCHAR" property="stuName" />
+    </association>
+  </resultMap>
+
+  <!--查询该帖子的所有内容-->
+  <select id="selectRdqAndWrite" resultMap="BaseResultMapAndStudent" parameterType="java.lang.Integer">
+    SELECT
+    writeback.WB_CONTENT,
+    writeback.WB_UPLOADFILE,
+    writeback.STU_STUDENTID,
+    writeback.WB_TIME,
+    student.STU_NAME
+    FROM
+    writeback ,
+    student
+    WHERE
+    writeback.RDQ_ID = #{rdqId}
+    AND
+    writeback.STU_STUDENTID = student.STU_STUDENTID
+    GROUP BY
+    writeback.WB_TIME
+  </select>
 
   <update id="insertWritebackCount" parameterType="java.lang.Integer">
 

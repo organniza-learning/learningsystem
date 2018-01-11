@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @Author : YangGuang
  * @Description:学生表Controller
  * @Date:Created in 9:41 2018/1/10
- * @Modified By:
+ * @Modified By: 转交给余枫
  **/
 @Controller
 @RequestMapping("StuController")
 public class StudentController {
 
-    @Autowired
+    /*@Autowired
     StudentServiceImpl studentService;
     @Autowired
     Student students;
@@ -39,5 +39,5 @@ public class StudentController {
             responseVo.add("error","用户数据插入失败");
         }
         return responseVo;
-    }
+    }*/
 }

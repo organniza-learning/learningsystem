@@ -37,4 +37,6 @@ public interface WritebackMapper {
 
     //自更新回复表统计回复数量
     int insertWritebackCount(Integer rdqId);
+    //查询该贴所有数据
+    List<Writeback> selectRdqAndWrite(Integer rdqId);
 }
