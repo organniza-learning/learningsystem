@@ -27,17 +27,14 @@ public class WritebackServiceImpl implements WritebackService {
     *@Date:Created in 12:50 2018/1/8
     *
     **/
-    @Override
     public int insertWritebackCount(Integer rdqId) {
         return writebackMapper.insertWritebackCount(rdqId);
     }
 
-    @Override
     public List<Writeback> selectRdqAndWrite(Integer rdqId) {
         return writebackMapper.selectRdqAndWrite(rdqId);
     }
 
-    @Override
     public String replyMessage(Integer rdqId, String content, MultipartFile file) {
         return null;
     }

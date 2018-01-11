@@ -5,7 +5,6 @@ import com.learningsystem.pojo.StudentExample;
 import java.util.List;
 import java.util.Map;
 
-import com.learningsystem.vo.ResponseVo;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -16,8 +15,8 @@ import org.apache.ibatis.annotations.Param;
 **/
 public interface StudentMapper {
 	
-	// 根据openid查询
-    Student selectByTgOpenid(String openid);
+	// 根据班级id连表查询（student和class）
+	List<Student> selectAndClassByCClassId(Integer classid);
     // 验证账号密码
     Student selectByIdAndPassword(Map<String, String> map);
 
@@ -43,5 +42,4 @@ public interface StudentMapper {
 
     int updateByPrimaryKey(Student record);
 
-    Integer insertStuInfo(Student student);
 }

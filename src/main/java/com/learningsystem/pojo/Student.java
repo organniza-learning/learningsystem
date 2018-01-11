@@ -1,33 +1,44 @@
 package com.learningsystem.pojo;
 
 public class Student {
-    private Integer stuId;//表ID
+    private Integer stuId;
 
-    private String tgOpenid;//微信登录绑定ID
+    private String tgOpenid;
 
-    private Integer cClassid;//班级标识
+    private Integer cClassid;
 
-    private Integer tgIdentifying;//成绩表绑定学生
+    private Integer tgIdentifying;
 
-    private String stuStudentid;//学生学号
+    private String stuStudentid;
 
-    private String stuPassword;//学生密码
+    private String stuPassword;
 
-    private String stuName;//学生姓名
+    private String stuName;
 
-    private String stuGender;//学生性别
+    private String stuGender;
 
-    private Integer gIdentifying;//分组标识
+    private Integer gIdentifying;
 
-    private String stuEmail;//学生邮箱
+    private String stuEmail;
 
-    private String stuPhoner;//学生手机
+    private String stuPhoner;
 
-    private String stuQq;//学生QQ
+    private String stuQq;
 
-    private String stuWechat;//学生微信
+    private String stuWechat;
+    
+    private Class classs;
+    
 
-    public Integer getStuId() {
+    public Class getClasss() {
+		return classs;
+	}
+
+	public void setClasss(Class classs) {
+		this.classs = classs;
+	}
+
+	public Integer getStuId() {
         return stuId;
     }
 
@@ -83,7 +94,7 @@ public class Student {
         this.stuName = stuName == null ? null : stuName.trim();
     }
 
-    public String getGtuGender() {
+    public String getStuGender() {
         return stuGender;
     }
 
@@ -112,7 +123,7 @@ public class Student {
     }
 
     public void setStuPhoner(String stuPhoner) {
-        this.stuPhoner = stuPhoner;
+        this.stuPhoner = stuPhoner == null ? null : stuPhoner.trim();
     }
 
     public String getStuQq() {
@@ -120,7 +131,7 @@ public class Student {
     }
 
     public void setStuQq(String stuQq) {
-        this.stuQq = stuQq;
+        this.stuQq = stuQq == null ? null : stuQq.trim();
     }
 
     public String getStuWechat() {
