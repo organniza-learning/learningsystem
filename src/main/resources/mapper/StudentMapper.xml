@@ -129,7 +129,6 @@
 
 	</select>
 
-
 	<select id="selectByExample" parameterType="com.learningsystem.pojo.StudentExample"
 		resultMap="BaseResultMap">
 		select

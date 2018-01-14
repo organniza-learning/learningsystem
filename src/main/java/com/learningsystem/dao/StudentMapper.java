@@ -19,7 +19,7 @@ public interface StudentMapper {
 	List<Student> selectAndClassByCClassId(Integer classid);
     // 验证账号密码
     Student selectByIdAndPassword(Map<String, String> map);
-
+    
     long countByExample(StudentExample example);
 
     int deleteByExample(StudentExample example);
