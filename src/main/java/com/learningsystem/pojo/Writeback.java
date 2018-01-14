@@ -87,4 +87,18 @@ public class Writeback {
     public void setStuStudentid(String stuStudentid) {
         this.stuStudentid = stuStudentid == null ? null : stuStudentid.trim();
     }
+
+    @Override
+    public String toString() {
+        return "Writeback{" +
+                "wbId=" + wbId +
+                ", rdqId=" + rdqId +
+                ", wbContent='" + wbContent + '\'' +
+                ", wbUploadfile='" + wbUploadfile + '\'' +
+                ", stuStudentid='" + stuStudentid + '\'' +
+                ", wbCcontenNum=" + wbCcontenNum +
+                ", wbTime='" + wbTime + '\'' +
+                ", student=" + student +
+                '}';
+    }
 }

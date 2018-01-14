@@ -3,6 +3,8 @@ package com.learningsystem.service;
 import com.learningsystem.pojo.Writeback;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -16,7 +18,8 @@ public interface WritebackService {
     //更新回复数据
     int insertWritebackCount(Integer rdqId);
     //查询该贴内容
-    List<Writeback> selectRdqAndWrite(Integer rdqId);
+    List<Writeback> selectRdqAndWrite(String rdqId);
     //回复该贴
-    String replyMessage(Integer rdqId, String content, MultipartFile file);
+    String replyMessage(HttpServletRequest request, HttpServletResponse response, Writeback writeback,MultipartFile file);
+
 }

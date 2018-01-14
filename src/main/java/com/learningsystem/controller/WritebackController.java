@@ -2,11 +2,10 @@ package com.learningsystem.controller;
 
 import com.learningsystem.pojo.Writeback;
 import com.learningsystem.service.WritebackService;
+import com.learningsystem.utils.LearningUtils;
 import com.learningsystem.utils.RemoveNullJsonUtils;
-import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import net.sf.json.JsonConfig;
-import net.sf.json.util.PropertyFilter;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -14,8 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 /**
@@ -33,7 +30,6 @@ public class WritebackController {
     @Autowired
     private WritebackService writebackService;
 
-
     RemoveNullJsonUtils removeNullJsonUtils = new RemoveNullJsonUtils();
 
 
@@ -50,7 +46,7 @@ public class WritebackController {
         /**
          * rdqId 该问题发起者的表ID，表为 Releasediscussionquestions 中的 RDQ_ID
          *  ----------该用户回复之后需要加载此方法，以便数据实时显示-----------
-        */
+         */
         return writebackService.insertWritebackCount(rdqId);
     }
 
@@ -62,22 +58,33 @@ public class WritebackController {
      **/
     @ResponseBody
     @RequestMapping(value = "selectRdqAndWrite",method = RequestMethod.GET)
-    public JSONObject selectRdqAndWrite(@RequestParam(value = "rdqId") Integer rdqId, HttpServletRequest request, HttpServletResponse response){
+    public JSONObject selectRdqAndWrite(@RequestParam(value = "rdqId") String rdqId, HttpServletRequest request, HttpServletResponse response){
         List<Writeback> list = writebackService.selectRdqAndWrite(rdqId);
-        JSONObject jsonObject = removeNullJsonUtils.removeBeanNull(list, request, response);
-        return jsonObject;
+        return removeNullJsonUtils.removeBeanNull(list, request, response);
     }
 
     /**
     *@Author : YangGuang
     *@Description:插入回复功能
     *@Date:Created in 21:43 2018/1/10
-    *
+    *页面发送文件必须带上enctype=multipart/form-data属性
+     * 去掉RequestBody注解
+     * 使用在进行图片或者文件上传时 multipart/form-data 类型时、
+     * 数据会自动进行映射不要添加任何注解。此处解释不知道正确不、欢迎指正。
     **/
     @RequestMapping(value = "replyMessage",method = RequestMethod.POST)
     @ResponseBody
-    public String replyMessage(HttpServletRequest request, HttpServletResponse response,@RequestParam("rdqId")Integer rdqId,
-                               @RequestParam("content")String content,@RequestParam("file")MultipartFile file){
-        return writebackService.replyMessage(rdqId,content,file);
+    public JSONObject replyMessage(HttpServletRequest request, HttpServletResponse response,@RequestParam("file")MultipartFile file,Writeback writeback){
+
+        System.err.println("rdqId:" + writeback.getRdqId() + "\n"+ "stuStudentid:" + writeback.getStuStudentid() + "\n"
+                            +"content: " + writeback.getWbContent() + "\n"+ "file: " + file);
+
+        JSONObject jsonObject = new JSONObject();
+        //插入回复
+        jsonObject.put("插入记录",writebackService.replyMessage(request,response,writeback,file));
+        //统计回复条数
+        jsonObject.put("统计记录",writebackService.insertWritebackCount(writeback.getRdqId()));
+
+         return jsonObject;
     }
 }

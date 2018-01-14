@@ -24,8 +24,27 @@
     </association>
   </resultMap>
 
+  <insert id="replyMessage" parameterType="com.learningsystem.pojo.Writeback">
+    INSERT INTO `learningsystemdatabase`.`writeback` (
+        `RDQ_ID`,
+        `WB_CONTENT`,
+        `WB_UPLOADFILE`,
+        `STU_STUDENTID`,
+        `WB_TIME`
+    )
+    VALUES
+
+        (
+            #{rdqId},
+            #{wbContent},
+            #{wbUploadfile},
+            #{stuStudentid},
+            #{wbTime}
+        )
+  </insert>
+
   <!--查询该帖子的所有内容-->
-  <select id="selectRdqAndWrite" resultMap="BaseResultMapAndStudent" parameterType="java.lang.Integer">
+  <select id="selectRdqAndWrite" resultMap="BaseResultMapAndStudent" parameterType="java.lang.String">
     SELECT
     writeback.WB_CONTENT,
     writeback.WB_UPLOADFILE,

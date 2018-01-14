@@ -27,12 +27,26 @@ public class Releasediscussionquestions {
 
     private String rdqUploadfile;
 
+    private String lNumber; //课程编号
+
+
+
     //查询Tag标签
     private Tag tag;
 
     //查询回复数
     private Writeback writeback;
 
+    //获取课程名称
+    private Lesson lesson;
+
+    public Lesson getLesson() {
+        return lesson;
+    }
+
+    public void setLesson(Lesson lesson) {
+        this.lesson = lesson;
+    }
 
     public Writeback getWriteback() {
         return writeback;
@@ -128,5 +142,12 @@ public class Releasediscussionquestions {
 
     public void setRdqUploadfile(String rdqUploadfile) {
         this.rdqUploadfile = rdqUploadfile == null ? null : rdqUploadfile.trim();
+    }
+    public String getlNumber() {
+        return lNumber;
+    }
+
+    public void setlNumber(String lNumber) {
+        this.lNumber = lNumber;
     }
 }

@@ -11,6 +11,7 @@
   <result column="RDQ_TEXT" jdbcType="VARCHAR" property="rdqText" />
   <result column="RDQ_TIME" jdbcType="TIME" property="rdqTime" />
   <result column="RDQ_UPLOADFILE" jdbcType="VARCHAR" property="rdqUploadfile" />
+    <result column="L_NUMBER" jdbcType="VARCHAR" property="lNumber" />
 </resultMap>
 
   <resultMap id="BaseResultMapAngTag"  type="com.learningsystem.pojo.Releasediscussionquestions">
@@ -23,6 +24,7 @@
     <result column="RDQ_TEXT" jdbcType="VARCHAR" property="rdqText" />
     <result column="RDQ_TIME" jdbcType="VARCHAR" property="rdqDate" />
     <result column="RDQ_UPLOADFILE" jdbcType="VARCHAR" property="rdqUploadfile" />
+    <result column="L_NUMBER" jdbcType="VARCHAR" property="lNumber" />
     <association property="tag" javaType="com.learningsystem.pojo.Tag" >
       <id column="TAG_ID" jdbcType="INTEGER" property="tagId" />
       <result column="TAG_CONTEN" jdbcType="VARCHAR" property="tagConten" />
@@ -34,7 +36,10 @@
       <result column="WB_UPLOADFILE" jdbcType="VARCHAR" property="wbUploadfile" />
       <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
       <result column="WB_CONTENT_NUM" javaType="INT" property="wbCcontenNum"/>
-
+    </association>
+    <association property="lesson" javaType="com.learningsystem.pojo.Lesson">
+      <result column="L_NUMBER" jdbcType="VARCHAR" property="lNumber" />
+      <result column="L_NAME" jdbcType="VARCHAR" property="lName" />
     </association>
   </resultMap>
 
@@ -47,14 +52,17 @@
     writeback.RDQ_ID,
     releasediscussionquestions.RDQ_ID,
     tag.TAG_CONTEN,
-    writeback.WB_CONTENT_NUM
+    writeback.WB_CONTENT_NUM,
+    lesson.L_NAME
     FROM
     releasediscussionquestions ,
     writeback ,
-    tag
+    tag,
+    lesson
     WHERE
     releasediscussionquestions.RDQ_ID = writeback.RDQ_ID AND
-    releasediscussionquestions.TAG_ID = tag.TAG_ID
+    releasediscussionquestions.TAG_ID = tag.TAG_ID AND
+    releasediscussionquestions.L_NUMBER = lesson.L_NUMBER
     ORDER BY
     releasediscussionquestions.RDQ_TIME DESC
   </select>
