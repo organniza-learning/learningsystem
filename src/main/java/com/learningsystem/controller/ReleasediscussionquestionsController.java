@@ -36,16 +36,20 @@ public class ReleasediscussionquestionsController {
      **/
     @ResponseBody
     @RequestMapping(value = "selectRdqAndTag",method = RequestMethod.GET)//查询问题讨论及关联的标签和回复记录
-    public JSONArray selectRdqAndTag(HttpServletRequest request, HttpServletResponse response){
+    public JSONObject selectRdqAndTag(HttpServletRequest request, HttpServletResponse response){
         RemoveNullJsonUtils removeNullJsonUtils = new RemoveNullJsonUtils();
-        JSONArray jsonArray = new JSONArray();
+        JSONObject jsonObject = new JSONObject();
+        //查询
         List<Releasediscussionquestions> list = rdqservice.selectRdqAndTag();
         if (list!=null){
             //查询问题讨论列表总数据，排序按时间降序，最新在前面
-            return removeNullJsonUtils.removeBeanNullByArray(list,request,response);
+            JSONArray jsonArray = removeNullJsonUtils.removeBeanNullByArray(list, request, response);
+            jsonObject.put("stutas",200);
+            jsonObject.put("data",jsonArray);
+            return jsonObject;
         }else {
-            removeNullJsonUtils.add(500,"stutas");
+            jsonObject.put("stutas",500);
         }
-        return jsonArray;
+        return jsonObject;
     }
 }

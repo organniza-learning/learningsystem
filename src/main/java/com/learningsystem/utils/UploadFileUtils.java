@@ -16,7 +16,7 @@ import java.util.Random;
  * @Date:Created in 13:05 2018/1/9
  * @Modified By:
  **/
-public class UploadFileUtils {
+public class UploadFileUtils extends JSONObject {
     LearningUtils learningUtils = new LearningUtils();
     /**
     *@Author : YangGuang
@@ -27,7 +27,7 @@ public class UploadFileUtils {
      *@file ：file 页面传输过来的文件
      * 页面发送文件必须带上 enctype = multipart/form-data 属性
     **/
-    public JSONObject  filesUpload(HttpServletRequest request, HttpServletResponse response, MultipartFile file){
+    public JSONObject filesUpload(HttpServletRequest request, HttpServletResponse response, MultipartFile file){
         //设置返回信息的编码格式及类型
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json;charset=utf-8");
@@ -105,5 +105,6 @@ public class UploadFileUtils {
         response.reset();
         return resultJson;
     }
+
 
 }

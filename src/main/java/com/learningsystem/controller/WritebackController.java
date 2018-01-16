@@ -59,7 +59,7 @@ public class WritebackController {
      **/
     @ResponseBody
     @RequestMapping(value = "selectRdqAndWrite",method = RequestMethod.GET)
-    public JSONArray selectRdqAndWrite(@RequestParam(value = "rdqId") String rdqId, HttpServletRequest request, HttpServletResponse response){
+    public JSONObject selectRdqAndWrite(@RequestParam(value = "rdqId") String rdqId, HttpServletRequest request, HttpServletResponse response){
         List<Writeback> list = writebackService.selectRdqAndWrite(rdqId);
         return removeNullJsonUtils.removeBeanNull(list, request, response);
     }

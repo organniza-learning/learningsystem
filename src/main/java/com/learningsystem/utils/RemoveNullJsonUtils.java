@@ -21,7 +21,7 @@ public class RemoveNullJsonUtils {
 
     JSONArray jsonArray = new JSONArray();
 
-    public JSONArray removeBeanNull(Object object, HttpServletRequest request, HttpServletResponse response){
+    public JSONObject removeBeanNull(Object object, HttpServletRequest request, HttpServletResponse response){
         //设置过滤json格式
         JsonConfig jsonConfig = new JsonConfig();
         //创建过滤器
@@ -56,7 +56,7 @@ public class RemoveNullJsonUtils {
             response.reset();
         }
         System.err.println(jsonArray.toString());
-        return jsonArray;
+        return jsonObject;
     }
 
     public void add(int key,Object object){
