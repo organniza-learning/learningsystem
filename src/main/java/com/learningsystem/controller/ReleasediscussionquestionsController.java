@@ -3,6 +3,7 @@ package com.learningsystem.controller;
 import com.learningsystem.pojo.Releasediscussionquestions;
 import com.learningsystem.service.ReleasediscussionquestionsService;
 import com.learningsystem.utils.RemoveNullJsonUtils;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,21 +36,16 @@ public class ReleasediscussionquestionsController {
      **/
     @ResponseBody
     @RequestMapping(value = "selectRdqAndTag",method = RequestMethod.GET)//查询问题讨论及关联的标签和回复记录
-    public JSONObject selectRdqAndTag(HttpServletRequest request, HttpServletResponse response){
+    public JSONArray selectRdqAndTag(HttpServletRequest request, HttpServletResponse response){
         RemoveNullJsonUtils removeNullJsonUtils = new RemoveNullJsonUtils();
-        JSONObject jsonObject = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
         List<Releasediscussionquestions> list = rdqservice.selectRdqAndTag();
-        System.err.println("list:" + list);
         if (list!=null){
             //查询问题讨论列表总数据，排序按时间降序，最新在前面
-            removeNullJsonUtils.removeBeanNull(list,request,response);
-            jsonObject.put("data",removeNullJsonUtils.removeBeanNull(list,request,response));
+            return removeNullJsonUtils.removeBeanNullByArray(list,request,response);
         }else {
-            jsonObject.put("stutas","500");
+            removeNullJsonUtils.add(500,"stutas");
         }
-        return jsonObject;
+        return jsonArray;
     }
-
-
-
 }

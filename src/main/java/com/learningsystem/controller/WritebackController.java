@@ -4,6 +4,7 @@ import com.learningsystem.pojo.Writeback;
 import com.learningsystem.service.WritebackService;
 import com.learningsystem.utils.LearningUtils;
 import com.learningsystem.utils.RemoveNullJsonUtils;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,7 +59,7 @@ public class WritebackController {
      **/
     @ResponseBody
     @RequestMapping(value = "selectRdqAndWrite",method = RequestMethod.GET)
-    public JSONObject selectRdqAndWrite(@RequestParam(value = "rdqId") String rdqId, HttpServletRequest request, HttpServletResponse response){
+    public JSONArray selectRdqAndWrite(@RequestParam(value = "rdqId") String rdqId, HttpServletRequest request, HttpServletResponse response){
         List<Writeback> list = writebackService.selectRdqAndWrite(rdqId);
         return removeNullJsonUtils.removeBeanNull(list, request, response);
     }

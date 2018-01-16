@@ -19,7 +19,9 @@ import java.util.List;
  **/
 public class RemoveNullJsonUtils {
 
-    public JSONObject removeBeanNull(Object object, HttpServletRequest request, HttpServletResponse response){
+    JSONArray jsonArray = new JSONArray();
+
+    public JSONArray removeBeanNull(Object object, HttpServletRequest request, HttpServletResponse response){
         //设置过滤json格式
         JsonConfig jsonConfig = new JsonConfig();
         //创建过滤器
@@ -39,14 +41,12 @@ public class RemoveNullJsonUtils {
         //转换
         JSONArray jsonArray = JSONArray.fromObject(object,jsonConfig);
         JSONObject jsonObject = new JSONObject();
-//        jsonObject.put("stutas","200");
-
-        jsonObject.put("data", jsonArray);
+        jsonObject.put("data",jsonArray);
         try {
             //保证返回值中文的时候不乱码
             request.setCharacterEncoding("UTF-8");
             response.setContentType("text/html;charset=utf-8");
-            response.getWriter().write(String.valueOf(jsonObject));
+            response.getWriter().write(String.valueOf(jsonArray));
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -56,8 +56,13 @@ public class RemoveNullJsonUtils {
             response.reset();
         }
         System.err.println(jsonArray.toString());
-        return jsonObject;
+        return jsonArray;
     }
+
+    public void add(int key,Object object){
+        jsonArray.add(key,object);
+    }
+
     
     public JSONArray removeBeanNullByArray(Object object, HttpServletRequest request, HttpServletResponse response){
         //设置过滤json格式

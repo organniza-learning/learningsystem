@@ -25,6 +25,8 @@ public class WritebackServiceImpl implements WritebackService {
     @Autowired
     private WritebackMapper writebackMapper;
 
+    LearningUtils learningUtils = new LearningUtils();
+
 
     /**
     *@Author : YangGuang
@@ -49,7 +51,6 @@ public class WritebackServiceImpl implements WritebackService {
     **/
     public String replyMessage(HttpServletRequest request, HttpServletResponse response, Writeback writeback ,MultipartFile file) {
         UploadFileUtils uploadFileUtils = new UploadFileUtils();
-        LearningUtils learningUtils = new LearningUtils();
         com.alibaba.fastjson.JSONObject pathjson = uploadFileUtils.filesUpload(request,response,file);
         String path = (String) pathjson.get("path");
         writeback.setWbUploadfile(path);

@@ -29,8 +29,6 @@ public class Releasediscussionquestions {
 
     private String lNumber; //课程编号
 
-
-
     //查询Tag标签
     private Tag tag;
 
@@ -39,6 +37,17 @@ public class Releasediscussionquestions {
 
     //获取课程名称
     private Lesson lesson;
+
+    //获取学生姓名
+    private Student student;
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
 
     public Lesson getLesson() {
         return lesson;

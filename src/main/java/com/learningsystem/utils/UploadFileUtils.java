@@ -57,9 +57,11 @@ public class UploadFileUtils {
                 String FilePath = request.getSession().getServletContext().getRealPath("/") + "upload/file/"+ learningUtils.date_yyyymmdd()+"/"
                         + filename;
 
-                //路径转化，将/全部转换为\，防止因为路径斜杠问题报错
-                String filepath = FilePathImg.replaceAll("\\/", "\\\\");
-                String filepaths = FilePath.replaceAll("\\/", "\\\\");
+                System.err.println("未转换斜杠：" + FilePath);
+
+                //路径转化，统一转换为浏览器访问斜杠/，防止因为路径斜杠问题报错
+                String filepath = FilePathImg.replaceAll("\\/", "/");
+                String filepaths = FilePath.replaceAll("\\/", "/");
 
                 //判断文件类型
                 if (filetype.equals("jpg") || filetype.equals("png")|| filetype.equals("jpeg") || filetype.equals("gif")){
@@ -77,7 +79,7 @@ public class UploadFileUtils {
                     // 转存文件，否则所创建的是个文件夹
                     file.transferTo(dir);
                 }
-                System.err.println(request.getContextPath());
+                System.err.println(request.getSession().getServletContext().getRealPath("/") + "upload/");
                 System.err.println("原生FilePath : " + filepath);
 
                 //截取后的路径，存入数据库
