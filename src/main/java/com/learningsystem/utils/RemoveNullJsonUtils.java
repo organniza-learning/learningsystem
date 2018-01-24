@@ -59,10 +59,6 @@ public class RemoveNullJsonUtils {
         return jsonObject;
     }
 
-    public void add(int key,Object object){
-        jsonArray.add(key,object);
-    }
-
     
     public JSONArray removeBeanNullByArray(Object object, HttpServletRequest request, HttpServletResponse response){
         //设置过滤json格式
@@ -99,4 +95,9 @@ public class RemoveNullJsonUtils {
         System.err.println(jsonArray.toString());
         return jsonArray;
     }
+
+    public void set(int key,Object value){
+        jsonArray.set(key,value);
+    }
+
 }

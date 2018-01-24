@@ -28,4 +28,7 @@ public interface LessonMapper {
     int updateByPrimaryKeySelective(Lesson record);
 
     int updateByPrimaryKey(Lesson record);
+    //查询班级下的课程
+    List<Lesson> findClassLesson(String cClassid);
+
 }

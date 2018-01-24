@@ -9,6 +9,17 @@
     <result column="T_TEACHER" jdbcType="INTEGER" property="tTeacher" />
     <result column="STU_STUDENTID" jdbcType="VARCHAR" property="stuStudentid" />
   </resultMap>
+
+  <!--查询班级下的课程 findClassLesson-->
+  <select id="findClassLesson" resultMap="BaseResultMap" parameterType="java.lang.String">
+    SELECT DISTINCT
+    lesson.L_NAME
+    FROM
+    class ,
+    lesson
+    WHERE
+    lesson.C_CLASSID = #{cClassid}
+  </select>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

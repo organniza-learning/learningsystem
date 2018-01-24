@@ -81,11 +81,18 @@ public class WritebackController {
                             +"content: " + writeback.getWbContent() + "\n"+ "file: " + file);
 
         JSONObject jsonObject = new JSONObject();
-        //插入回复
-        jsonObject.put("插入记录",writebackService.replyMessage(request,response,writeback,file));
-        //统计回复条数
-        jsonObject.put("统计记录",writebackService.insertWritebackCount(writeback.getRdqId()));
+        String str =  writebackService.replyMessage(request,response,writeback,file);
+        int count = writebackService.insertWritebackCount(writeback.getRdqId());
 
+        if (str!=null && count!=0){
+            jsonObject.put("status",200);
+            //插入回复
+            jsonObject.put("插入记录",Integer.parseInt(str));
+            //统计回复条数
+            jsonObject.put("统计记录",count);
+        }else {
+            jsonObject.put("status",500);
+        }
          return jsonObject;
     }
 }
