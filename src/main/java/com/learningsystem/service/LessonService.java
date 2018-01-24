@@ -11,5 +11,6 @@ import java.util.List;
 *
 **/
 public interface LessonService {
+    //查询班级下的课表
     List<Lesson> findClassLesson(String cClassid);
 }
