@@ -42,11 +42,11 @@ public class LessonController {
         List<Lesson> lesson = lessonService.findClassLesson(cClassid);
         JSONObject jsonObject = new JSONObject();
         if(lesson!=null){
-            jsonObject.put("status",500);
+            jsonObject.put("status",200);
             //去除pojo中null值
             jsonObject.put("data",removeNullJsonUtils.removeBeanNullByArray(lesson,request,response));
         }else{
-            jsonObject.put("status",200);
+            jsonObject.put("status",500);
         }
         return jsonObject;
     }
