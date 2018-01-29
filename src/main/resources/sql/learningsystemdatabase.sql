@@ -1,24 +1,25 @@
 /*
-Navicat MySQL Data Transfer
+SQLyog Ultimate v11.33 (64 bit)
+MySQL - 5.7.20-log : Database - learningsystemdatabase
+*********************************************************************
+*/
 
-Source Server         : learningsystemdatabase
-Source Server Version : 50720
-Source Host           : localhost:3306
-Source Database       : learningsystemdatabase
+/*!40101 SET NAMES utf8 */;
 
-Target Server Type    : MYSQL
-Target Server Version : 50720
-File Encoding         : 65001
+/*!40101 SET SQL_MODE=''*/;
 
-Date: 2018-01-14 20:50:50
-*/
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`learningsystemdatabase` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-SET FOREIGN_KEY_CHECKS=0;
+USE `learningsystemdatabase`;
 
--- ----------------------------
--- Table structure for class
--- ----------------------------
+/*Table structure for table `class` */
+
 DROP TABLE IF EXISTS `class`;
+
 CREATE TABLE `class` (
   `C_ID` int(6) NOT NULL AUTO_INCREMENT COMMENT '表ID',
   `C_CLASSID` int(6) DEFAULT NULL COMMENT '班级标识',
@@ -30,15 +31,14 @@ CREATE TABLE `class` (
   PRIMARY KEY (`C_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of class
--- ----------------------------
-INSERT INTO `class` VALUES ('1', '1', '1', '15软件7班', '计算机工程技术学院', '软件技术', '大三');
+/*Data for the table `class` */
 
--- ----------------------------
--- Table structure for classwork
--- ----------------------------
+insert  into `class`(`C_ID`,`C_CLASSID`,`T_TEACHER`,`C_NAME`,`C_COLLEGE`,`C_MAJOR`,`C_GRADE`) values (1,1,'1','15软件7班','计算机工程技术学院','软件技术','大三');
+
+/*Table structure for table `classwork` */
+
 DROP TABLE IF EXISTS `classwork`;
+
 CREATE TABLE `classwork` (
   `CK_ID` int(6) NOT NULL COMMENT '表ID',
   `CK_CALSS` varchar(30) DEFAULT NULL COMMENT '班级',
@@ -48,14 +48,12 @@ CREATE TABLE `classwork` (
   PRIMARY KEY (`CK_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of classwork
--- ----------------------------
+/*Data for the table `classwork` */
 
--- ----------------------------
--- Table structure for grouping
--- ----------------------------
+/*Table structure for table `grouping` */
+
 DROP TABLE IF EXISTS `grouping`;
+
 CREATE TABLE `grouping` (
   `G_ID` int(6) NOT NULL COMMENT '表ID',
   `G_IDENTIFYING` int(6) DEFAULT NULL COMMENT '分组标识',
@@ -66,18 +64,39 @@ CREATE TABLE `grouping` (
   PRIMARY KEY (`G_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of grouping
--- ----------------------------
-INSERT INTO `grouping` VALUES ('1', '1', '超级舰队', '0104150701', null, '组长');
-INSERT INTO `grouping` VALUES ('2', '1', '超级舰队', '0104150702', null, '组员');
-INSERT INTO `grouping` VALUES ('3', '1', '超级舰队', '0104150717', null, '组员');
-INSERT INTO `grouping` VALUES ('4', '1', '超级舰队', '0104150718', null, '组员');
+/*Data for the table `grouping` */
 
--- ----------------------------
--- Table structure for lesson
--- ----------------------------
+insert  into `grouping`(`G_ID`,`G_IDENTIFYING`,`G_NAME`,`G_STUDENTID`,`G_SPEAKNUM`,`G_DUTY`) values (1,1,'超级舰队','0104150701',NULL,'组长'),(2,1,'超级舰队','0104150702',NULL,'组员'),(3,1,'超级舰队','0104150717',NULL,'组员'),(4,1,'超级舰队','0104150718',NULL,'组员');
+
+/*Table structure for table `issues` */
+
+DROP TABLE IF EXISTS `issues`;
+
+CREATE TABLE `issues` (
+  `is_id` int(100) NOT NULL AUTO_INCREMENT COMMENT '反馈单号',
+  `tg_openid` varchar(1000) DEFAULT NULL COMMENT '用户标识',
+  `state` varchar(1000) DEFAULT NULL COMMENT '处理状态',
+  `body` varchar(1000) DEFAULT NULL COMMENT '反馈内容',
+  `title` varchar(1000) DEFAULT NULL COMMENT '反馈标题',
+  `avatar_url` varchar(1000) DEFAULT NULL COMMENT '回复者头像',
+  `replyer` varchar(1000) DEFAULT NULL COMMENT '回复者名称',
+  `endtime` varchar(1000) DEFAULT NULL COMMENT '反馈处理时间',
+  `starttime` varchar(1000) DEFAULT NULL COMMENT '反馈建立时间',
+  `replybody` varchar(1000) DEFAULT NULL COMMENT '回复内容',
+  `img_url` varchar(1000) DEFAULT NULL COMMENT '反馈图片集',
+  `label` varchar(1000) DEFAULT NULL COMMENT '反馈标签',
+  `details` varchar(1000) DEFAULT NULL COMMENT '反馈详情',
+  PRIMARY KEY (`is_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+/*Data for the table `issues` */
+
+insert  into `issues`(`is_id`,`tg_openid`,`state`,`body`,`title`,`avatar_url`,`replyer`,`endtime`,`starttime`,`replybody`,`img_url`,`label`,`details`) values (5,'a','closed','反馈3','反馈3','11','11',NULL,'2018-01-24 23:05:36','已经处理，请等待下次更新','http://ouayrx93b.bkt.clouddn.com/null 2018-01-24zgth0, http://ouayrx93b.bkt.clouddn.com/null 2018-01-24zgth1',NULL,'用户名：陌路（余枫-0104150718）\n手机型号：iPhone 6\n操作系统：iOS 10.0.1（devtools - 375x667）\n微信版本号：6.5.6\n小程序版本号：v0.1.0\n基础库版本：1.5.2\n网络类型：wifi'),(6,'a','open','反馈3','反馈3',NULL,NULL,NULL,'2018-01-24 23:15:50',NULL,'http://ouayrx93b.bkt.clouddn.com/null 2018-01-24zgth0, http://ouayrx93b.bkt.clouddn.com/null 2018-01-24zgth1',NULL,'用户名：陌路（余枫-0104150718）\n手机型号：iPhone 6\n操作系统：iOS 10.0.1（devtools - 375x667）\n微信版本号：6.5.6\n小程序版本号：v0.1.0\n基础库版本：1.5.2\n网络类型：wifi');
+
+/*Table structure for table `lesson` */
+
 DROP TABLE IF EXISTS `lesson`;
+
 CREATE TABLE `lesson` (
   `L_ID` int(6) NOT NULL AUTO_INCREMENT COMMENT '表ID',
   `L_NAME` varchar(35) DEFAULT NULL COMMENT '课程名称',
@@ -86,17 +105,16 @@ CREATE TABLE `lesson` (
   `T_TEACHER` int(6) DEFAULT NULL COMMENT '老师标识',
   `STU_STUDENTID` varchar(20) DEFAULT NULL COMMENT '学生标识',
   PRIMARY KEY (`L_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of lesson
--- ----------------------------
-INSERT INTO `lesson` VALUES ('1', 'JAVA实战', 'ABSC253-562', '1', '1', '1');
+/*Data for the table `lesson` */
 
--- ----------------------------
--- Table structure for releaseapplicationcase
--- ----------------------------
+insert  into `lesson`(`L_ID`,`L_NAME`,`L_NUMBER`,`C_CLASSID`,`T_TEACHER`,`STU_STUDENTID`) values (1,'JAVA实战','ABSC253-562',1,1,'1'),(2,'PHP实战','ABSC253-563',1,1,NULL),(3,'JavaScript','ABSC253-564',1,1,NULL),(4,'Photoshop','ABSC253-565',1,1,NULL);
+
+/*Table structure for table `releaseapplicationcase` */
+
 DROP TABLE IF EXISTS `releaseapplicationcase`;
+
 CREATE TABLE `releaseapplicationcase` (
   `RAC_ID` int(6) NOT NULL COMMENT '表ID',
   `T_TEACHER` int(6) DEFAULT NULL COMMENT '老师标识',
@@ -109,14 +127,12 @@ CREATE TABLE `releaseapplicationcase` (
   PRIMARY KEY (`RAC_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of releaseapplicationcase
--- ----------------------------
+/*Data for the table `releaseapplicationcase` */
 
--- ----------------------------
--- Table structure for releasediscussionquestions
--- ----------------------------
+/*Table structure for table `releasediscussionquestions` */
+
 DROP TABLE IF EXISTS `releasediscussionquestions`;
+
 CREATE TABLE `releasediscussionquestions` (
   `RDQ_ID` int(6) NOT NULL COMMENT '表ID',
   `L_NUMBER` varchar(255) DEFAULT NULL COMMENT '课程编号',
@@ -132,16 +148,14 @@ CREATE TABLE `releasediscussionquestions` (
   PRIMARY KEY (`RDQ_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of releasediscussionquestions
--- ----------------------------
-INSERT INTO `releasediscussionquestions` VALUES ('1', 'ABSC253-562', '0104150701', null, '1', '探讨机器学习', '15软件7班', '机器学习需要掌握哪些技术，对数据算法要求一定很高吧', '2017-01-04', null, null);
-INSERT INTO `releasediscussionquestions` VALUES ('2', 'ABSC253-562', '0104150701', null, '1', 'JAVA进阶应该学习啥？', '15软件7班', '深入研究数据结构以及框架源码', '2017-01-05', null, null);
+/*Data for the table `releasediscussionquestions` */
 
--- ----------------------------
--- Table structure for releaseexercise
--- ----------------------------
+insert  into `releasediscussionquestions`(`RDQ_ID`,`L_NUMBER`,`G_STUDENTID`,`T_TEACHER`,`TAG_ID`,`RDQ_THEME`,`RDQ_CLASS`,`RDQ_TEXT`,`RDQ_TIME`,`RDQ_UPLOADFILE`,`WB_CONTENT_NUM`) values (1,'ABSC253-562','0104150701',NULL,1,'探讨机器学习','15软件7班','机器学习需要掌握哪些技术，对数据算法要求一定很高吧','2017-01-04',NULL,NULL),(2,'ABSC253-562','0104150701',NULL,1,'JAVA进阶应该学习啥？','15软件7班','深入研究数据结构以及框架源码','2017-01-05',NULL,NULL);
+
+/*Table structure for table `releaseexercise` */
+
 DROP TABLE IF EXISTS `releaseexercise`;
+
 CREATE TABLE `releaseexercise` (
   `RE_ID` int(6) NOT NULL COMMENT '表ID',
   `RE_TITLE` varchar(20) DEFAULT NULL COMMENT '习题标题',
@@ -152,14 +166,12 @@ CREATE TABLE `releaseexercise` (
   PRIMARY KEY (`RE_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of releaseexercise
--- ----------------------------
+/*Data for the table `releaseexercise` */
 
--- ----------------------------
--- Table structure for releaselearningcontent
--- ----------------------------
+/*Table structure for table `releaselearningcontent` */
+
 DROP TABLE IF EXISTS `releaselearningcontent`;
+
 CREATE TABLE `releaselearningcontent` (
   `RLC_ID` int(6) NOT NULL AUTO_INCREMENT COMMENT '表ID',
   `RLC_CLASS` varchar(200) DEFAULT NULL COMMENT '对应班级',
@@ -171,14 +183,12 @@ CREATE TABLE `releaselearningcontent` (
   PRIMARY KEY (`RLC_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of releaselearningcontent
--- ----------------------------
+/*Data for the table `releaselearningcontent` */
 
--- ----------------------------
--- Table structure for rleaseonlinetesting
--- ----------------------------
+/*Table structure for table `rleaseonlinetesting` */
+
 DROP TABLE IF EXISTS `rleaseonlinetesting`;
+
 CREATE TABLE `rleaseonlinetesting` (
   `ROT_ID` int(6) NOT NULL COMMENT '表ID',
   `ROT_IDENTIFYING` int(6) DEFAULT NULL COMMENT '习题在线测试标识',
@@ -196,14 +206,12 @@ CREATE TABLE `rleaseonlinetesting` (
   PRIMARY KEY (`ROT_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of rleaseonlinetesting
--- ----------------------------
+/*Data for the table `rleaseonlinetesting` */
 
--- ----------------------------
--- Table structure for student
--- ----------------------------
+/*Table structure for table `student` */
+
 DROP TABLE IF EXISTS `student`;
+
 CREATE TABLE `student` (
   `STU_ID` int(6) NOT NULL AUTO_INCREMENT COMMENT '表ID',
   `TG_OPENID` varchar(255) DEFAULT NULL COMMENT '微信登录绑定ID',
@@ -221,34 +229,28 @@ CREATE TABLE `student` (
   PRIMARY KEY (`STU_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of student
--- ----------------------------
-INSERT INTO `student` VALUES ('1', '1', '1', '1', '0104150701', '123456', '杨广', '男', '1', '627756022@qq.com', '1319220725', '627756022', 'y_627756022');
-INSERT INTO `student` VALUES ('2', null, '1', '1', '0104150702', null, '刘梓彦', null, '1', null, null, null, null);
-INSERT INTO `student` VALUES ('3', null, '1', '1', '0104150717', null, '胡剑锋', null, '1', null, null, null, null);
-INSERT INTO `student` VALUES ('4', null, '1', '1', '0104150718', null, '余枫', null, '1', null, null, null, null);
+/*Data for the table `student` */
 
--- ----------------------------
--- Table structure for tag
--- ----------------------------
+insert  into `student`(`STU_ID`,`TG_OPENID`,`C_CLASSID`,`TG_IDENTIFYING`,`STU_STUDENTID`,`STU_PASSWORD`,`STU_NAME`,`STU_GENDER`,`G_IDENTIFYING`,`STU_EMAIL`,`STU_PHONER`,`STU_QQ`,`STU_WECHAT`) values (1,'oJkz50BT-KSw69awi9iIDJQ0w7Kc',1,1,'0104150701','123456','杨广','男',1,'3213','124','44','dj222'),(2,'a',1,1,'0104150702','123456','刘梓彦',NULL,1,'123131','1231','1231','123'),(3,NULL,1,1,'0104150717',NULL,'胡剑锋',NULL,1,NULL,NULL,NULL,NULL),(4,NULL,1,1,'0104150718',NULL,'余枫',NULL,1,NULL,NULL,NULL,NULL);
+
+/*Table structure for table `tag` */
+
 DROP TABLE IF EXISTS `tag`;
+
 CREATE TABLE `tag` (
   `TAG_ID` int(6) NOT NULL COMMENT '标签ID',
   `TAG_CONTEN` varchar(30) DEFAULT NULL COMMENT '标签内容',
   PRIMARY KEY (`TAG_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tag
--- ----------------------------
-INSERT INTO `tag` VALUES ('1', 'Java');
-INSERT INTO `tag` VALUES ('2', 'JavaScript');
+/*Data for the table `tag` */
 
--- ----------------------------
--- Table structure for teacher
--- ----------------------------
+insert  into `tag`(`TAG_ID`,`TAG_CONTEN`) values (1,'Java'),(2,'JavaScript');
+
+/*Table structure for table `teacher` */
+
 DROP TABLE IF EXISTS `teacher`;
+
 CREATE TABLE `teacher` (
   `T_ID` int(6) NOT NULL AUTO_INCREMENT COMMENT '表ID',
   `T_NAME` varchar(35) DEFAULT NULL COMMENT '老师姓名',
@@ -261,15 +263,14 @@ CREATE TABLE `teacher` (
   PRIMARY KEY (`T_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of teacher
--- ----------------------------
-INSERT INTO `teacher` VALUES ('1', '张爱清', '1', '15软件7班', null, null, null, null);
+/*Data for the table `teacher` */
 
--- ----------------------------
--- Table structure for testgrade
--- ----------------------------
+insert  into `teacher`(`T_ID`,`T_NAME`,`T_TEACHER`,`C_CLASS`,`T_GRNDER`,`T_PHONE`,`T_QQ`,`T_WECHAT`) values (1,'张爱清',1,'15软件7班',NULL,NULL,NULL,NULL);
+
+/*Table structure for table `testgrade` */
+
 DROP TABLE IF EXISTS `testgrade`;
+
 CREATE TABLE `testgrade` (
   `TG_ID` int(6) NOT NULL COMMENT '表ID',
   `TG_IDENTIFYING` int(6) DEFAULT NULL COMMENT '单元标识',
@@ -277,14 +278,12 @@ CREATE TABLE `testgrade` (
   PRIMARY KEY (`TG_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of testgrade
--- ----------------------------
+/*Data for the table `testgrade` */
 
--- ----------------------------
--- Table structure for writeback
--- ----------------------------
+/*Table structure for table `writeback` */
+
 DROP TABLE IF EXISTS `writeback`;
+
 CREATE TABLE `writeback` (
   `WB_ID` int(6) NOT NULL AUTO_INCREMENT COMMENT '表ID',
   `RDQ_ID` int(11) DEFAULT NULL COMMENT '问题讨论表ID',
@@ -296,15 +295,11 @@ CREATE TABLE `writeback` (
   PRIMARY KEY (`WB_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of writeback
--- ----------------------------
-INSERT INTO `writeback` VALUES ('1', '1', '个人认为学好数据结构也很重要', null, '0104150701', '6', '2018-01-02');
-INSERT INTO `writeback` VALUES ('2', '1', '赞同楼上说法', null, '0104150702', '6', '2018-01-02');
-INSERT INTO `writeback` VALUES ('4', '2', '赞同楼上说法', null, '0104150702', '2', '2018-01-01');
-INSERT INTO `writeback` VALUES ('5', '3', '顶帖支持一下楼主', null, '0104150701', '1', '2018-01-02');
-INSERT INTO `writeback` VALUES ('6', '1', '大家都很厉害的样子', null, '0104150701', '6', '2018-01-03');
-INSERT INTO `writeback` VALUES ('7', '1', '想知道怎么自学才比较有效率', null, '0104150702', '6', '2018-01-04');
-INSERT INTO `writeback` VALUES ('8', '2', '赞同楼上说法', null, '0104150702', '2', '2018-01-02');
-INSERT INTO `writeback` VALUES ('9', '1', '你很棒', null, '0104150701', '6', '2018-01-10');
-INSERT INTO `writeback` VALUES ('12', '1', '上次这个楼主发的内容我也觉得很有趣，附上截图一张', 'upload\\image\\20180114\\1515931121125_349.jpg', '0104150701', '6', '2018-01-14');
+/*Data for the table `writeback` */
+
+insert  into `writeback`(`WB_ID`,`RDQ_ID`,`WB_CONTENT`,`WB_UPLOADFILE`,`STU_STUDENTID`,`WB_CONTENT_NUM`,`WB_TIME`) values (1,1,'个人认为学好数据结构也很重要',NULL,'0104150701',6,'2018-01-02'),(2,1,'赞同楼上说法',NULL,'0104150702',6,'2018-01-02'),(4,2,'赞同楼上说法',NULL,'0104150702',2,'2018-01-01'),(5,3,'顶帖支持一下楼主',NULL,'0104150701',1,'2018-01-02'),(6,1,'大家都很厉害的样子',NULL,'0104150701',6,'2018-01-03'),(7,1,'想知道怎么自学才比较有效率',NULL,'0104150702',6,'2018-01-04'),(8,2,'赞同楼上说法',NULL,'0104150702',2,'2018-01-02'),(9,1,'你很棒',NULL,'0104150701',6,'2018-01-10'),(12,1,'上次这个楼主发的内容我也觉得很有趣，附上截图一张','upload\\image\\20180114\\1515931121125_349.jpg','0104150701',6,'2018-01-14');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
