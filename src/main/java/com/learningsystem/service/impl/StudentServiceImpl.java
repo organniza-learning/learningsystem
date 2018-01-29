@@ -47,12 +47,12 @@ public class StudentServiceImpl implements StudentService {
 			ct.andStuPasswordEqualTo(password);
 			Student stu = ExploitUtil.stuIsNull(sm, se);
 			if (stu != null) { // 有信息
-				json.put("stutas", 200);
+				json.put("status", 200);
 				// 插入openid
 				stu.setTgOpenid(openid);
 				sm.updateByPrimaryKey(stu);
 			} else {// 无信息
-				json.put("stutas", 500);
+				json.put("status", 500);
 			}
 		}
 		return json;
@@ -91,12 +91,12 @@ public class StudentServiceImpl implements StudentService {
 			time.put("week", week);
 			time.put("day", day);
 			data.put("time", time);
-			json.put("stutas", 200);
+			json.put("status", 200);
 			data.put("openid", openid);
 			data.put("is_bind", true);
 			json.put("data", data);
 		} else { // 不存在绑定
-			json.put("stutas", 200);
+			json.put("status", 200);
 			JSONObject data = new JSONObject();
 			data.put("is_bind", false);
 			data.put("openid", openid);
@@ -113,9 +113,9 @@ public class StudentServiceImpl implements StudentService {
 		ct.andTgOpenidEqualTo(openid);
 		int i = sm.updateByExampleSelective(stu, se);
 		if(i==1){
-			json.put("stutas", 200);
+			json.put("status", 200);
 		}else{
-			json.put("stutas", 500);
+			json.put("status", 500);
 		}
 		return json;
 	}

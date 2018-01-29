@@ -3,6 +3,8 @@ package com.learningsystem.controller;
 import com.learningsystem.pojo.Lesson;
 import com.learningsystem.service.LessonService;
 import com.learningsystem.utils.RemoveNullJsonUtils;
+
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -43,8 +45,7 @@ public class LessonController {
         JSONObject jsonObject = new JSONObject();
         if(lesson!=null){
             jsonObject.put("status",200);
-            //去除pojo中null值
-            jsonObject.put("data",removeNullJsonUtils.removeBeanNullByArray(lesson,request,response));
+            jsonObject.put("data",lesson);
         }else{
             jsonObject.put("status",500);
         }

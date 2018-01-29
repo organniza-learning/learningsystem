@@ -97,7 +97,7 @@ public class WeChatController {
 			@RequestParam("phone") String phone, @RequestParam("qq") String qq, @RequestParam("wechat") String wechat,
 			@RequestParam("types") String types) {
 		JSONObject json = null;
-		if(types=="student"){
+		if(types.equals("student")){
 			Student stu = new Student();
 			stu.setStuEmail(email);
 			stu.setStuPhoner(phone);

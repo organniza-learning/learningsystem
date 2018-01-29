@@ -44,11 +44,11 @@ public class ReleasediscussionquestionsController {
         if (list!=null){
             //查询问题讨论列表总数据，排序按时间降序，最新在前面
             JSONArray jsonArray = removeNullJsonUtils.removeBeanNullByArray(list, request, response);
-            jsonObject.put("stutas",200);
+            jsonObject.put("status",200);
             jsonObject.put("data",jsonArray);
             return jsonObject;
         }else {
-            jsonObject.put("stutas",500);
+            jsonObject.put("status",500);
         }
         return jsonObject;
     }

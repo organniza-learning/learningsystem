@@ -27,7 +27,7 @@ public class LessonServiceImpl implements LessonService {
     *@Date:Created in 17:57 2018/1/24
     *@cClassid 班级ID
     **/
-    @Override
+
     public List<Lesson> findClassLesson(String cClassid) {
         return lessonMapper.findClassLesson(cClassid);
     }

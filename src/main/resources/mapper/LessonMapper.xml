@@ -13,7 +13,8 @@
   <!--查询班级下的课程 findClassLesson-->
   <select id="findClassLesson" resultMap="BaseResultMap" parameterType="java.lang.String">
     SELECT DISTINCT
-    lesson.L_NAME
+    lesson.L_NAME,
+    lesson.L_NUMBER
     FROM
     class ,
     lesson
