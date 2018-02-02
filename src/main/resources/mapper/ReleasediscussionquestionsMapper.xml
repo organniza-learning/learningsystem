@@ -11,7 +11,7 @@
   <result column="RDQ_TEXT" jdbcType="VARCHAR" property="rdqText" />
   <result column="RDQ_TIME" jdbcType="TIME" property="rdqTime" />
   <result column="RDQ_UPLOADFILE" jdbcType="VARCHAR" property="rdqUploadfile" />
-    <result column="L_NUMBER" jdbcType="VARCHAR" property="lNumber" />
+  <result column="L_NUMBER" jdbcType="VARCHAR" property="lNumber" />
 </resultMap>
 
   <resultMap id="BaseResultMapAngTag"  type="com.learningsystem.pojo.Releasediscussionquestions">
@@ -54,6 +54,7 @@
         releasediscussionquestions.RDQ_TEXT,
         releasediscussionquestions.RDQ_TIME,
         releasediscussionquestions.RDQ_UPLOADFILE,
+        releasediscussionquestions.L_NUMBER,
         writeback.RDQ_ID,
         releasediscussionquestions.RDQ_ID,
         tag.TAG_CONTEN,
