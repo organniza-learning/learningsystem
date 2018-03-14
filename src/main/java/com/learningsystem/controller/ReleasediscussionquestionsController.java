@@ -1,5 +1,6 @@
 package com.learningsystem.controller;
 
+import com.github.pagehelper.PageHelper;
 import com.learningsystem.pojo.Releasediscussionquestions;
 import com.learningsystem.service.ReleasediscussionquestionsService;
 import com.learningsystem.utils.RemoveNullJsonUtils;
@@ -40,6 +41,7 @@ public class ReleasediscussionquestionsController {
         RemoveNullJsonUtils removeNullJsonUtils = new RemoveNullJsonUtils();
         JSONObject jsonObject = new JSONObject();
         //查询
+        //PageHelper.startPage(2,10);
         List<Releasediscussionquestions> list = rdqservice.selectRdqAndTag();
         if (list!=null){
             //查询问题讨论列表总数据，排序按时间降序，最新在前面

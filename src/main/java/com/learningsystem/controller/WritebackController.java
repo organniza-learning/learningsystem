@@ -1,5 +1,6 @@
 package com.learningsystem.controller;
 
+import com.github.pagehelper.PageHelper;
 import com.learningsystem.pojo.Writeback;
 import com.learningsystem.service.WritebackService;
 import com.learningsystem.utils.LearningUtils;
@@ -14,7 +15,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author : YangGuang
@@ -59,9 +62,19 @@ public class WritebackController {
      **/
     @ResponseBody
     @RequestMapping(value = "selectRdqAndWrite",method = RequestMethod.GET)
-    public JSONObject selectRdqAndWrite(@RequestParam(value = "rdqId") String rdqId, HttpServletRequest request, HttpServletResponse response){
+    public Map<String, Object> selectRdqAndWrite(@RequestParam(value = "rdqId") String rdqId,
+                                        @RequestParam(value = "pageNum")Integer pageNum,
+                                        HttpServletRequest request, HttpServletResponse response){
+        PageHelper.startPage(pageNum,10);
         List<Writeback> list = writebackService.selectRdqAndWrite(rdqId);
-        return removeNullJsonUtils.removeBeanNull(list, request, response);
+        //map
+        Map<String,Object> map = new HashMap<String,Object>();
+        if(list.size()!=0){
+            map.put("status",200);
+            map.put("data",removeNullJsonUtils.removeBeanNullByArray(list, request, response));
+            return map;
+        }
+        return (Map<String, Object>) map.put("status",500);
     }
 
     /**

@@ -55,7 +55,6 @@
         releasediscussionquestions.RDQ_TIME,
         releasediscussionquestions.RDQ_UPLOADFILE,
         releasediscussionquestions.L_NUMBER,
-        writeback.RDQ_ID,
         releasediscussionquestions.RDQ_ID,
         tag.TAG_CONTEN,
         writeback.WB_CONTENT_NUM,
