@@ -58,8 +58,8 @@
     writeback.RDQ_ID = #{rdqId}
     AND
     writeback.STU_STUDENTID = student.STU_STUDENTID
-    GROUP BY
-    writeback.WB_TIME
+    ORDER BY
+	writeback.WB_TIME DESC
   </select>
 
   <update id="insertWritebackCount" parameterType="java.lang.Integer">
