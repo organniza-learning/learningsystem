@@ -88,10 +88,7 @@ public class WritebackController {
     **/
     @RequestMapping(value = "replyMessage",method = RequestMethod.POST)
     @ResponseBody
-    public JSONObject replyMessage(HttpServletRequest request, HttpServletResponse response,@RequestParam("file")MultipartFile file,Writeback writeback){
-
-        System.err.println("rdqId:" + writeback.getRdqId() + "\n"+ "stuStudentid:" + writeback.getStuStudentid() + "\n"
-                            +"content: " + writeback.getWbContent() + "\n"+ "file: " + file);
+    public JSONObject replyMessage(HttpServletRequest request, HttpServletResponse response,@RequestParam(value = "file",required = false)MultipartFile file,Writeback writeback){
 
         JSONObject jsonObject = new JSONObject();
         String str =  writebackService.replyMessage(request,response,writeback,file);

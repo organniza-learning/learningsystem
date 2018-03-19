@@ -4,6 +4,7 @@ import com.learningsystem.dao.WritebackMapper;
 import com.learningsystem.pojo.Writeback;
 import com.learningsystem.service.WritebackService;
 import com.learningsystem.utils.LearningUtils;
+import com.learningsystem.utils.QiniuUtil;
 import com.learningsystem.utils.UploadFileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,13 +51,21 @@ public class WritebackServiceImpl implements WritebackService {
     *
     **/
     public String replyMessage(HttpServletRequest request, HttpServletResponse response, Writeback writeback ,MultipartFile file) {
-        UploadFileUtils uploadFileUtils = new UploadFileUtils();
-        com.alibaba.fastjson.JSONObject pathjson = uploadFileUtils.filesUpload(request,response,file);
-        String path = (String) pathjson.get("path");
-        writeback.setWbUploadfile(path);
-        writeback.setWbTime(learningUtils.date_yyyy_mm_dd());
-        System.err.println("writeback : "+ writeback.toString());
-        int i = writebackMapper.replyMessage(writeback);
+        Integer i = 0;
+        if (file!=null){
+            QiniuUtil qiniuUtil = new QiniuUtil();
+            String upload = qiniuUtil.upload(file);
+
+            if (upload!=null){
+                writeback.setWbUploadfile(upload);
+                writeback.setWbTime(learningUtils.date_yyyy_mm_dd());
+                i = writebackMapper.replyMessage(writeback);
+            }
+        }else {
+            writeback.setWbTime(learningUtils.date_yyyy_mm_dd());
+            i = writebackMapper.replyMessage(writeback);
+        }
+
         return String.valueOf(i);
     }
 }
